@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> //cross pattern
 using namespace std;
 
 int main(int argc, char **argv)
