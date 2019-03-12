@@ -9,9 +9,9 @@ int main(int argc, char **argv)
     int stars = num/2 + 1;
     int spaces = 1;
 
-    for (int r = 1; r <= num; r++)
+    for (int r = 1; r <= num; r++) // r means rows
     {
-        for (int i = 1; i <= stars; i++)
+        for (int i = 1; i <= stars; i++) // i means cols
         {
             cout << "*";
         }
