@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     else
     {
         cout << "Bit is on\n";
-        num=num^bm; //one more way to do this,see sir's code
+        num=num^bm; 
         cout<<num;
     }
 }
