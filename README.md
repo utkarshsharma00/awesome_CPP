@@ -9,5 +9,5 @@ LEVEL_4 : Insights of Bit Manipulation.<br/>
 LEVEL_5 + LEVEL_6 + LEVEL_8 + LEVEL_9 : Insights of Array.<br/>
 LEVEL_7 : Insights of some basic Sorts.<br/>
 LEVEL_10 : Inisghts of Pointers and Memory.<br/>
-LEVEL_11 : Insights of .<br/>
+LEVEL_11 : Insights of Gap Strategy.<br/>
 
