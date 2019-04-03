@@ -5,9 +5,6 @@ using namespace std;
 
 void floodfill(int current_row, int current_col, int destination_row, int destination_col, vector<vector<int>>&arr, string paths_so_far)
 {
-    /*vector<vector<int>> arr = {
-        {0, 1, 0, 0, 0, 0}, {0, 1, 0, 1, 1, 0}, {0, 1, 0, 1, 1, 0}, {0, 0, 0, 0, 0, 0}, {0, 1, 0, 1, 1, 0}, {0, 1, 0, 0, 0, 0}};*/
-
     if (current_row == current_col && destination_row == destination_col)
     {
         cout << paths_so_far;
