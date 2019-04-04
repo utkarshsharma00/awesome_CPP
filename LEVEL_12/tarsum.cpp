@@ -1,4 +1,4 @@
-#include <iostream> //understand this code once again
+#include <iostream> //targetsum
 #include <vector>
 
 using namespace std;
@@ -15,7 +15,7 @@ vector<vector<int>> *tarsum(int arr[], int target, int starting_point, int size_
         }
         return br;
     }
-    vector<vector<int>> *rr1 = tarsum(arr, target - arr[starting_point], starting_point + 1, size_of_array);
+    vector<vector<int>> *rr1 = tarsum(arr, target - arr[starting_point], starting_point + 1, size_of_array); // rr means recursion_result
     vector<vector<int>> *rr2 = tarsum(arr, target, starting_point + 1, size_of_array);
 
     vector<vector<int>> *my_result = new vector<vector<int>>();
