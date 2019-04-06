@@ -73,6 +73,15 @@ inline int Max_of_2(int num1, int num2)
     //* As inline functions dont get storage space therefore they have no address and in case we want the address of the function it will not be possible if the function is Inline.
 }
 
+void static_object_function()
+{
+    static study object;
+
+    //TODO NOTES
+    //* The above is a static object ,therefore it has its scope till the end of the program's lifetime.
+    //* Its dtor() will be called when the main function exits.
+}
+
 int main(int argc, char **argv)
 {
     study object1, object2, object_to_test_static1, object_to_test_static2;
