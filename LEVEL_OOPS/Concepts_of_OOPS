@@ -25,8 +25,34 @@ class study
 
     static int counter; //! counter variable cannot be assigned value here because ISO C++ forbids in-class initialization of non-const static member
 
+    static const int counter_1 = 1; //! This also sorts the problem faced by line 26. This is basically the Inline definition.
+
+    //TODO Notes:
     //* Static variables are not destroyed that is they keep their value throught the lifetime of the program.
     //* They are not associated with the objects of the class. Moreover static varibles even exist without the instantiation of an object.
     //* They are created when the program starts which is similar to global variables.
     //* Its better to think the Static members belonging to the class itself, and not to the Objects of the class
+
+    static int object_counter;
+    // study(int check_param) //*ctor
+    // {
+    //     check_param = -1;
+    //     cout << "Constructor Called\n";
+    //     object_counter++;
+    // }
+
+    static int getCount()
+    {
+        return object_counter;
+
+        //TODO NOTES
+        //* Static functions can be accessed using only the class name and scope resolution operator.
+        //* A static function can only access static data members and other static member functions.
+        //* It cannot access non-static data members because they must belong to class object and static member functions have no class objects to work with.
+        //* This operator cannot be used because they are not attatched to an object.
+        //* Static functions cannot be virtual.
+        //* Member functions with the same name and name parameter type list cannot be overloaded if any of them is a static member function declaration.
+    }
+
+    ~study(); //* dtor
 };
