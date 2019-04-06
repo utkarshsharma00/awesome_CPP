@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class study
+{
+  private:
+    int roll_no;
+
+  public:
+    void add(int num1, int num2) //* can also be declared outside the class with the help of scope resolution operator F
+    {
+        int sum = num1 + num2;
+        std ::cout << sum;
+    }
+
+    int getroll_no()
+    {
+        return roll_no;
+    }
+
+    int setroll_no(int i)
+    {
+        roll_no = i;
+    }
+
+    static int counter; //! counter variable cannot be assigned value here because ISO C++ forbids in-class initialization of non-const static member
+
+    //* Static variables are not destroyed that is they keep their value throught the lifetime of the program.
+    //* They are not associated with the objects of the class. Moreover static varibles even exist without the instantiation of an object.
+    //* They are created when the program starts which is similar to global variables.
+    //* Its better to think the Static members belonging to the class itself, and not to the Objects of the class
+};
