@@ -4,6 +4,34 @@
 
 using namespace std;
 
+bool canPlaceTheWordH(vector<vector<char>> &board, int i, int j, string word)
+{
+    if (j + word.size() > board.size())
+    {
+        return false;
+    }
+    else if (j > 0 && board[i][j - 1] != '+')
+    {
+        return false;
+    }
+    else if (j + word.size() < board.size() && board[i][j + word.size()] != '+')
+    {
+        return false;
+    }
+    else
+    {
+        for (int ii = 0; ii < word.size(); ii++)
+        {
+            if (board[i][j + ii] != '-' && board[i][j + ii] != word[ii])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
 int main(int argc, char **argv)
 {
     vector<vector<char>> board{
