@@ -32,6 +32,16 @@ bool canPlaceTheWordH(vector<vector<char>> &board, int i, int j, string word)
     }
 }
 
+bool PlaceWordH(vector<vector<char>> &board, int i, int j, string word, bool check[])
+{
+    for (int ii = 0; ii < word.size(); ii++)
+    {
+        check[ii] = board[i][j + ii] == '-';
+        board[i][j + ii] = word[ii];
+    }
+}
+
+
 int main(int argc, char **argv)
 {
     vector<vector<char>> board{
