@@ -52,6 +52,8 @@ bool UnplaceWordH(vector<vector<char>> &board, int i, int j, string word, bool c
     }
 }
 
+//create the above functions for vertical direction as well !
+
 int main(int argc, char **argv)
 {
     vector<vector<char>> board{
