@@ -41,6 +41,16 @@ bool PlaceWordH(vector<vector<char>> &board, int i, int j, string word, bool che
     }
 }
 
+bool UnplaceWordH(vector<vector<char>> &board, int i, int j, string word, bool check[])
+{
+    for (int ii = 0; ii < word.size(); ii++)
+    {
+        if (check[ii] == true)
+        {
+            board[i][j + ii] = '-';
+        }
+    }
+}
 
 int main(int argc, char **argv)
 {
