@@ -3,6 +3,35 @@
 #include <string>
 using namespace std;
 
+bool is_the_number_safe(vector<vector<int>> &board, int i, int j, int possible_options)
+{
+    for (int ii = i, jj = 0; jj < board.size(); jj++) //vertical tracing ||||...
+    {
+        if (board[ii][jj] == possible_options)
+        {
+            return false;
+        }
+    }
+    for (int ii = 0, jj = j; ii < board.size(); ii++) //horizontal tracing ____...
+    {
+        if (board[ii][jj] == possible_options)
+        {
+            return false;
+        }
+    }
+    for (int ii = (i / 3) * 3; ii < (i / 3) * 3 + 3; ii++) //submatrix check , +3 is done to move on the next submatrix wrt row
+    {
+        for (int jj = (j / 3) * 3; jj < (j / 3) * 3 + 3; jj++) //+3 is done to move on the next submatrix wrt col
+        {
+            if (board[ii][jj] == possible_options)
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 void sudoku(vector<vector<int>> &board, int box_no)
 {
     if (box_no == board.size() * board.size()) // see carefully for assignment and comparison operators and logic
