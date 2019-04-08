@@ -28,7 +28,7 @@ class study
     static const int counter_1 = 1; //! This also sorts the problem faced by line 26. This is basically the Inline definition.
 
     //TODO Notes:
-    //* Static variables are not destroyed that is they keep their value throught the lifetime of the program.
+    //* Static variables are not destroyed that is they keep their value through out the lifetime of the program.
     //* They are not associated with the objects of the class. Moreover static varibles even exist without the instantiation of an object.
     //* They are created when the program starts which is similar to global variables.
     //* Its better to think the Static members belonging to the class itself, and not to the Objects of the class
