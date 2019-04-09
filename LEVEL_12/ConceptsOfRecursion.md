@@ -6,7 +6,9 @@
 5. Stack Overflow is usually encountered more often in JAVA as compared to C++ because the size of stack in JAVA is less as compared to that of C++. This is primarily because of the fact that JAVA uses a virtual environment.</br>
 ## Approach to a Recursive Problem
 There are 2 styles of approaching any Recursive problem. The first being the Reactive Approach and the second being the Proactive Approach.</br>
-### 1.Reactive Approach</br>
-In this approach we basically make stupid calls that is we just call the function without putting even the slightest of thought to the solution of the problem and then we handle all of the problems in the Base Case. This type of approach usually has less amount of code but its slower than the Proactive Approach.</br>
+### 1. Reactive Approach</br>
+In this approach we basically make Stupid calls that is we just call the function without putting even the slightest of thought to the solution of the problem and then we handle/recover from all of the problems in the base case. This type of approach usually has less amount of code. It is slower than the Proactive Approach.</br>
+### 2. Proactive Approach</br>
+In this approach we make Smart calls that is we put in our thoughts to solve the problem and the base case is a very straight forward one. This type of approach has a lot more lines of code. It is faster than the Reactive Approach.</br>
 
 
