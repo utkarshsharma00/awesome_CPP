@@ -10,5 +10,6 @@ There are 2 styles of approaching any Recursive problem. The first being the Rea
 In this approach we basically make Stupid calls that is we just call the function without putting even the slightest of thought to the solution of the problem and then we handle/recover from all of the problems in the base case. This type of approach usually has less amount of code. It is slower than the Proactive Approach.</br>
 ### 2. Proactive Approach</br>
 In this approach we make Smart calls that is we put in our thoughts to solve the problem and the base case is a very straight forward one. This type of approach has a lot more lines of code. It is faster than the Reactive Approach.</br>
-
+## Memory Insights for Recursive Functions</br>
+When a function is called from main() the memory is allocate to it on stack. A recursive function calls itself, the memory for called function is allocated on top of memory allocated to calling function and different copy of local variables is created for each function call. When the base case is reached, the function returns its value to the function by whom it is called and memory is de-allocated and the process continues. All the variables in the recursive functions have local scope or we can say function scope and are stored in the stack until and unless they are static (static variables are stored in "Data Segment"). The 
 
