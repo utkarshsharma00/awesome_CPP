@@ -21,7 +21,40 @@ bool is_the_queen_safe(vector<vector<bool>> &board, int i, int j)
             return false;
         }
     }
-    
+    //southeast
+    for (int ii = i + 1, jj = j + 1; ii < board.size() && jj < board.size(); ii++, jj++)
+    {
+        if (board[ii][jj] == true)
+        {
+            return false;
+        }
+    }
+    //southwest
+    for (int ii = i + 1, jj = j - 1; ii < board.size() && jj >= 0; ii++, jj--)
+    {
+        if (board[ii][jj] == true)
+        {
+            return false;
+        }
+    }
+    //northeast
+    for (int ii = i - 1, jj = j + 1; ii >= 0 && jj < board.size(); ii--, jj++)
+    {
+        if (board[ii][jj] == true)
+        {
+            return false;
+        }
+    }
+    //northwest
+    for (int ii = i - 1, jj = j - 1; ii >= 0 && jj >= 0; ii--, jj--)
+    {
+        if (board[ii][jj] == true)
+        {
+            return false;
+        }
+    }
+
+    return true;
 }    
 
 bool is_the_box_safe(vector<vector<bool>> &board)
