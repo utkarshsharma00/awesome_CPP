@@ -2,6 +2,24 @@
 #include <vector>
 using namespace std;
 
+bool is_the_box_safe(vector<vector<bool>> &board)
+{
+    for (int i = 0; i < board.size(); i++)
+    {
+        for (int j = 0; j < board.size(); j++)
+        {
+            if (board[i][j] == true)
+            {
+                if (is_the_queen_safe(board, i, j) == false)
+                {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
 void nqueens(vector<vector<bool>> &board, int current_queen, int last_queen_placed_in_which_box, string as_of_now)
 {
     if (current_queen == board.size())
