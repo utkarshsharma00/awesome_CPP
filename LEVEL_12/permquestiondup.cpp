@@ -11,7 +11,7 @@ void permqd(string ques, string ans)
         return;
     }
 
-    int bm = 0;
+    int bm = 0; //bm means bitmask
     for (int i = 0; i < ques.size(); i++)
     {
         char ch = ques[i];
