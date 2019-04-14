@@ -19,6 +19,27 @@ void tarsum1(int arr[], int index, int target, string set, int size_of_array)
     tarsum1(arr, index + 1, target, set, size_of_array);
 }
 
+void tarsum2(int arr[], int index, int target, vector<int> &set, int size_of_array)
+{
+    if (index == size_of_array)
+    {
+        if (target == 0)
+        {
+            for (int i = 0; i < set.size(); i++)
+            {
+                cout << set[i] << " ";
+            }
+            cout << endl;
+        }
+        return;
+    }
+
+    set.push_back(arr[index]);
+    tarsum2(arr, index + 1, target - arr[index], set, size_of_array);
+    set.pop_back();
+    tarsum2(arr, index + 1, target, set, size_of_array);
+}
+
 int main(int argc, char **argv)
 {
     int arr[] = {10, 20, 30, 40, 50, 60, 70};
