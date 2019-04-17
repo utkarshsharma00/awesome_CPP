@@ -78,7 +78,6 @@ void nqueens(vector<vector<bool>> &board, int box_no,int queens_placed_so_far, s
     }
 }
 
-
 int main(int argc, char **argv)
 {
     vector<vector<bool>> board{
