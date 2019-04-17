@@ -55,6 +55,30 @@ bool is_the_queen_safe(vector<vector<bool>> &board, int i, int j)
     return true;
 }
 
+void nqueens(vector<vector<bool>> &board, int box_no,int queens_placed_so_far, string as_of_now)
+{
+    if (box_no == board.size()*board.size())
+    {
+        if (queens_placed_so_far == board.size())
+        {
+            cout << as_of_now << endl;
+        }
+        return;
+    }
+    nqueens(board, box_no + 1, queens_placed_so_far, as_of_now);
+
+    int i = box_no / board[0].size();
+    int j = box_no % board[0].size();
+
+    if (board[i][j] == 0 && is_the_queen_safe(board, i, j) == true)
+    {
+        board[i][j] = 1;
+        nqueens(board, box_no + 1,queens_placed_so_far + 1, as_of_now + to_string(i) + to_string(j) + "_");
+        board[i][j] = 0;
+    }
+}
+
+
 int main(int argc, char **argv)
 {
     vector<vector<bool>> board{
