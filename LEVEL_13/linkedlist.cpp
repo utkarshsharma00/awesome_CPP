@@ -26,6 +26,23 @@ class LinkedList
     }
   
   public:
+    void addFirst(int data)
+    {
+        if (size == 0)
+        {
+            handleAddWhenSizeis0(data);
+        }
+        else
+        {
+            Node *temp = new Node();
+            temp->data = data;
+            temp->next = NULL;
+            temp->next = head;
+            head = temp;
+            size++;
+        }
+    }
+  
     void display()
     {
         Node *temp = head;
