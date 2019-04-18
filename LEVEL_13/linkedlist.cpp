@@ -43,6 +43,23 @@ class LinkedList
         }
     }
   
+    void addLast(int data)
+    {
+        if (size == 0)
+        {
+            handleAddWhenSizeis0(data);
+        }
+        else
+        {
+            Node *nn = new Node(); //nn means new node
+            nn->data = data;
+            nn->next = NULL;
+            tail->next = nn;
+            tail = nn;
+            size++;
+        }
+    }
+  
     void display()
     {
         Node *temp = head;
