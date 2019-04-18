@@ -71,5 +71,29 @@ class LinkedList
         cout << endl;
     }
 };  
+
+int main(int argc,char **argv)
+{
+    cout << "By Stack\n";
+    LinkedList ll; // this creates the ll in Stack 
+    ll.addLast(10);
+    ll.addLast(20);
+    ll.addLast(30);
+    ll.display();
+    ll.addFirst(40);
+    ll.addFirst(50);
+    ll.display();
+    ll.addAt(100, 3); //yet to be written, the params are addAt(data, index)
+    ll.display();
+    ll.removeFirst(); //yet to be written
+    ll.removeFirst();
+    ll.display();
+    ll.removeLast(); //yet to be written
+    ll.display();
+    ll.addLast(200); 
+    ll.display();
+    ll.removeAt(2); //yet to be written
+    ll.display();
+}
   
   
