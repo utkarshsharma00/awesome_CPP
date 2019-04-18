@@ -83,17 +83,29 @@ int main(int argc,char **argv)
     ll.addFirst(40);
     ll.addFirst(50);
     ll.display();
-    ll.addAt(100, 3); //yet to be written, the params are addAt(data, index)
+    //ll.addAt(100, 3); //yet to be written, the params are addAt(data, index)
     ll.display();
-    ll.removeFirst(); //yet to be written
-    ll.removeFirst();
+    //ll.removeFirst(); //yet to be written
+    //ll.removeFirst();
     ll.display();
-    ll.removeLast(); //yet to be written
+    //ll.removeLast(); //yet to be written
     ll.display();
     ll.addLast(200); 
     ll.display();
-    ll.removeAt(2); //yet to be written
+    //ll.removeAt(2); //yet to be written
     ll.display();
+  
+    cout << "By heap\n"; //2nd way
+    LinkedList *ll1 = new LinkedList();
+    ll1->addLast(10);
+    ll1->addLast(20);
+    ll1->addLast(30);
+    ll1->addLast(40);
+    ll1->addLast(50);
+    ll1->addLast(60);
+    //ll1->reverseDataIteratively();
+    ll1->display();
+    delete ll1;*/
 }
   
   
