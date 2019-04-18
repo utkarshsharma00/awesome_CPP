@@ -15,6 +15,15 @@ class LinkedList
     Node *head;
     Node *tail;
     int size;
+    
+    void handleAddWhenSizeis0(int data)
+    {
+        Node *nn = new Node(); //nn means newnode
+        nn->data = data;
+        nn->next = NULL;
+        head = tail = nn;
+        size = 1;
+    }
   
   public:
     void display()
