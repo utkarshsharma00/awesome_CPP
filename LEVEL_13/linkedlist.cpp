@@ -103,7 +103,6 @@ int main(int argc,char **argv)
     ll1->addLast(40);
     ll1->addLast(50);
     ll1->addLast(60);
-    //ll1->reverseDataIteratively();
     ll1->display();
     delete ll1;
 }
