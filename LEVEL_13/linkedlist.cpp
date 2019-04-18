@@ -105,7 +105,7 @@ int main(int argc,char **argv)
     ll1->addLast(60);
     //ll1->reverseDataIteratively();
     ll1->display();
-    delete ll1;*/
+    delete ll1;
 }
   
   
