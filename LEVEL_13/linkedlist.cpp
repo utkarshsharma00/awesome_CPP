@@ -60,6 +60,32 @@ class LinkedList
         }
     }
   
+    void addAt(int data, int index)
+    {
+        if (index < 0 || index > size)
+        {
+            return;
+        }
+        else if (index == 0)
+        {
+            addFirst(data);
+        }
+        else if (index == size)
+        {
+            addLast(data);
+        }
+        else
+        {
+            Node *nm1 = getNodeAt(index - 1); //need to write the getNodeAt(index) function first !
+            Node *np1 = nm1->next;
+            Node *n = new Node();
+            n->data = data;
+            nm1->next = n;
+            n->next = np1;
+            size++;
+        }
+    }
+  
     void display()
     {
         Node *temp = head;
