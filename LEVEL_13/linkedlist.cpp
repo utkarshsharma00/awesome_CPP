@@ -83,7 +83,7 @@ int main(int argc,char **argv)
     ll.addFirst(40);
     ll.addFirst(50);
     ll.display();
-    //ll.addAt(100, 3); //yet to be written, the params are addAt(data, index)
+    ll.addAt(100, 3); //yet to be written, the params are addAt(data, index)
     ll.display();
     //ll.removeFirst(); //yet to be written
     //ll.removeFirst();
