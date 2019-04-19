@@ -25,6 +25,16 @@ class LinkedList
         size = 1;
     }
   
+    Node *getNodeAt(int index)
+    {
+        Node *temp = head;
+        for (int i = 0; i < index; i++)
+        {
+            temp = temp->next;
+        }
+        return temp;
+    }
+
   public:
     void addFirst(int data)
     {
