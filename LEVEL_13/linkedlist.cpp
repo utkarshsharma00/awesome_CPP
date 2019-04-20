@@ -45,6 +45,7 @@ class LinkedList
     }
 
   public:
+    // ctor() and dtor() have to be written as well
     void addFirst(int data)
     {
         if (size == 0)
