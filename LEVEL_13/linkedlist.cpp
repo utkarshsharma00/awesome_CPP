@@ -96,6 +96,11 @@ class LinkedList
         }
     }
   
+    int getsize()
+    {
+        return size;
+    }
+  
     void display()
     {
         Node *temp = head;
