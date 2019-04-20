@@ -105,6 +105,28 @@ class LinkedList
     {
         return size == 0;
     }
+  
+    int removeFirst()
+    {
+        if (size == 0)
+        {
+            return -1;
+        }
+        else if (size == 1)
+        {
+            handleRemoveWhenSizeis1();
+        }
+        else
+        {
+            int temp = head->data;
+            Node *newhead = head->next;
+            delete head;
+            head = newhead;
+            size--;
+            return temp;
+        }
+    }
+
     void display()
     {
         Node *temp = head;
