@@ -25,6 +25,15 @@ class LinkedList
         size = 1;
     }
   
+    int handleRemoveWhenSizeis1()
+    {
+        int temp = head->data;
+        delete head;
+        head = tail = NULL;
+        size = 0;
+        return temp;
+    }
+  
     Node *getNodeAt(int index)
     {
         Node *temp = head;
