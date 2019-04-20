@@ -101,6 +101,10 @@ class LinkedList
         return size;
     }
   
+    bool isEmpty()
+    {
+        return size == 0;
+    }
     void display()
     {
         Node *temp = head;
