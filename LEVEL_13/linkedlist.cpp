@@ -143,6 +143,24 @@ class LinkedList
             return temp;
         }
     }
+  
+    int removeLast()
+    {
+        if (size == 1)
+        {
+            return handleRemoveWhenSizeis1();
+        }
+        else
+        {
+            Node *s1 = getNodeAt(size - 2);
+            s1->next = NULL;
+            int temp = tail->data;
+            delete tail;
+            tail = s1;
+            size--;
+            return temp;
+        }
+    }
 
     void display()
     {
