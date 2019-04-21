@@ -161,6 +161,18 @@ class LinkedList
             return temp;
         }
     }
+  
+    int getFirst()
+    {
+        if (size == 0)
+        {
+            return -1;
+        }
+        else
+        {
+            return head->data;
+        }
+    }
 
     void display()
     {
