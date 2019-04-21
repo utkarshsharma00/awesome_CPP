@@ -173,6 +173,18 @@ class LinkedList
             return head->data;
         }
     }
+  
+    int getLast()
+    {
+        if (size == 0)
+        {
+            return -1;
+        }
+        else
+        {
+            return tail->data;
+        }
+    }
 
     void display()
     {
