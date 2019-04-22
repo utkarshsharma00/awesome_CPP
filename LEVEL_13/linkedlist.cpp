@@ -162,6 +162,22 @@ class LinkedList
         }
     }
   
+    int removeAt(int index)
+    {
+        if (index == 0)
+        {
+            return removeFirst();
+        }
+        else if (index == size - 1)
+        {
+            return removeLast();
+        }
+        else
+        {
+            //logic goes in here
+        }
+    }
+  
     int getFirst()
     {
         if (size == 0)
