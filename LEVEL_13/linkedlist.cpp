@@ -185,6 +185,20 @@ class LinkedList
             return tail->data;
         }
     }
+  
+    int getAt(int index)
+    {
+        if (index < 0 || index >= size)
+        {
+            cout << "Index out of  bound\n";
+            return -1;
+        }
+        else
+        {
+            Node *temp = getNodeAt(index);
+            return temp->data;
+        }
+    }
 
     void display()
     {
