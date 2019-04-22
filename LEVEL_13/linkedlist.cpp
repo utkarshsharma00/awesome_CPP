@@ -183,7 +183,14 @@ class LinkedList
         }
         else
         {
-            //logic goes in here
+            Node *nm1 = getNodeAt(index - 1);
+            Node *n = nm1->next;
+            Node *np1 = n->next;
+            int temp = n->data;
+            nm1->next = np1;
+            delete n;
+            size--;
+            return temp;        
         }
     }
   
