@@ -51,7 +51,16 @@ class LinkedList
         size = 0;
     }
   
-    // dtor() still left
+   ~LinkedList()
+    {
+        Node *temp = head;
+        for (int i = 0; i < size; i++)
+        {
+            Node *toberemoved = temp;
+            temp = temp->next;
+            delete toberemoved;
+        }
+    }  
   
     void addFirst(int data)
     {
