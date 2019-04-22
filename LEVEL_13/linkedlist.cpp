@@ -264,7 +264,7 @@ int main(int argc,char **argv)
     ll.display();
     ll.addLast(200); 
     ll.display();
-    //ll.removeAt(2); //yet to be written
+    ll.removeAt(2); 
     ll.display();
   
     cout << "By heap\n"; //2nd way
