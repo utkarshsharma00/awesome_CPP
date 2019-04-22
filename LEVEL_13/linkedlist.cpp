@@ -260,7 +260,7 @@ int main(int argc,char **argv)
     ll.removeFirst(); 
     ll.removeFirst();
     ll.display();
-    //ll.removeLast(); //yet to be written
+    ll.removeLast(); 
     ll.display();
     ll.addLast(200); 
     ll.display();
@@ -276,7 +276,7 @@ int main(int argc,char **argv)
     ll1->addLast(50);
     ll1->addLast(60);
     ll1->display();
-    delete ll1;
+    delete ll1; // deleting the Dynamic Memory (that is memory that we created for our use) is very important otherwise it will lead to memory leak and one can see this in the Task Manager of Windows.
 }
   
   
