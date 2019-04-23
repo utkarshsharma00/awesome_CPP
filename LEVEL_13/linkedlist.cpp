@@ -43,6 +43,11 @@ class LinkedList
         }
         return temp;
     }
+  
+    void displayReverse(Node *node)
+    {
+      
+    }
 
   public:
     LinkedList()
