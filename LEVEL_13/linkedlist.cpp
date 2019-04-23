@@ -237,7 +237,7 @@ class LinkedList
         }
     }
 
-    void displayRev() //this public funtion calls the private function displayReverse(Node *node)
+    void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
     {
         displayReverse(head); 
     }
