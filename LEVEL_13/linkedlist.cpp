@@ -237,6 +237,11 @@ class LinkedList
         }
     }
 
+    void displayRev() //this public funtion calls the private function displayReverse(Node *node)
+    {
+        displayReverse(head); 
+    }
+  
     void display()
     {
         Node *temp = head;
