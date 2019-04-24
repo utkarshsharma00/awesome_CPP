@@ -246,7 +246,13 @@ class LinkedList
         }
     }
 
-    void reversePointerRecursion(){
+    void reversePointerRecursion()
+    {
+        reversePointerRecursive(head);
+        Node *temp = head;
+        head = tail;
+        tail = temp;
+        tail->next = NULL;
     }
 
     void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
