@@ -45,6 +45,7 @@ class LinkedList
     }
   
     void reversePointerRecursive(Node *node){
+      //yet to be written
     }
 
     void displayReverse(Node *node)
