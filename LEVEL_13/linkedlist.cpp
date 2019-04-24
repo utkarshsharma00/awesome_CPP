@@ -46,7 +46,13 @@ class LinkedList
   
     void displayReverse(Node *node)
     {
+      if (node == NULL)
+        {
+            return;
+        }
       
+        displayReverse(node->next);
+        cout << node->data << " "; //once the node becomes NULL it falls from the stack and then prints the data while falling
     }
 
   public:
