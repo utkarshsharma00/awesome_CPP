@@ -44,8 +44,15 @@ class LinkedList
         return temp;
     }
   
-    void reversePointerRecursive(Node *node){
-      //yet to be written
+    void reversePointerRecursive(Node *node)
+    {
+        if (node->next == NULL)
+        {
+            return;
+        }
+        reversePointerRecursive(node->next);
+        node->next->next = node; // is equal to saying that current->next = previous
+        node->next = NULL;
     }
 
     void displayReverse(Node *node)
