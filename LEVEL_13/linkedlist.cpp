@@ -55,8 +55,12 @@ class LinkedList
         node->next = NULL;
     }
   
-    void reverseDataRecursive(Node *right, int floor){
-    //yet to be written
+    void reverseDataRecursive(Node *right, int floor)
+    {
+      if (right == NULL)
+        {
+            return;
+        }    
     }
 
     void displayReverse(Node *node)
