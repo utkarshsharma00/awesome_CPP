@@ -54,6 +54,10 @@ class LinkedList
         node->next->next = node; // is equal to saying that current->next = previous
         node->next = NULL;
     }
+  
+    void reverseDataRecursive(Node *right, int floor){
+    
+    }
 
     void displayReverse(Node *node)
     {
