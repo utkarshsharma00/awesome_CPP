@@ -317,6 +317,11 @@ class LinkedList
         }
         cout << endl;
     }
+  
+    bool isPalin()
+    {
+      //this will call isPalindrome() fun which is a private member function.
+    }
 };  
 
 int main(int argc,char **argv)
