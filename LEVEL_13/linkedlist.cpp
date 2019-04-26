@@ -61,6 +61,15 @@ class LinkedList
         {
             return;
         }    
+        reverseDataRecursive(right->next, floor + 1);
+        if (floor >= size / 2)
+        {
+            int temp = reverseDataRecursiveLeft->data;
+            reverseDataRecursiveLeft->data = right->data;
+            right->data = temp;
+
+            reverseDataRecursiveLeft = reverseDataRecursiveLeft->next;
+        }
     }
 
     void displayReverse(Node *node)
