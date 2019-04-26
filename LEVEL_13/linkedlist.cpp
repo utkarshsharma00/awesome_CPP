@@ -270,6 +270,11 @@ class LinkedList
             return temp->data;
         }
     }
+  
+    void reverseDataIteratively()
+    {
+        
+    }
 
     void reversePointerRecursion()
     {
