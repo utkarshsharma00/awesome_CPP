@@ -83,16 +83,18 @@ class LinkedList
         cout << node->data << " "; //once the node becomes NULL it falls from the stack and then prints the data while falling
     }
   
-     bool isPalindrome(Node **left, Node *right)
-     {
-        if (right == NULL)
+    bool isPalindrome(Node **left, Node *right)
+    {
+       if (right == NULL)
         {
             return true;
         }
        
-       //yet to be thought
+        bool recursion_result = isPalindrome(left, right->next);
+        bool my_result = recursion_result == true && (*left)->data == right->data;
+        *left = (*left)->next;
+        return my_result;     
      }
-
 
   public:
     LinkedList()
