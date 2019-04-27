@@ -369,7 +369,7 @@ int main(int argc,char **argv)
     ll2->reverseDataRecursion();
     ll2->display();
     ll2->displayRev();
-    ll2->reverseDataPointer(); 
+    ll2->reverseDataPointer();  // yet to be thought off !
     ll2->reversePointerRecursion();
     ll2->addFirst(100);
     ll2->addLast(40);
