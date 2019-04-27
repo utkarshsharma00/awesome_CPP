@@ -320,7 +320,9 @@ class LinkedList
   
     bool isPalin()
     {
-      //this will call isPalindrome() fun which is a private member function.
+        Node *left = head;
+        Node *right = head;
+        isPalindrome(&left, right);    
     }
 };  
 
