@@ -362,7 +362,7 @@ int main(int argc,char **argv)
     ll1->display();
     delete ll1; // deleting the Dynamic Memory (that is memory that we created for our use) is very important otherwise it will lead to memory leak and one can see this in the Task Manager of Windows.
     
-    LinkedList *ll3 = new LinkedList(); //for checking palindrome functions/code
+    LinkedList *ll3 = new LinkedList(); //for checking palindrome function
     ll3->addLast(10);
     ll3->addLast(20);
     ll3->addLast(30);
