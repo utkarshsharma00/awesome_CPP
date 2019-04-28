@@ -286,7 +286,12 @@ class LinkedList
   
     void reverseDataIteratively()
     {
-        
+        for (int low = 0, high = size - 1; low <= high; low++, high--)
+        {
+            Node *last = getNodeAt(high);
+            Node *first = getNodeAt(low);
+            swap(first->data, last->data); //STL library function
+        }
     }
 
     void reversePointerRecursion()
