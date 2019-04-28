@@ -324,6 +324,9 @@ class LinkedList
                 current_forward = current_forward->next;
             }
         }
+      
+      // not working yet
+      
     }
 
 
