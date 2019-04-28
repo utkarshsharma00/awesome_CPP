@@ -74,7 +74,7 @@ class LinkedList
 
     void displayReverse(Node *node)
     {
-      if (node == NULL)
+        if (node == NULL)
         {
             return;
         }
@@ -85,7 +85,7 @@ class LinkedList
   
     bool isPalindrome(Node **left, Node *right)
     {
-       if (right == NULL)
+        if (right == NULL)
         {
             return true;
         }
@@ -314,6 +314,16 @@ class LinkedList
         Node *current = head;
         Node *current_forward = current->next; //node after the current node
         Node *current_backward = NULL;         //node before the cuurent node
+        while (current != NULL)
+        {
+            current->next = current_backward;
+            current_backward = current;
+            current = current_forward;
+            if (current_forward != NULL)
+            {
+                current_forward = current_forward->next;
+            }
+        }
     }
 
 
