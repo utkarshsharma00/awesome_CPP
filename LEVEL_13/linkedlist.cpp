@@ -421,6 +421,19 @@ int main(int argc,char **argv)
     ll3->addLast(40);
     ll3->display();
     delete ll3;
+  
+    LinkedList *ll7 = new LinkedList(); //for OddEven
+    ll7->addLast(2);
+    ll7->addLast(7);
+    ll7->addLast(4);
+    ll7->addLast(9);
+    ll7->addLast(3);
+    ll7->addLast(18);
+    ll7->addLast(6);
+    ll7->addLast(11);
+    ll7->oddeven();
+    ll7->display();
+    delete ll7;
 }
   
   
