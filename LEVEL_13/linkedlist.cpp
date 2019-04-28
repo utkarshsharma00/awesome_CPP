@@ -335,6 +335,15 @@ class LinkedList
       LinkedList newlistE; //list containing even nos
       //yet to be thought off
     }
+  
+    Node *midNode(Node *starting_point, Node *ending_point)
+    {
+        Node *slow_p = starting_point;
+        Node *fast_p = starting_point;
+        //yet to be thought off
+
+    }
+
 
     void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
     {
