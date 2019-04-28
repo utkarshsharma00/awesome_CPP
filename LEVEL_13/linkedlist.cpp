@@ -308,6 +308,14 @@ class LinkedList
         reverseDataRecursiveLeft = head;
         reverseDataRecursive(head, 0);
     }
+  
+    void reverseDataPointer() //iteratively
+    {
+        Node *current = head;
+        Node *current_forward = current->next; //node after the current node
+        Node *current_backward = NULL;         //node before the cuurent node
+    }
+
 
     void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
     {
