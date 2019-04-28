@@ -329,6 +329,12 @@ class LinkedList
       
     }
 
+    void oddeven()
+    {
+      LinkedList newlistO; //list containing odd nos
+      LinkedList newlistE; //list containing even nos
+      //yet to be thought off
+    }
 
     void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
     {
