@@ -89,7 +89,6 @@ class LinkedList
         {
             return true;
         }
-       
         bool recursion_result = isPalindrome(left, right->next);
         bool my_result = recursion_result == true && (*left)->data == right->data;
         *left = (*left)->next;
