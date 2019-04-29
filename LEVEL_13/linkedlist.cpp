@@ -330,6 +330,11 @@ class LinkedList
         tail = temp;      
     }
 
+    void kreverse(int k) //Microsoft Interview Question
+    {
+      //to be thought off
+    }
+
     void oddeven()
     {
       LinkedList newlistO; //list containing odd nos
@@ -349,7 +354,6 @@ class LinkedList
         }
         return slow_p;
     }
-
 
     void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
     {
