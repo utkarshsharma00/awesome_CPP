@@ -325,8 +325,9 @@ class LinkedList
             }
         }
       
-      // not working yet
-      
+        Node *temp = head; // I had forgot to do this !
+        head = tail;
+        tail = temp;      
     }
 
     void oddeven()
