@@ -354,6 +354,12 @@ class LinkedList
         }
         return slow_p;
     }
+  
+    int midelement()
+    {
+        Node *mid = midNode(head, tail);
+        return mid->data;
+    }
 
     void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
     {
