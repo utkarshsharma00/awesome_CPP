@@ -458,6 +458,21 @@ int main(int argc,char **argv)
     ll7->oddeven();
     ll7->display();
     delete ll7;
+  
+    LinkedList *ll9 = new LinkedList(); //for midElement and kthfromlast
+    ll9->addLast(10);
+    ll9->addLast(20);
+    ll9->addLast(30);
+    ll9->addLast(40);
+    ll9->addLast(50);
+    ll9->addLast(60);
+    ll9->addLast(70);
+    ll9->addLast(80);
+    cout << ll9->midelement();
+    cout << "------------------------------" << endl;
+    //cout << ll9->kthfromlast(3); yet to be written
+    //ll9->display();
+    delete ll9;
 }
   
   
