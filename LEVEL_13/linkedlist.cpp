@@ -373,6 +373,11 @@ class LinkedList
       
     }
 
+    void merge2lists(LinkedList &ml1, LinkedList &ml2)
+    {
+        //yet to be thought
+    }
+
   
     void display()
     {
