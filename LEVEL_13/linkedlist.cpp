@@ -365,6 +365,15 @@ class LinkedList
         displayReverse(head); 
     }
   
+    int kthfromlast(int k)
+    {
+        Node *slow = head;
+        Node *fast = head;
+        //yet to be thought
+      
+    }
+
+  
     void display()
     {
         Node *temp = head;
