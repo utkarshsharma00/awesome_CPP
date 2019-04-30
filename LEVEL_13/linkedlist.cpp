@@ -331,7 +331,19 @@ class LinkedList
 
     void kreverse(int k) //Microsoft Interview Question
     {
-      //to be thought off
+        Node *slow = head;
+        Node *fast = head;
+      
+        for (int i = 0; i < k; i++)
+        {
+            fast = fast->next;
+        }
+        while (fast != NULL)
+        {
+            slow = slow->next;
+            fast = fast->next;
+        }
+        return slow->data;    
     }
 
     void oddeven()
