@@ -359,6 +359,11 @@ class LinkedList
         Node *mid = midNode(head, tail);
         return mid->data;
     }
+  
+    void remduplicate()
+    {
+        //yet to be thought
+    }
 
     void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
     {
@@ -378,6 +383,10 @@ class LinkedList
         //yet to be thought
     }
 
+    LinkedList *MergeSort(Node *starting_point, Node *ending_point)
+    { 
+       //yet to be thought
+    } 
   
     void display()
     {
