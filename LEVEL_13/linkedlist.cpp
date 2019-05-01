@@ -113,6 +113,13 @@ class LinkedList
         }
     }  
   
+    void CLEAR(LinkedList *l) //this function is very good, do understand it once
+    {
+        l->head = NULL;
+        l->tail = NULL;
+        l->size = 0;
+    }
+  
     void addFirst(int data)
     {
         if (size == 0)
@@ -374,7 +381,20 @@ class LinkedList
   
     void remduplicate()
     {
-        //yet to be thought
+      LinkedList newlist;
+        while (this->size > 0)
+        {
+            int temp = this->removeFirst();
+            if (newlist.size == 0 || newlist.tail->data != temp)
+            {
+                newlist.addLast(temp);
+            }
+        }
+        this->head = newlist.head;
+        this->tail = newlist.tail;
+        this->size = newlist.size;
+
+        CLEAR(&newlist);
     }
 
     void displayRev() //this public funtion calls the private function displayReverse(Node *node). This had to be done because private members can't be accessed by the objects of the class. Strong OOPS Concept required
