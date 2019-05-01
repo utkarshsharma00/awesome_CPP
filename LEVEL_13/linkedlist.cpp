@@ -552,6 +552,19 @@ int main(int argc,char **argv)
     ll7->display();
     delete ll7;
   
+    LinkedList *ll8 = new LinkedList(); //for kReverse
+    ll8->addLast(2);
+    ll8->addLast(7);
+    ll8->addLast(4);
+    ll8->addLast(9);
+    ll8->addLast(3);
+    ll8->addLast(18);
+    ll8->addLast(6);
+    ll8->addLast(11);
+    ll8->kreverse(3);
+    ll8->display();
+    delete ll8;
+  
     LinkedList *ll9 = new LinkedList(); //for midElement and kthfromlast
     ll9->addLast(10);
     ll9->addLast(20);
