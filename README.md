@@ -2,7 +2,7 @@
 A spectacular way to learn the insights of C++ and Competitive Programming.<br/>
 
 
-LEVEL_1 : Insights of Loops and Conditional statements.<br/>
+LEVEL_0 + LEVEL_1 : Insights of Loops and Conditional statements.<br/>
 LEVEL_2 : Insights of Patterns.<br/>
 LEVEL_3 : Insights of Number Systems.<br/>
 LEVEL_4 : Insights of Bit Manipulation.<br/>
