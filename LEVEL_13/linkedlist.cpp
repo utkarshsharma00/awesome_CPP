@@ -386,7 +386,16 @@ class LinkedList
     {
         Node *slow = head;
         Node *fast = head;
-        //yet to be thought
+        for (int i = 0; i < k; i++)
+        {
+            fast = fast->next;
+        }
+        while (fast != NULL)
+        {
+            slow = slow->next;
+            fast = fast->next;
+        }
+        return slow->data;
       
     }
 
