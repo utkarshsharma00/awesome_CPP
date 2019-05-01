@@ -336,6 +336,11 @@ class LinkedList
         tail = temp;      
     }
 
+    void reverseDataPointer() //iteratively
+    {
+      //yet to be thought off
+    }
+
     void kreverse(int k) //Microsoft Interview Question
     {
         Node *slow = head;
