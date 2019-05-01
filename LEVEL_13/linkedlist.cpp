@@ -357,6 +357,18 @@ class LinkedList
     {
       LinkedList newlistO; //list containing odd nos
       LinkedList newlistE; //list containing even nos
+      while (this->size > 0)
+        {
+            int temp = this->removeFirst();
+            if (temp % 2 == 0)
+            {
+                newlistE.addLast(temp);
+            }
+            else
+            {
+                newlistO.addLast(temp);
+            }
+        }
       //yet to be thought off
     }
   
@@ -381,7 +393,7 @@ class LinkedList
   
     void remduplicate()
     {
-      LinkedList newlist;
+        LinkedList newlist;
         while (this->size > 0)
         {
             int temp = this->removeFirst();
