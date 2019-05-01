@@ -521,6 +521,23 @@ int main(int argc,char **argv)
     ll3->addLast(40);
     ll3->display();
     delete ll3;
+    
+    LinkedList *ll6 = new LinkedList(); //for removeduplicate
+    ll6->addLast(2);
+    ll6->addLast(2);
+    ll6->addLast(2);
+    ll6->addLast(2);
+    ll6->addLast(3);
+    ll6->addLast(3);
+    ll6->addLast(5);
+    ll6->addLast(5);
+    ll6->addLast(5);
+    ll6->addLast(11);
+    ll6->addLast(11);
+    ll6->addLast(11);
+    ll6->remduplicate();
+    ll6->display();
+    delete ll6;
   
     LinkedList *ll7 = new LinkedList(); //for OddEven
     ll7->addLast(2);
