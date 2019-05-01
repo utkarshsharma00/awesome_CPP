@@ -576,8 +576,8 @@ int main(int argc,char **argv)
     ll9->addLast(80);
     cout << ll9->midelement();
     cout << "------------------------------" << endl;
-    //cout << ll9->kthfromlast(3); yet to be written
-    //ll9->display();
+    cout << ll9->kthfromlast(3);
+    ll9->display();
     delete ll9;
 }
   
