@@ -94,6 +94,11 @@ class LinkedList
         *left = (*left)->next;
         return my_result;     
      }
+  
+    void Fold(Node **left, Node *right, int floor)
+    {
+      //yet to be written
+    }
 
   public:
     LinkedList()
