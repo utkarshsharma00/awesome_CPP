@@ -338,6 +338,9 @@ class LinkedList
 
     void reverseDataPointer() //iteratively
     {
+      Node *current = head;
+      Node *current_forward = current->next; //node after the current node
+      Node *current_backward = NULL;         //node before the cuurent node
       //yet to be thought off
     }
 
