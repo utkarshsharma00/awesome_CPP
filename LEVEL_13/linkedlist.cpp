@@ -383,6 +383,12 @@ class LinkedList
             this->tail = newlistE.tail;
             this->size = newlistE.size;
         }
+        else if (newlistE.size == 0) //if all the elements in the list are odd
+        {
+            this->head = newlistO.head;
+            this->tail = newlistO.tail;
+            this->size = newlistO.size;
+        }
       //yet to be thought off
     }
   
