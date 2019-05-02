@@ -564,6 +564,17 @@ int main(int argc,char **argv)
     ll3->addLast(40);
     ll3->display();
     delete ll3;
+  
+    LinkedList *ll4 = new LinkedList(); //for Fold
+    ll4->addLast(10);
+    ll4->addLast(20);
+    ll4->addLast(30);
+    ll4->addLast(40);
+    ll4->addLast(50);
+    ll4->addLast(60);
+    ll4->fold();
+    ll4->display();
+    delete ll4;
     
     LinkedList *ll6 = new LinkedList(); //for removeduplicate
     ll6->addLast(2);
