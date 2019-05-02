@@ -377,6 +377,7 @@ class LinkedList
                 newlistO.addLast(temp);
             }
         }
+      
         if (newlistO.size == 0) //if all the elements in the list are even
         {
             this->head = newlistE.head;
@@ -389,7 +390,16 @@ class LinkedList
             this->tail = newlistO.tail;
             this->size = newlistO.size;
         }
-      //yet to be thought off
+        else //if the elements in the list are even and odd
+        {
+            newlistO.tail->next = newlistE.head;
+            this->head = newlistO.head;
+            this->tail = newlistE.tail;
+            this->size = newlistO.size + newlistE.size;
+        }
+        CLEAR(&newlistO);
+        CLEAR(&newlistE);
+
     }
   
     Node *midNode(Node *starting_point, Node *ending_point)
