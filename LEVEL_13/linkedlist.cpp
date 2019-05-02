@@ -377,6 +377,12 @@ class LinkedList
                 newlistO.addLast(temp);
             }
         }
+        if (newlistO.size == 0) //if all the elements in the list are even
+        {
+            this->head = newlistE.head;
+            this->tail = newlistE.tail;
+            this->size = newlistE.size;
+        }
       //yet to be thought off
     }
   
@@ -441,6 +447,8 @@ class LinkedList
 
     void merge2lists(LinkedList &ml1, LinkedList &ml2)
     {
+        Node *ml1temp = ml1.head;
+        Node *ml2temp = ml2.head;
         //yet to be thought
     }
 
