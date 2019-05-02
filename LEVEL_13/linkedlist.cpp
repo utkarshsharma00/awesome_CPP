@@ -99,6 +99,12 @@ class LinkedList
     {
       //yet to be written
     }
+      
+    void Unfold(Node *temp1)
+    {
+      //yet to be written
+    }
+
 
   public:
     LinkedList()
