@@ -109,6 +109,11 @@ class LinkedList
       //yet to be written
     }
 
+    LinkedList *MergeSort(Node *starting_point, Node *ending_point)
+    {
+       //yet to be written
+    }
+
 
   public:
     LinkedList()
@@ -498,8 +503,7 @@ class LinkedList
 
     LinkedList *MergeSort(Node *starting_point, Node *ending_point)
     { 
-        LinkedList *s1 = MergeSort(this->head, this->tail);
-        return s1;
+        //yet to be written
     } 
   
     void display()
