@@ -352,6 +352,16 @@ class LinkedList
       Node *current = head;
       Node *current_forward = current->next; //node after the current node
       Node *current_backward = NULL;         //node before the cuurent node
+      while (current != NULL)
+        {
+            current->next = current_backward;
+            current_backward = current;
+            current = current_forward;
+            if (current_forward != NULL)
+            {
+                current_forward = current_forward->next;
+            }
+        }
       //yet to be thought off
     }
 
