@@ -349,10 +349,10 @@ class LinkedList
 
     void reverseDataPointer() //iteratively
     {
-      Node *current = head;
-      Node *current_forward = current->next; //node after the current node
-      Node *current_backward = NULL;         //node before the cuurent node
-      while (current != NULL)
+        Node *current = head;
+        Node *current_forward = current->next; //node after the current node
+        Node *current_backward = NULL;         //node before the current node
+        while (current != NULL)
         {
             current->next = current_backward;
             current_backward = current;
@@ -362,7 +362,10 @@ class LinkedList
                 current_forward = current_forward->next;
             }
         }
-      //yet to be thought off
+
+        Node *temp = head;
+        head = tail;
+        tail = temp;
     }
 
     void kreverse(int k) //Microsoft Interview Question
