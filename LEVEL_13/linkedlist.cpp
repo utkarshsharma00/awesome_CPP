@@ -669,6 +669,22 @@ int main(int argc,char **argv)
     cout << ll9->kthfromlast(3);
     ll9->display();
     delete ll9;
+  
+    LinkedList ml1, ml2, ml3; //for merge2lists() //*ml means mergelist
+    ml1.addLast(10);
+    ml1.addLast(20);
+    ml1.addLast(30);
+    ml1.addLast(40);
+
+    ml2.addLast(11);
+    ml2.addLast(22);
+    ml2.addLast(200);
+    ml2.addLast(400);
+
+    //! here ml3 will be automatically passed with the help of 'this'
+
+    ml3.merge2lists(ml1, ml2);
+    ml3.display();
 }
   
   
