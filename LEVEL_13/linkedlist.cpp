@@ -597,6 +597,20 @@ int main(int argc,char **argv)
     ll4->fold();
     ll4->display();
     delete ll4;
+  
+    LinkedList *ll5 = new LinkedList(); //for UnFold
+    ll5->addLast(10);
+    ll5->addLast(70);
+    ll5->addLast(20);
+    ll5->addLast(60);
+    ll5->addLast(30);
+    ll5->addLast(50);
+    ll5->addLast(40);
+    ll5->unfold();
+    ll5->addFirst(-1);
+    ll5->addLast(100);
+    ll5->display();
+    delete ll5;
     
     LinkedList *ll6 = new LinkedList(); //for removeduplicate
     ll6->addLast(2);
