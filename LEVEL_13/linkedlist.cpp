@@ -97,6 +97,10 @@ class LinkedList
   
     void Fold(Node **left, Node *right, int floor)
     {
+        if (right == NULL)
+        {
+            return;
+        }
       //yet to be written
     }
       
