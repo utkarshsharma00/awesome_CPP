@@ -101,7 +101,18 @@ class LinkedList
         {
             return;
         }
-      //yet to be written
+        Fold(left, right->next, floor + 1);
+        if (floor > size / 2)
+        {
+            right->next = (*left)->next;
+            (*left)->next = right;
+            (*left) = right->next;
+        }
+        else if (floor == size / 2)
+        {
+            tail = right;
+            tail->next = NULL;
+        }
     }
       
     void Unfold(Node *temp1)
