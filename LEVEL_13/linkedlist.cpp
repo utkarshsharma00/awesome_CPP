@@ -119,6 +119,11 @@ class LinkedList
     {
       //yet to be written
     }
+  
+    Node *midNode(Node *starting_point, Node *ending_point)
+    {
+      //yet to be written
+    }
 
     LinkedList *MergeSort(Node *starting_point, Node *ending_point)
     {
