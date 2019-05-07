@@ -539,6 +539,13 @@ class LinkedList
         Node *right = head;
         isPalindrome(&left, right);    
     }
+  
+    void fold()
+    {
+        Node *left = head;
+        Node *right = head;
+        Fold(&left, right, 0);
+    }
 };  
 
 int main(int argc,char **argv)
