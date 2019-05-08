@@ -117,6 +117,17 @@ class LinkedList
       
     void Unfold(Node *temp1)
     {
+        if (temp1->next == NULL)
+        {
+            head = tail = temp1;
+            return;
+        }
+        else if (temp1->next->next == NULL)
+        {
+            head = temp1;
+            tail = temp1->next;
+            return;
+        }
       //yet to be written
     }
   
