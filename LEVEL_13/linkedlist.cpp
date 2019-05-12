@@ -539,7 +539,18 @@ class LinkedList
                 ml2temp = ml2temp->next;
             }
         }
-        //yet to be thought
+      
+        while (ml1temp != NULL)
+        {
+            this->addLast(ml1temp->data);
+            ml1temp = ml1temp->next;
+        }
+      
+        while (ml2temp != NULL)
+        {
+            this->addLast(ml2temp->data);
+            ml2temp = ml2temp->next;
+        }
     }
 
     LinkedList *MergeSort(Node *starting_point, Node *ending_point)
