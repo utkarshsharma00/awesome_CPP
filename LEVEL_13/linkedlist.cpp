@@ -555,7 +555,8 @@ class LinkedList
 
     LinkedList *MergeSort(Node *starting_point, Node *ending_point)
     { 
-        //yet to be written
+        LinkedList *s1 = MergeSort(this->head, this->tail);
+        return s1;
     } 
   
     void display()
