@@ -525,6 +525,20 @@ class LinkedList
     {
         Node *ml1temp = ml1.head;
         Node *ml2temp = ml2.head;
+      
+        while (ml1temp != NULL && ml2temp != NULL)
+        {
+            if (ml1temp->data < ml2temp->data)
+            {
+                this->addLast(ml1temp->data);
+                ml1temp = ml1temp->next;
+            }
+            else
+            {
+                this->addLast(ml2temp->data);
+                ml2temp = ml2temp->next;
+            }
+        }
         //yet to be thought
     }
 
