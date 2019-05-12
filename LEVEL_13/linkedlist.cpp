@@ -138,7 +138,13 @@ class LinkedList
 
     LinkedList *MergeSort(Node *starting_point, Node *ending_point)
     {
-       //yet to be written
+        if (ending_point == starting_point)
+        {
+            LinkedList *newlist = new LinkedList();
+            newlist->addLast(starting_point->data);
+            return newlist;
+        } 
+      //yet to be written
     }
 
 
@@ -444,12 +450,14 @@ class LinkedList
             this->tail = newlistE.tail;
             this->size = newlistE.size;
         }
+      
         else if (newlistE.size == 0) //if all the elements in the list are odd
         {
             this->head = newlistO.head;
             this->tail = newlistO.tail;
             this->size = newlistO.size;
         }
+      
         else //if the elements in the list are even and odd
         {
             newlistO.tail->next = newlistE.head;
@@ -457,6 +465,7 @@ class LinkedList
             this->tail = newlistE.tail;
             this->size = newlistO.size + newlistE.size;
         }
+      
         CLEAR(&newlistO);
         CLEAR(&newlistE);
 
