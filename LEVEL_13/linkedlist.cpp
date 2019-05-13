@@ -128,7 +128,15 @@ class LinkedList
             tail = temp1->next;
             return;
         }
-      //yet to be written
+      
+        Node *temp2 = temp1->next;
+        Unfold(temp1->next->next);
+
+        temp1->next = head;
+        head = temp1;
+        tail->next = temp2;
+        tail = temp2;
+        tail->next = NULL;
     }
   
     Node *midNode(Node *starting_point, Node *ending_point)
@@ -144,6 +152,7 @@ class LinkedList
             newlist->addLast(starting_point->data);
             return newlist;
         } 
+      
         Node *mid = midNode(starting_point, ending_point);
         Node *temp = mid->next; //! this needs to be done because otherwise because of the 195th line NULL will be passed in 151 line no.
         mid->next = NULL;
@@ -436,9 +445,9 @@ class LinkedList
 
     void oddeven()
     {
-      LinkedList newlistO; //list containing odd nos
-      LinkedList newlistE; //list containing even nos
-      while (this->size > 0)
+        LinkedList newlistO; //list containing odd nos
+        LinkedList newlistE; //list containing even nos
+        while (this->size > 0)
         {
             int temp = this->removeFirst();
             if (temp % 2 == 0)
