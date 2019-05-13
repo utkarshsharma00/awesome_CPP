@@ -761,6 +761,19 @@ int main(int argc,char **argv)
 
     ml3.merge2lists(ml1, ml2);
     ml3.display();
+  
+    LinkedList *ll10 = new LinkedList(); // for mergesort
+    ll10->addLast(2);
+    ll10->addLast(7);
+    ll10->addLast(4);
+    ll10->addLast(9);
+    ll10->addLast(3);
+    ll10->addLast(18);
+    ll10->addLast(6);
+    ll10->addLast(11);
+
+    LinkedList *ll11 = ll10->mergesort();
+    ll11->display();
 }
   
   
