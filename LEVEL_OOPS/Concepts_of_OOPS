@@ -57,7 +57,7 @@ class study
     //~study(); //* dtor
 };
 
-int study::counter = 1; //! due to the reason in comment on line 26 we had to declare it outside the class.
+int study::counter = 1; //! due to the reason in comment on line 26 I had to declare it outside the class.
 
 inline int Max_of_2(int num1, int num2)
 {
