@@ -144,7 +144,14 @@ class LinkedList
             newlist->addLast(starting_point->data);
             return newlist;
         } 
-      //yet to be written
+        Node *mid = midNode(starting_point, ending_point);
+        Node *temp = mid->next; //! this needs to be done because otherwise because of the 195th line NULL will be passed in 151 line no.
+        mid->next = NULL;
+        LinkedList *left = MergeSort(starting_point, mid);
+        LinkedList *right = MergeSort(temp, ending_point);
+        LinkedList *sorted = new LinkedList();
+        sorted->merge2lists(*left, *right);
+        return sorted;
     }
 
 
