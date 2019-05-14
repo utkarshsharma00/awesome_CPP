@@ -26,6 +26,13 @@ void RemoveLoop(Node *slow, Node *fast)
     prev->next = NULL;
 }
 
+bool Detect(Node *n)
+{
+    bool loop = false;
+    Node *slow = n;
+    Node *fast = n;
+}
+
 void display(Node *n)
 {   
     cout<<endl;
