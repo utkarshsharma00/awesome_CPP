@@ -54,4 +54,18 @@ int main(int argc, char **argv)
     Node *n7 = new Node(7);
     Node *n8 = new Node(8);
     Node *n9 = new Node(9);
+  
+    n1->next = n2;
+    n2->next = n3;
+    n3->next = n4;
+    n4->next = n5;
+    n5->next = n6;
+    n6->next = n7;
+    n7->next = n8;
+    n8->next = n9;
+    n9->next = n5;
+
+    bool result = Detect(n1);
+    cout << result;
+    display(n1);
 } 
