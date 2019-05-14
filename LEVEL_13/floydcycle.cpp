@@ -31,6 +31,8 @@ bool Detect(Node *n)
     bool loop = false;
     Node *slow = n;
     Node *fast = n;
+  
+    //yet to be written
 }
 
 void display(Node *n)
