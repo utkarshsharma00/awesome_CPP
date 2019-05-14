@@ -25,3 +25,13 @@ void RemoveLoop(Node *slow, Node *fast)
     cout << fast->data << endl;
     prev->next = NULL;
 }
+
+void display(Node *n)
+{   
+    cout<<endl;
+    for (Node *temp = n; temp != NULL; temp = temp->next)
+    {
+        cout << temp->data << " ";
+    }
+    cout << endl;
+}
