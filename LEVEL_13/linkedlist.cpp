@@ -141,7 +141,9 @@ class LinkedList
   
     Node *midNode(Node *starting_point, Node *ending_point)
     {
-      //yet to be written
+        Node *slow_p = starting_point;
+        Node *fast_p = starting_point;
+      
     }
 
     LinkedList *MergeSort(Node *starting_point, Node *ending_point)
