@@ -144,6 +144,14 @@ class LinkedList
         Node *slow_p = starting_point;
         Node *fast_p = starting_point;
       
+        while (fast_p != ending_point && fast_p->next != ending_point)
+        {
+            slow_p = slow_p->next;
+            fast_p = fast_p->next->next;
+        }
+      
+        return slow_p;
+      
     }
 
     LinkedList *MergeSort(Node *starting_point, Node *ending_point)
