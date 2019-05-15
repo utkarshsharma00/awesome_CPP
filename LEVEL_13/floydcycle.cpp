@@ -32,7 +32,18 @@ bool Detect(Node *n)
     Node *slow = n;
     Node *fast = n;
   
-    //yet to be written
+    while (fast != NULL && fast->next != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast)
+        {
+            RemoveLoop(n, fast);
+            return true; //* it will return 1 (true)
+        }
+    }
+    return loop; 
 }
 
 void display(Node *n)
