@@ -18,6 +18,10 @@ class Node
 
 Node *construct(vector<int> &datalist)
 {
-  
+  //yet to be written 
 }
 
+void display(Node *root)
+{
+  //yet to be written 
+}
