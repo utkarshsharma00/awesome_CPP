@@ -18,6 +18,8 @@ class Node
 
 Node *construct(vector<int> &datalist)
 {
+  Node *root = NULL;
+  vector<Node *> *newlist = new vector<Node *>();
   //yet to be written 
 }
 
