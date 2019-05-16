@@ -23,6 +23,11 @@ Node *construct(vector<int> &datalist)
   //yet to be written 
 }
 
+int height(Node *root)
+{
+  //yet to be written 
+}
+
 void display(Node *root)
 {
   //yet to be written 
