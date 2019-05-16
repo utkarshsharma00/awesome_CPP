@@ -15,3 +15,9 @@ class Node
         this->data = data;
     }
 };
+
+Node *construct(vector<int> &datalist)
+{
+  
+}
+
