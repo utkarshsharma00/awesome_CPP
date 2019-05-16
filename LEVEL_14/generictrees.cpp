@@ -28,6 +28,11 @@ int height(Node *root)
   //yet to be written 
 }
 
+int sizeoftree(Node *root)
+{
+  //yet to be written 
+}
+
 void display(Node *root)
 {
   //yet to be written 
