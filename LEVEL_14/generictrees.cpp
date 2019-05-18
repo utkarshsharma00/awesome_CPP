@@ -23,6 +23,12 @@ Node *construct(vector<int> &datalist)
   //yet to be written 
 }
 
+int maxintree(Node *root)
+{
+    //yet to be written 
+
+}
+
 int height(Node *root)
 {    
   int virtualheight = 0;
