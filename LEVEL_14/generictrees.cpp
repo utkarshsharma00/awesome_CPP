@@ -20,7 +20,14 @@ Node *construct(vector<int> &datalist)
 {
   Node *root = NULL;
   vector<Node *> *newlist = new vector<Node *>();
-  //yet to be written 
+  for (int i = 0; i < datalist.size(); i++)
+    {
+        if (datalist[i] == -1)
+        {
+            newlist->pop_back();
+        }
+    //yet to be written 
+    return root;
 }
 
 int maxintree(Node *root)
