@@ -26,7 +26,21 @@ Node *construct(vector<int> &datalist)
       {
           newlist->pop_back();
       }
-    //yet to be written 
+      else
+      {
+          Node *newnode = new Node(datalist[i]);
+          if (newlist->size() == 0)
+          {
+              root = newnode;
+          }
+          else
+          {
+              Node *lastNode = newlist->back();
+              lastNode->children.push_back(newnode);
+          }
+          newlist->push_back(newnode);
+        }
+    }
   return root;
 }
 
