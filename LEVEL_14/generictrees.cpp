@@ -25,8 +25,7 @@ Node *construct(vector<int> &datalist)
 
 int maxintree(Node *root)
 {
-    //yet to be written 
-
+  //yet to be written 
 }
 
 int height(Node *root)
@@ -45,13 +44,17 @@ int height(Node *root)
 
 bool findintree(Node *root, int data_to_find)
 {
-    //yet to be written 
-
+  //yet to be written 
 }
 
 int sizeoftree(Node *root)
 {
-  //yet to be written 
+  int count = 0;
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      count += sizeoftree(root->children[i]);
+  }
+  return count + 1; //* +1 because of 10. The for loop above is our faith that 20,30 and 40 will give their sizes 
 }
 
 void display(Node *root)
