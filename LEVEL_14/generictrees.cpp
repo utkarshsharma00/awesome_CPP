@@ -100,5 +100,8 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     vector<int> list{
         10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1, -1};
     Node *root = construct(list);
-
+    display(root);
+    cout << "Size of tree is " << sizeoftree(root) << endl;
+    cout << "Height of tree is " << height(root) << endl;
+    cout << "Max in tree is " << maxintree(root) << endl;
 }
