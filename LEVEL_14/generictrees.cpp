@@ -47,7 +47,15 @@ Node *construct(vector<int> &datalist)
 int maxintree(Node *root)
 {
   int max = root->data;
-  //yet to be written 
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      int fakemax = maxintree(root->children[i]);
+      if (max < fakemax)
+      {
+          max = fakemax;
+      }
+  }
+  return max; 
 }
 
 int height(Node *root)
