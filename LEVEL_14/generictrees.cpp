@@ -46,6 +46,7 @@ Node *construct(vector<int> &datalist)
 
 int maxintree(Node *root)
 {
+  int max = root->data;
   //yet to be written 
 }
 
