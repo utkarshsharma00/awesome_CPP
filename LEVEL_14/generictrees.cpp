@@ -65,7 +65,10 @@ int height(Node *root)
 
 bool findintree(Node *root, int data_to_find)
 {
-  //yet to be written 
+  if (root->data == data_to_find)
+  {
+      return true;
+  }
 }
 
 int sizeoftree(Node *root)
