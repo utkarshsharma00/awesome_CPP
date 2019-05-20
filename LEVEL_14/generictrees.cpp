@@ -99,6 +99,11 @@ int sizeoftree(Node *root)
   return count + 1; //* +1 because of 10. The for loop above is our faith that 20,30 and 40 will give their sizes 
 }
 
+vector<int> *Node2rootPath(Node *root, int data_to_find)
+{
+  //yet to be written
+}
+
 void display(Node *root)
 {
   //yet to be written 
