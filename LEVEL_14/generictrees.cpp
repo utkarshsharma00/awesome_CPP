@@ -78,6 +78,15 @@ bool findintree(Node *root, int data_to_find)
   {
       return true;
   }
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      bool find = findintree(root->children[i], data_to_find);
+      if (find == true)
+      {
+         return true;
+      }
+    }
+   return false;
 }
 
 int sizeoftree(Node *root)
