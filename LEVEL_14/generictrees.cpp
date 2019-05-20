@@ -104,6 +104,11 @@ vector<int> *Node2rootPath(Node *root, int data_to_find)
   //yet to be written
 }
 
+int lowestcommonancestor(Node *root, int data1, int data2)
+{
+  //yet to be written
+}
+
 void display(Node *root)
 {
   //yet to be written 
