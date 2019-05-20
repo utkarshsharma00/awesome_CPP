@@ -114,6 +114,11 @@ void display(Node *root)
   //yet to be written 
 }
 
+int distance(Node *root, int data1, int data2)
+{
+  //yet to be written 
+}
+
 int main(int argc, char **argv) //TODO calling the functions is a tricky task in this code
 {
     vector<int> list{
