@@ -120,6 +120,11 @@ int distance(Node *root, int data1, int data2)
   //yet to be written 
 }
 
+void Mirror(Node *root)
+{
+  //yet to be written 
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
