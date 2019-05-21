@@ -101,6 +101,12 @@ int sizeoftree(Node *root)
 
 vector<int> *Node2rootPath(Node *root, int data_to_find)
 {
+  if (root->data == data_to_find)
+  {
+      vector<int> *baseresult = new vector<int>();
+      baseresult->push_back(data_to_find);
+      return baseresult;
+  }
   //yet to be written
 }
 
