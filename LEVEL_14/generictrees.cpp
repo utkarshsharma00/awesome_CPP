@@ -115,13 +115,18 @@ int lowestcommonancestor(Node *root, int data1, int data2)
   //yet to be written
 }
 
-void display(Node *root)
+int distance(Node *root, int data1, int data2)
 {
   //yet to be written 
 }
 
-int distance(Node *root, int data1, int data2)
+void display(Node *root)
 {
+  cout << root->data << "->";
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      cout << root->children[i]->data << " ";
+  }
   //yet to be written 
 }
 
