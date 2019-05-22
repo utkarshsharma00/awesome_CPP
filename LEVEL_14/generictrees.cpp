@@ -125,6 +125,11 @@ void Mirror(Node *root)
   //yet to be written 
 }
 
+Node *linearize(Node *root) //O(n) complexity
+{
+  //yet to be written 
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
