@@ -107,7 +107,16 @@ vector<int> *Node2rootPath(Node *root, int data_to_find)
       baseresult->push_back(data_to_find);
       return baseresult;
   }
-  //yet to be written
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      vector<int> *fakeresult = Node2rootPath(root->children[i], data_to_find); //! another easy way of "for(Node* child:root->children)"
+      if (fakeresult != NULL)
+      {
+          fakeresult->push_back(root->data);
+          return fakeresult;
+      }
+  }
+  return NULL;
 }
 
 int lowestcommonancestor(Node *root, int data1, int data2)
