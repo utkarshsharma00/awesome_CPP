@@ -121,6 +121,12 @@ vector<int> *Node2rootPath(Node *root, int data_to_find)
 
 int lowestcommonancestor(Node *root, int data1, int data2)
 {
+  vector<int> *path1 = Node2rootPath(root, data1);
+  vector<int> *path2 = Node2rootPath(root, data2);
+
+  int i = path1->size() - 1;
+  int j = path2->size() - 1;
+
   //yet to be written
 }
 
