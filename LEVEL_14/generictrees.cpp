@@ -144,7 +144,16 @@ int distance(Node *root, int data1, int data2)
 
 void Mirror(Node *root)
 {
-  //yet to be written 
+  if (root == NULL)
+  {
+      return;
+  }
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      Mirror(root->children[i]);
+  }
+  
+  //yet to be written
 }
 
 Node *linearize(Node *root) //O(n) complexity
