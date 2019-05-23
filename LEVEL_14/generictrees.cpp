@@ -158,6 +158,13 @@ void Mirror(Node *root)
 
 Node *linearize(Node *root) //O(n) complexity
 {
+  if (root->children.size() == 0)
+  {
+      return root;
+  }
+  Node *original_last = root->children.back();
+  Node *original_last_tail = linearize(original_last);
+
   //yet to be written 
 }
 
