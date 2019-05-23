@@ -126,8 +126,15 @@ int lowestcommonancestor(Node *root, int data1, int data2)
 
   int i = path1->size() - 1;
   int j = path2->size() - 1;
-
-  //yet to be written
+  
+  int previous = (*path1)[i]; //* can also be done as path1->at(i)
+  while (i >= 0 && j >= 0 && path1->at(i) == path2->at(j))
+  {
+      previous = (*path1)[i];
+      i--;
+      j--;
+  }
+  return previous;
 }
 
 int distance(Node *root, int data1, int data2)
