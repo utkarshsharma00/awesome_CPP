@@ -184,7 +184,15 @@ bool areSimilarStructure(Node *node1, Node *node2)
   {
       return false;
   }
-  //yet to be written 
+  for (int i = 0; i < node1->children.size(); i++)
+    {
+        bool checker = areSimilarStructure(node1->children[i], node2->children[i]);
+        if (checker == false)
+        {
+            return false;
+        }
+    }
+    return true;
 }
 
 void display(Node *root)
