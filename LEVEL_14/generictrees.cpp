@@ -165,17 +165,17 @@ Node *linearize(Node *root) //O(n) complexity
   Node *original_last = root->children.back();
   Node *original_last_tail = linearize(original_last);
 
-    while (root->children.size() > 1)
-    {
-        Node *second_last = root->children[root->children.size() - 2];
-        Node *second_last_tail = linearize(second_last);
+  while (root->children.size() > 1)
+  {
+      Node *second_last = root->children[root->children.size() - 2];
+      Node *second_last_tail = linearize(second_last);
 
-        Node *last = root->children[root->children.size() - 1];
-        root->children.pop_back();
+      Node *last = root->children[root->children.size() - 1];
+      root->children.pop_back();
 
-        second_last_tail->children.push_back(last);
-    }
-      return original_last_tail;
+      second_last_tail->children.push_back(last);
+  }
+  return original_last_tail;
 }
 
 bool areSimilarStructure(Node *node1, Node *node2)
@@ -185,14 +185,14 @@ bool areSimilarStructure(Node *node1, Node *node2)
       return false;
   }
   for (int i = 0; i < node1->children.size(); i++)
-    {
-        bool checker = areSimilarStructure(node1->children[i], node2->children[i]);
-        if (checker == false)
-        {
-            return false;
-        }
-    }
-    return true;
+  {
+      bool checker = areSimilarStructure(node1->children[i], node2->children[i]);
+      if (checker == false)
+      {
+          return false;
+      }
+  }
+  return true;
 }
 
 void display(Node *root)
