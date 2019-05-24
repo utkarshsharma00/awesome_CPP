@@ -175,7 +175,7 @@ Node *linearize(Node *root) //O(n) complexity
 
         second_last_tail->children.push_back(last);
     }
-  //yet to be written 
+      return original_last_tail;
 }
 
 bool areSimilarStructure(Node *node1, Node *node2)
