@@ -208,6 +208,11 @@ bool areSimilarStructure(Node *node1, Node *node2)
   return true;
 }
 
+bool areMirrorSimilar(Node *node1, Node *node2)
+{
+  //yet to be written
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
