@@ -152,8 +152,19 @@ void Mirror(Node *root)
   {
       Mirror(root->children[i]);
   }
-  
-  //yet to be written
+  int left = 0;
+  int right = root->children.size() - 1;
+  while (left < right)
+  {
+      Node *leftNode = root->children[left];
+      Node *rightNode = root->children[right];
+
+      root->children[left] = rightNode;
+      root->children[right] = leftNode;
+
+      left++;
+      right--;
+  }
 }
 
 Node *linearize(Node *root) //O(n) complexity
