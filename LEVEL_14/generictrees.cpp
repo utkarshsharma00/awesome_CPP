@@ -218,6 +218,11 @@ bool isSymetric(Node *root)
   //yet to be written
 }
 
+void MultiSolver(Node *root, int depth, int &MAX, int &MIN, int &Size_of_tree, int &Height, int &Ceil, int &Floor, int data)
+{
+  //yet to be written
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
