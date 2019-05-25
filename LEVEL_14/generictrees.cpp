@@ -141,7 +141,15 @@ int distance(Node *root, int data1, int data2)
 {
   vector<int> *path1 = Node2rootPath(root, data1);
   vector<int> *path2 = Node2rootPath(root, data2);
-  //yet to be written 
+  
+  int i = path1->size() - 1;
+  int j = path2->size() - 1;
+  while (i >= 0 && j >= 0 && path1->at(i) == path2->at(j))
+  {
+      i--;
+      j--;
+  }
+  return (i + 1) + (j + 1) + 1;
 }
 
 void Mirror(Node *root)
