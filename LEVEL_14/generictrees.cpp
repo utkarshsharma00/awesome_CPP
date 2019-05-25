@@ -219,7 +219,7 @@ bool areMirrorSimilar(Node *node1, Node *node2)
 
 bool isSymetric(Node *root)
 {
-  //yet to be written
+  return areMirrorSimilar(root, root);
 }
 
 void MultiSolver(Node *root, int depth, int &MAX, int &MIN, int &Size_of_tree, int &Height, int &Ceil, int &Floor, int data)
