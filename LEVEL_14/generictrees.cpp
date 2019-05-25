@@ -210,6 +210,10 @@ bool areSimilarStructure(Node *node1, Node *node2)
 
 bool areMirrorSimilar(Node *node1, Node *node2)
 {
+  if (node1->children.size() != node2->children.size())
+  {
+      return false;
+  }
   //yet to be written
 }
 
