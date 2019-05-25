@@ -139,6 +139,8 @@ int lowestcommonancestor(Node *root, int data1, int data2)
 
 int distance(Node *root, int data1, int data2)
 {
+  vector<int> *path1 = Node2rootPath(root, data1);
+  vector<int> *path2 = Node2rootPath(root, data2);
   //yet to be written 
 }
 
