@@ -213,6 +213,11 @@ bool areMirrorSimilar(Node *node1, Node *node2)
   //yet to be written
 }
 
+bool isSymetric(Node *root)
+{
+  //yet to be written
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
