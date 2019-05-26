@@ -232,6 +232,10 @@ bool isSymetric(Node *root)
 
 void MultiSolver(Node *root, int depth, int &MAX, int &MIN, int &Size_of_tree, int &Height, int &Ceil, int &Floor, int data)
 {
+  Size_of_tree++;
+  Height = depth > Height ? depth : Height;
+  MAX = root->data > MAX ? root->data : MAX;
+  MIN = root->data < MIN ? root->data : MIN;
   //yet to be written
 }
 
