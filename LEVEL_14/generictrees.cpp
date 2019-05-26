@@ -222,7 +222,15 @@ bool areMirrorSimilar(Node *node1, Node *node2)
   {
       return false;
   }
-  //yet to be written
+  for (int i = 0; i < node1->children.size(); i++)
+  {
+      bool checker = areMirrorSimilar(node1->children[i], node2->children[node2->children.size() - 1 - i]);
+      if (checker == false)
+      {
+          return false;
+      }
+  }
+  return true;
 }
 
 bool isSymetric(Node *root)
