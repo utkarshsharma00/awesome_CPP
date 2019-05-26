@@ -257,6 +257,11 @@ void MultiSolver(Node *root, int depth, int &MAX, int &MIN, int &Size_of_tree, i
   //yet to be written
 }
 
+void Predecessor_Successor(Node *root, int &predecessor, int &successor, int &state, int data) //* 1st way
+{
+  //yet to be written
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
