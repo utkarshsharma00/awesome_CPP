@@ -244,6 +244,16 @@ void MultiSolver(Node *root, int depth, int &MAX, int &MIN, int &Size_of_tree, i
   Height = depth > Height ? depth : Height;
   MAX = root->data > MAX ? root->data : MAX;
   MIN = root->data < MIN ? root->data : MIN;
+  
+  if (root->data > data)
+  {
+      Ceil = min(root->data, Ceil);
+  }
+
+  if (root->data < data)
+  {
+      Floor = max(root->data, Floor);
+  }
   //yet to be written
 }
 
