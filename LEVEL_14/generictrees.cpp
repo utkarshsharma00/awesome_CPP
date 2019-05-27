@@ -305,4 +305,26 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     cout << "Size of tree is " << sizeoftree(root) << endl;
     cout << "Height of tree is " << height(root) << endl;
     cout << "Max in tree is " << maxintree(root) << endl;
+    cout << "Find in tree 0/1 \n"<< findintree(root, 900) << endl; //* Test other cases as well
+
+    cout << "Node to root path is \n";
+    vector<int> *myresult = Node2rootPath(root, 50);
+    for (int i = 0; i < myresult->size(); i++)
+    {
+       cout << (*myresult)[i] << " ";
+    }
+    cout << endl;
+
+    cout << "Least common ancestor is " << lowestcommonancestor(root, 70, 120);
+    cout << endl;
+    cout << "Distance between the 2 nodes is " << distance(root, 70, 120);
+    cout << "----------------------" << endl;
+
+    cout << "Mirror display is " << endl;
+    //Mirror(root); //TODO uncomment this for running the mirror function.
+    display(root);
+    display(root2);
+    cout << "Linearizing the tree " << endl;
+    linearize(root);
+    display(root);
 }
