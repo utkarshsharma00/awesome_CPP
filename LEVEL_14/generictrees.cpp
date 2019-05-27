@@ -262,6 +262,17 @@ void MultiSolver(Node *root, int depth, int &MAX, int &MIN, int &Size_of_tree, i
 
 void Predecessor_Successor(Node *root, int &predecessor, int &successor, int &state, int data) //* 1st way
 {
+  if (state == 0)
+  {
+      if (root->data != data)
+      {
+          predecessor = root->data;
+      }
+      else
+      {
+          state++;
+      }
+  }
   //yet to be written
 }
 
