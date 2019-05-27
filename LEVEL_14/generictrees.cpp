@@ -276,6 +276,11 @@ void Predecessor_Successor(Node *root, int &predecessor, int &successor, int &st
   //yet to be written
 }
 
+void predecessor_successor_way2(Node *root, int &pred, int &succ, int &prev, int &curr, int data)
+{  
+  //yet to be written
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
