@@ -281,6 +281,11 @@ void predecessor_successor_way2(Node *root, int &pred, int &succ, int &prev, int
   //yet to be written
 }
 
+int kthSmallest(Node *root, int k)
+{
+  //yet to be written  
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
