@@ -300,6 +300,25 @@ int kthSmallest(Node *root, int k)
   return result;
 }
 
+int kthLargest(Node *root, int k)
+{
+  int result = INT_MAX;
+
+  for (int i = 0; i < k; i++)
+  {
+      int Size = 0;
+      int height = 0;
+      int mn = INT_MAX; //minimum = mn
+      int mx = INT_MIN; // maximum = mx
+      int Ceil = INT_MAX;
+      int Floor = INT_MIN;
+
+      MultiSolver(root, 0, mx, mn, Size, height, Ceil, Floor, result);
+      result = Floor;
+  }
+  return result;
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
