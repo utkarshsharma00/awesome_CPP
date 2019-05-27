@@ -254,7 +254,10 @@ void MultiSolver(Node *root, int depth, int &MAX, int &MIN, int &Size_of_tree, i
   {
       Floor = max(root->data, Floor);
   }
-  //yet to be written
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      MultiSolver(root->children[i], depth + 1, MAX, MIN, Size_of_tree, Height, Ceil, Floor, data);
+  }
 }
 
 void Predecessor_Successor(Node *root, int &predecessor, int &successor, int &state, int data) //* 1st way
