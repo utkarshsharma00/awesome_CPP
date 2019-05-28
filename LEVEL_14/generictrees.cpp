@@ -334,6 +334,16 @@ int kthLargest(Node *root, int k)
   return result;
 }
 
+void LevelOrder(Node *root) //* #include<list> has to be included
+{
+  //yet to be written
+}
+
+void LevelOrderLineByLine(Node *root)
+{
+  //yet to be written
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
