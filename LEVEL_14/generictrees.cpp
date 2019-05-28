@@ -415,4 +415,15 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     int MAX = INT_MIN;
     int Ceil = 1000000000;
     int Floor = -100000000;
+  
+    display(root);
+    MultiSolver(root, 0, MAX, MIN, size, height, Ceil, Floor, 10);
+    if (Ceil == 1000000000)
+    {
+        Ceil = 1; //*this is done for handling the edge case, told by sir. Otherwise no need of doing these both if conditions for Ceil and Floor
+    }
+    if (Floor == -100000000)
+    {
+        Floor = -1;
+    }
 }
