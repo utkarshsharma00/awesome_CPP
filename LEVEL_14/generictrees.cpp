@@ -408,6 +408,11 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     cout << "Foldable ? " << endl;
     cout << isSymetric(root);
   
-    
-
+    cout << "MultiSolver funtion " << endl;
+    int size = 0;
+    int height = 0;
+    int MIN = INT_MAX;
+    int MAX = INT_MIN;
+    int Ceil = 1000000000;
+    int Floor = -100000000;
 }
