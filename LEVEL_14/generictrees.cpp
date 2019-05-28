@@ -286,7 +286,13 @@ void Predecessor_Successor(Node *root, int &predecessor, int &successor, int &st
 }
 
 void predecessor_successor_way2(Node *root, int &pred, int &succ, int &prev, int &curr, int data)
-{  
+{
+  prev = curr;
+  curr = root->data;
+  if (curr == data)
+  {
+      pred = prev;
+  }
   //yet to be written
 }
 
