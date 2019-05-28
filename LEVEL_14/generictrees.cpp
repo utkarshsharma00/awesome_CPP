@@ -293,7 +293,14 @@ void predecessor_successor_way2(Node *root, int &pred, int &succ, int &prev, int
   {
       pred = prev;
   }
-  //yet to be written
+  else if (prev == data)
+  {
+      succ = curr;
+  }
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      predecessor_successor_way2(root->children[i], pred, succ, prev, curr, data);
+  }
 }
 
 int kthSmallest(Node *root, int k)
@@ -340,6 +347,11 @@ void LevelOrder(Node *root) //* #include<list> has to be included
 }
 
 void LevelOrderLineByLine(Node *root)
+{
+  //yet to be written
+}
+
+void LevelOrderZigZag(Node *root)
 {
   //yet to be written
 }
