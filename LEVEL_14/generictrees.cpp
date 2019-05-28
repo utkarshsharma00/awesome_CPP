@@ -273,7 +273,16 @@ void Predecessor_Successor(Node *root, int &predecessor, int &successor, int &st
           state++;
       }
   }
-  //yet to be written
+  else if (state == 1)
+  {
+      successor = root->data;
+      state++;
+  }
+  
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      Predecessor_Successor(root->children[i], predecessor, successor, state, data);
+  }
 }
 
 void predecessor_successor_way2(Node *root, int &pred, int &succ, int &prev, int &curr, int data)
