@@ -397,4 +397,17 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     cout << "Linearizing the tree " << endl;
     linearize(root);
     display(root);
+  
+    cout << "Are similar structure? " << endl;
+    cout << areSimilarStructure(root, root2) << endl;
+
+    cout << "Are Mirror Similar? " << endl;
+    Mirror(root);
+    cout << areMirrorSimilar(root, root3) << endl;
+
+    cout << "Foldable ? " << endl;
+    cout << isSymetric(root);
+  
+    
+
 }
