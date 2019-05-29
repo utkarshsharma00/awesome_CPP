@@ -355,6 +355,8 @@ void LevelOrderLineByLine(Node *root)
 
 void LevelOrderZigZag(Node *root)
 {
+  list<Node *> *current_queue = new list<Node *>();
+  list<Node *> *next_queue = new list<Node *>();
   //yet to be written
 }
 
