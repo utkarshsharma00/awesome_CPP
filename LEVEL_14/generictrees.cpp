@@ -343,20 +343,23 @@ int kthLargest(Node *root, int k)
 
 void LevelOrder(Node *root) //* #include<list> has to be included
 {
+  list<Node *> queue;
+  queue.push_back(root);
   //yet to be written
 }
 
 void LevelOrderLineByLine(Node *root)
 {
-  list<Node *> queue;
-  queue.push_back(root);
+  list<Node *> *current_queue = new list<Node *>();
+  list<Node *> *next_queue = new list<Node *>();
   //yet to be written
 }
 
 void LevelOrderZigZag(Node *root)
 {
   list<Node *> *current_queue = new list<Node *>();
-  list<Node *> *next_queue = new list<Node *>();
+  list<Node *> *new_stack = new list<Node *>();
+  bool left_to_right = true;
   //yet to be written
 }
 
