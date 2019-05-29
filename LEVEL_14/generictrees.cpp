@@ -348,6 +348,8 @@ void LevelOrder(Node *root) //* #include<list> has to be included
 
 void LevelOrderLineByLine(Node *root)
 {
+  list<Node *> queue;
+  queue.push_back(root);
   //yet to be written
 }
 
