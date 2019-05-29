@@ -345,7 +345,18 @@ void LevelOrder(Node *root) //* #include<list> has to be included
 {
   list<Node *> queue;
   queue.push_back(root);
-  //yet to be written
+  while (queue.size() > 0)
+  {
+      Node *front = queue.front();
+      queue.pop_front();
+      cout << front->data << " ";
+
+      for (int i = 0; i < front->children.size(); i++)
+      {
+          queue.push_back(front->children[i]);
+      }
+  }
+  cout << endl;
 }
 
 void LevelOrderLineByLine(Node *root)
