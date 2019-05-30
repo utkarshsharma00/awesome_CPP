@@ -383,6 +383,13 @@ void LevelOrderZigZag(Node *root)
   list<Node *> *current_queue = new list<Node *>();
   list<Node *> *new_stack = new list<Node *>();
   bool left_to_right = true;
+  current_queue->push_back(root);
+  while (current_queue->size() > 0)
+  {
+      Node *front = current_queue->front();
+      current_queue->pop_front();
+      cout << front->data << " ";
+  }
   //yet to be written
 }
 
