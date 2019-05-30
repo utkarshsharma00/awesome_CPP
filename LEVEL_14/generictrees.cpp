@@ -393,6 +393,11 @@ void LevelOrderZigZag(Node *root)
   //yet to be written
 }
 
+void Euler(Node *root) //this uses EulerHelper Class
+{
+  //yet to be written
+}
+
 void display(Node *root)
 {
   cout << root->data << "->";
