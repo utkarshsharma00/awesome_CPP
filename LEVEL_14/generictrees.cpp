@@ -16,6 +16,19 @@ class Node
     }
 };
 
+
+class EulerHelper
+{
+public:
+  Node *root;
+  int state;
+  EulerHelper(Node *root, int state)
+  {
+      this->root = root;
+      this->state = state;
+  }
+};
+
 Node *construct(vector<int> &datalist)
 {
   Node *root = NULL;
