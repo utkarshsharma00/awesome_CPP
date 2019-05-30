@@ -363,6 +363,18 @@ void LevelOrderLineByLine(Node *root)
 {
   list<Node *> *current_queue = new list<Node *>();
   list<Node *> *next_queue = new list<Node *>();
+  current_queue->push_back(root);
+  while (current_queue->size() > 0)
+  {
+      Node *front = current_queue->front();
+      current_queue->pop_front();
+      cout << front->data << " ";
+
+      for (int i = 0; i < front->children.size(); i++)
+      {
+          next_queue->push_back(front->children[i]);
+      }
+  }
   //yet to be written
 }
 
