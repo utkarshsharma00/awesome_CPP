@@ -418,6 +418,14 @@ void LevelOrderZigZag(Node *root)
               new_stack->push_front(front->children[i]); //* dont do push_back() , its a stack !
           }
       }
+    
+      else
+      {
+          for (int i = front->children.size() - 1; i >= 0; i--)
+          {
+              new_stack->push_front(front->children[i]); //* dont do push_back() , its a stack !
+          }
+      }
   }
   //yet to be written
 }
