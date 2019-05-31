@@ -387,8 +387,17 @@ void LevelOrderLineByLine(Node *root)
       {
           next_queue->push_back(front->children[i]);
       }
-  }
-  //yet to be written
+      if (current_queue->size() == 0)
+      {
+          delete current_queue;
+          current_queue = next_queue;
+          next_queue = new list<Node *>();
+          cout << endl;
+      }
+   }
+
+   delete current_queue;
+   delete next_queue;
 }
 
 void LevelOrderZigZag(Node *root)
