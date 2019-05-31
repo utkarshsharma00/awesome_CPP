@@ -411,6 +411,13 @@ void LevelOrderZigZag(Node *root)
       Node *front = current_queue->front();
       current_queue->pop_front();
       cout << front->data << " ";
+      if (left_to_right)
+      {
+          for (int i = 0; i < front->children.size(); i++)
+          {
+              new_stack->push_front(front->children[i]); //* dont do push_back() , its a stack !
+          }
+      }
   }
   //yet to be written
 }
