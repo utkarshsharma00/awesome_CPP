@@ -534,5 +534,12 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     cout << "MIN = " << MIN << endl;
     cout << "Ceil = " << Ceil << endl;
     cout << "Floor = " << Floor << endl;
+  
+    cout << "Predecessor and Successor" << endl;
+    int predecessor = -1;
+    int successor = -1;
+    int state = 0;
+    Predecessor_Successor(root, predecessor, successor, state, 60);
+    cout << predecessor << " & " << successor << " & " << state;
 
 }
