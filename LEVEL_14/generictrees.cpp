@@ -426,8 +426,18 @@ void LevelOrderZigZag(Node *root)
               new_stack->push_front(front->children[i]); //* dont do push_back() , its a stack !
           }
       }
+    
+      if (current_queue->size() == 0)
+      {
+          delete current_queue;
+          current_queue = new_stack;
+          new_stack = new list<Node *>();
+          left_to_right = !left_to_right; //had to be toggled not !=
+          cout << endl;
+      }
   }
-  //yet to be written
+  delete current_queue;
+  delete new_stack;
 }
 
 void Euler(Node *root) //this uses EulerHelper Class
