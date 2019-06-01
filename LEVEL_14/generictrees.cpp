@@ -432,6 +432,19 @@ void LevelOrderZigZag(Node *root)
 
 void Euler(Node *root) //this uses EulerHelper Class
 {
+  list<EulerHelper *> stack;
+  EulerHelper *rootHelper = new EulerHelper(root, 0);
+  stack.push_front(rootHelper);
+
+  while (stack.size() > 0)
+  {
+      EulerHelper *topHelper = stack.front();
+      if (topHelper->state == 0)
+      {
+          cout << topHelper->root->data << " Pre" << endl;
+          topHelper->state++;
+      }
+   }
   //yet to be written
 }
 
