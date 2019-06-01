@@ -528,4 +528,11 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     {
         Floor = -1;
     }
+    cout << "Size = " << size << endl;
+    cout << "Height = " << height << endl;
+    cout << "MAX = " << MAX << endl;
+    cout << "MIN = " << MIN << endl;
+    cout << "Ceil = " << Ceil << endl;
+    cout << "Floor = " << Floor << endl;
+
 }
