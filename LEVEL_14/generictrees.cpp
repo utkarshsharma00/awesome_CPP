@@ -465,7 +465,11 @@ void display(Node *root)
   {
       cout << root->children[i]->data << " ";
   }
-  //yet to be written 
+  cout << " . " << endl;
+  for (int i = 0; i < root->children.size(); i++)
+  {
+      display(root->children[i]);
+  }
 }
 
 int main(int argc, char **argv) //TODO calling the functions is a tricky task in this code
