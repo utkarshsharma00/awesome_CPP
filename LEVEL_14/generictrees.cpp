@@ -454,6 +454,16 @@ void Euler(Node *root) //this uses EulerHelper Class
           cout << topHelper->root->data << " Pre" << endl;
           topHelper->state++;
       }
+      else if (topHelper->state >= 1 && topHelper->state <= topHelper->root->children.size())
+      {
+          EulerHelper *childHelper = new EulerHelper(topHelper->root->children[topHelper->state - 1], 0);
+          stack.push_front(childHelper);
+          if (topHelper->state >= 2)
+          {
+              cout << topHelper->root->data << " In" << topHelper->state - 1 << endl;
+          }
+          topHelper->state++;
+      }
    }
   //yet to be written
 }
