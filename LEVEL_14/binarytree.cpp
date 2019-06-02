@@ -29,3 +29,8 @@ Node *constructgood1(vector<int> &preorder, vector<int> &inorder, int preoLow, i
 {
     //yet to be written
 }
+
+Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow, int postoHigh, int inoLow, int inoHigh)
+{
+    //yet to be written
+}
