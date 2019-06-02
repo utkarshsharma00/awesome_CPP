@@ -541,5 +541,12 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     int state = 0;
     Predecessor_Successor(root, predecessor, successor, state, 60);
     cout << predecessor << " & " << successor << " & " << state;
-
+    
+    cout << "\nPredecessor and Successor WAY 2" << endl;
+    int pred = -1;
+    int succ = -1;
+    int current = 0;
+    int previous = 0;
+    predecessor_successor_way2(root, pred, succ, previous, current, 60);
+    cout << pred << " & " << succ << endl;
 }
