@@ -549,4 +549,10 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     int previous = 0;
     predecessor_successor_way2(root, pred, succ, previous, current, 60);
     cout << pred << " & " << succ << endl;
+  
+    cout << "kth Largest is " << kthLargest(root, 3) << endl;
+    cout << "kth Smallest is " << kthSmallest(root, 2) << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
 }
