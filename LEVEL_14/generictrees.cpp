@@ -555,4 +555,15 @@ int main(int argc, char **argv) //TODO calling the functions is a tricky task in
     cout << endl;
     cout << endl;
     cout << endl;
+  
+    cout << "--------------------------------TRAVERSALS-----------------------------------" << endl;
+    cout << "BFS " << endl;
+    LevelOrder(root);
+    cout << endl;
+    cout << "Line By Line" << endl;
+    LevelOrderLineByLine(root);
+    cout << endl;
+    cout << "ZIG ZAG" << endl;
+    LevelOrderZigZag(root);
+    cout << endl;
 }
