@@ -30,6 +30,14 @@ Node *construct(vector<int> &datalist)
         {
             newlist.pop_back();
         }
+        else
+        {
+            Node *newnode = new Node(datalist[i]);
+            if (newlist.size() == 0)
+            {
+                root = newnode;
+                // cout << "oka1";
+            }
     }
     //yet to be written
 }
