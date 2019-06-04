@@ -47,8 +47,16 @@ Node *construct(vector<int> &datalist)
                     top_of_stack->left = newnode;
                     // cout << "oka2";
                 }
+                else
+                {
+                    top_of_stack->right = newnode;
+                }
+                // cout << "oka3";
+            }
+            newlist.push_back(newnode);
+        }
     }
-    //yet to be written
+    return (root);
 }
 
 Node *constructgood1(vector<int> &preorder, vector<int> &inorder, int preoLow, int preoHigh, int inoLow, int inoHigh) //ino means inorder and preo means preorder
