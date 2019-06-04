@@ -38,6 +38,15 @@ Node *construct(vector<int> &datalist)
                 root = newnode;
                 // cout << "oka1";
             }
+            else
+            {
+                //cout << "ok0";
+                Node *top_of_stack = newlist.back();
+                if (top_of_stack->left == NULL)
+                {
+                    top_of_stack->left = newnode;
+                    // cout << "oka2";
+                }
     }
     //yet to be written
 }
