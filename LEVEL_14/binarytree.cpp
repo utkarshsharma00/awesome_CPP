@@ -68,3 +68,10 @@ Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow,
 {
     //yet to be written
 }
+
+int main(int argc, char **argv)
+{
+    vector<int> list{
+        50, 25, 12, -1, 37, 30, -1, 40, -1, -1, -1, 75, 62, 60, -1, 70, -1, -1, 87, -1, -1, -1};
+    Node *root = construct(list);
+}
