@@ -69,6 +69,11 @@ Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow,
     //yet to be written
 }
 
+display(Node *root)
+{
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
     vector<int> list{
