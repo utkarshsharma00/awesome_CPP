@@ -82,6 +82,11 @@ display(Node *root)
         cout << root->left->data << "<-" << root->data << "." << endl;
         display(root->left);
     }
+    else if (root->right != NULL)
+    {
+        cout << "." << root->data << "->" << root->right->data << endl;
+        display(root->right);
+    }
     //yet to be written
 }
 
