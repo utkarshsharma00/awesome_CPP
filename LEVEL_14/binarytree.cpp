@@ -87,7 +87,10 @@ display(Node *root)
         cout << "." << root->data << "->" << root->right->data << endl;
         display(root->right);
     }
-    //yet to be written
+    else
+    {
+        cout << "." << root->data << "." << endl;
+    }
 }
 
 int main(int argc, char **argv)
