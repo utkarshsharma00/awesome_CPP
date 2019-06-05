@@ -71,6 +71,12 @@ Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow,
 
 display(Node *root)
 {
+    if (root->left != NULL && root->right != NULL)
+    {
+        cout << root->left->data << "<-" << root->data << "->" << root->right->data << endl;
+        display(root->left);
+        display(root->right);
+    }
     //yet to be written
 }
 
