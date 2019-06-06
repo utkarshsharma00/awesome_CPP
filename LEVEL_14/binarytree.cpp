@@ -76,7 +76,17 @@ int maxintree(Node *root)
         return -1;
     }
     
-    return max(height(root->left), height(root->right)) + 1;
+    return max(max(maxintree(root->left), maxintree(root->right)), root->data);
+}
+
+int height(Node *root)
+{
+    if (root == NULL)
+    {
+        return -1;
+    }
+    
+     return max(height(root->left), height(root->right)) + 1;
 }
 
 display(Node *root)
