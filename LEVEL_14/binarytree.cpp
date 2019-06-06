@@ -89,6 +89,20 @@ int height(Node *root)
      return max(height(root->left), height(root->right)) + 1;
 }
 
+bool Find(Node *root, int data)
+{
+    if (root == NULL)
+    {
+        return false;
+    }
+    if (root->data == data)
+    {
+        return true;
+    }
+    
+    //yet to be written
+}
+
 display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
