@@ -69,6 +69,14 @@ Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow,
     //yet to be written
 }
 
+int maxintree(Node *root)
+{
+    if (root == NULL)
+    {
+        return -1;
+    }
+}
+
 display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
