@@ -100,7 +100,19 @@ bool Find(Node *root, int data)
         return true;
     }
     
-    //yet to be written
+    bool find_in_left_child = Find(root->left, data);
+    if (find_in_left_child == true)
+    {
+        return true;
+    }
+
+    bool find_in_right_child = Find(root->right, data);
+    if (find_in_right_child == true)
+    {
+        return true;
+    }
+
+    return false;
 }
 
 display(Node *root)
