@@ -115,6 +115,11 @@ bool Find(Node *root, int data)
     return false;
 }
 
+vector<int> *Node2RootPath(Node *root, int data)
+{
+    //yet to be written
+}
+
 display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
