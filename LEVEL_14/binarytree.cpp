@@ -117,6 +117,16 @@ bool Find(Node *root, int data)
 
 vector<int> *Node2RootPath(Node *root, int data)
 {
+    if (root == NULL)
+    {
+        return NULL;
+    }
+    if (root->data == data)
+    {
+        vector<int> *base_result = new vector<int>();
+        base_result->push_back(root->data);
+        return base_result;
+    }
     //yet to be written
 }
 
