@@ -150,6 +150,14 @@ void kdown(Node *root, int key)
     {
         return;
     }
+    if (key == 0)
+    {
+        cout << root->data << endl;
+        return;
+    }
+
+    kdown(root->left, key - 1);
+    kdown(root->right, key - 1);
 }
 
 display(Node *root)
