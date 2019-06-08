@@ -127,6 +127,12 @@ vector<int> *Node2RootPath(Node *root, int data)
         base_result->push_back(root->data);
         return base_result;
     }
+    vector<int> *node2leftpath = Node2RootPath(root->left, data);
+    if (node2leftpath != NULL)
+    {
+        node2leftpath->push_back(root->data);
+        return node2leftpath;
+    }
     //yet to be written
 }
 
