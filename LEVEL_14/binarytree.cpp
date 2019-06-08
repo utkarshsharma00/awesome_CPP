@@ -200,4 +200,6 @@ int main(int argc, char **argv)
     cout << "Find in tree 0/1 ?" << endl;
     cout << Find(root, 25);
     cout << endl;
+    cout << "K_down" << endl;
+    kdown(root, 3);
 }
