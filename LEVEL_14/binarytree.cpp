@@ -202,4 +202,14 @@ int main(int argc, char **argv)
     cout << endl;
     cout << "K_down" << endl;
     kdown(root, 3);
+    
+    //*These vectors below have been created for generating tress from (preorder,inorder) and (postorder,inorder)
+    vector<int> preorder{
+        50, 25, 12, 37, 40, 75, 62, 87};
+
+    vector<int> inorder{
+        12, 25, 37, 40, 50, 62, 75, 87};
+
+    vector<int> postorder{
+        12, 40, 37, 25, 62, 87, 75, 50};
 }
