@@ -144,6 +144,14 @@ vector<int> *Node2RootPath(Node *root, int data)
     return NULL;
 }
 
+void kdown(Node *root, int key)
+{
+    if(root == NULL)
+    {
+        return;
+    }
+}
+
 display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
