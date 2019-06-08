@@ -133,7 +133,15 @@ vector<int> *Node2RootPath(Node *root, int data)
         node2leftpath->push_back(root->data);
         return node2leftpath;
     }
-    //yet to be written
+    vector<int> *node2rightpath = Node2RootPath(root->right, data);
+    {
+        if (node2rightpath != NULL)
+        {
+            node2rightpath->push_back(root->data);
+            return node2rightpath;
+        }
+    }
+    return NULL;
 }
 
 display(Node *root)
