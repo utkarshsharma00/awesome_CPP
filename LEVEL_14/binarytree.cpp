@@ -190,4 +190,14 @@ int main(int argc, char **argv)
         50, 25, 12, -1, 37, 30, -1, 40, -1, -1, -1, 75, 62, 60, -1, 70, -1, -1, 87, -1, -1, -1};
     Node *root = construct(list);
     display(root);
+    cout << endl;
+    cout << "Height is" << endl;
+    cout << height(root);
+    cout << endl;
+    cout << "Max in tree is" << endl;
+    cout << maxintree(root);
+    cout << endl;
+    cout << "Find in tree 0/1 ?" << endl;
+    cout << Find(root, 25);
+    cout << endl;
 }
