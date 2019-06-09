@@ -171,6 +171,8 @@ void kdown2(Node *root, Node *prohibiter, int key) //* will be used in kfar()
         cout << root->data << endl;
         return;
     }
+    kdown2(root->left, prohibiter, key - 1);
+    kdown2(root->right, prohibiter, key - 1);
 }
 
 display(Node *root)
