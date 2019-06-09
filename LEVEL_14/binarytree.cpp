@@ -160,6 +160,14 @@ void kdown(Node *root, int key)
     kdown(root->right, key - 1);
 }
 
+void kdown2(Node *root, Node *prohibiter, int key) //* will be used in kfar()
+{
+    if (root == NULL || root == prohibiter)
+    {
+        return;
+    }
+}
+
 display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
