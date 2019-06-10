@@ -175,6 +175,15 @@ void kdown2(Node *root, Node *prohibiter, int key) //* will be used in kfar()
     kdown2(root->right, prohibiter, key - 1);
 }
 
+void kfar(Node *root, int data, int key)
+{
+    vector<Node *> *Node2RootPath = Node2RootPathForKfar(root, data);
+    for (int i = 0; i <= key && i < Node2RootPath->size(); i++)
+    {
+        kdown2(Node2RootPath->at(i), i == 0 ? NULL : Node2RootPath->at(i - 1), key - i);
+    }
+}
+
 display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
