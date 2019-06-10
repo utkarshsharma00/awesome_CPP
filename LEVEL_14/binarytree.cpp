@@ -144,6 +144,11 @@ vector<int> *Node2RootPath(Node *root, int data)
     return NULL;
 }
 
+vector<Node *> *Node2RootPathForKfar(Node *root, int data)
+{
+    //yet to be written
+}
+
 void kdown(Node *root, int key)
 {
     if(root == NULL)
