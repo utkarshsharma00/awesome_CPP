@@ -81,6 +81,11 @@ Node *constructgood1(vector<int> &preorder, vector<int> &inorder, int preoLow, i
 
 Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow, int postoHigh, int inoLow, int inoHigh)
 {
+    if (postoLow > postoHigh || inoLow > inoHigh)
+    {
+        return NULL;
+    }
+
     //yet to be written
 }
 
