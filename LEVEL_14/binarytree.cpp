@@ -61,6 +61,10 @@ Node *construct(vector<int> &datalist)
 
 Node *constructgood1(vector<int> &preorder, vector<int> &inorder, int preoLow, int preoHigh, int inoLow, int inoHigh) //ino means inorder and preo means preorder
 {
+    if (preoLow > preoHigh || inoLow > inoHigh)
+    {
+        return NULL;
+    }
     //yet to be written
 }
 
