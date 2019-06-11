@@ -86,6 +86,16 @@ Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow,
         return NULL;
     }
 
+    Node *root = new Node(postorder[postoHigh]);
+    int foundAt = -1;
+    for (int i = inoHigh; i >= 0; i--)
+    {
+        if (inorder[i] == postorder[postoHigh])
+        {
+            foundAt = i;
+            break;
+        }
+    }
     //yet to be written
 }
 
