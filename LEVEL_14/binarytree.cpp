@@ -65,6 +65,17 @@ Node *constructgood1(vector<int> &preorder, vector<int> &inorder, int preoLow, i
     {
         return NULL;
     }
+    
+    Node *root = new Node(preorder[preoLow]);
+    int foundAt = -1;
+    for (int i = inoLow; i <= inoHigh; i++)
+    {
+        if (inorder[i] == preorder[preoLow])
+        {
+            foundAt = i;
+            break;
+        }
+    }
     //yet to be written
 }
 
