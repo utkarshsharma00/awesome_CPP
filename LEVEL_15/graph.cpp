@@ -36,7 +36,8 @@ void allPaths(vector<vector<Edge>> &graph, int source, int destination, vector<b
 {
     if (source == destination)
     {
-        return true;
+        cout << answer_so_far << destination << endl;
+        return;
     }
 }
 
