@@ -41,6 +41,19 @@ void allPaths(vector<vector<Edge>> &graph, int source, int destination, vector<b
     }
 }
 
+void min_Path(vector<vector<Edge>> &graph, int source, int destination, vector<bool> &visited, string answer_so_far, int sum)
+{
+    if (source == destination)
+    {
+        if (sum < Min)
+        {
+            Min = sum;
+            minpath = answer_so_far + to_string(destination);
+        }
+        return;
+    }
+}
+
 int main(int argc, char **argv)
 {
     vector<vector<Edge>> graph(9);
