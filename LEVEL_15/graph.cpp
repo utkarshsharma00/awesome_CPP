@@ -24,6 +24,14 @@ void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
     graph[vertex2].push_back(Edge(vertex1, weight));
 }
 
+bool hasPath(vector<vector<Edge>> &graph, int source, int destination, vector<bool> &visited)
+{
+    if (source == destination)
+    {
+        return true;
+    }
+}
+
 int main(int argc, char **argv)
 {
     vector<vector<Edge>> graph(9);
