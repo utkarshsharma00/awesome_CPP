@@ -32,6 +32,14 @@ bool hasPath(vector<vector<Edge>> &graph, int source, int destination, vector<bo
     }
 }
 
+void allPaths(vector<vector<Edge>> &graph, int source, int destination, vector<bool> &visited, string answer_so_far)
+{
+    if (source == destination)
+    {
+        return true;
+    }
+}
+
 int main(int argc, char **argv)
 {
     vector<vector<Edge>> graph(9);
