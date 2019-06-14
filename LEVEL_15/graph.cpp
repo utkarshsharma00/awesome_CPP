@@ -53,6 +53,16 @@ void allPaths(vector<vector<Edge>> &graph, int source, int destination, vector<b
         cout << answer_so_far << destination << endl;
         return;
     }
+    visited[source] = true;
+    for (int neighbour = 0; neighbour < graph[source].size(); neighbour++)
+    {
+        Edge new_edge = graph[source][neighbour];
+        if (visited[new_edge.neighbour] == false)
+        {
+            allPaths(graph, new_edge.neighbour, destination, visited, answer_so_far + to_string(source));
+        }
+    }
+    visited[source] = false;
 }
 
 void min_Path(vector<vector<Edge>> &graph, int source, int destination, vector<bool> &visited, string answer_so_far, int sum)
