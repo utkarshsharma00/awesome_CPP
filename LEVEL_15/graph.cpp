@@ -30,6 +30,20 @@ bool hasPath(vector<vector<Edge>> &graph, int source, int destination, vector<bo
     {
         return true;
     }
+    visited[source] = true;
+    for (int neighbour = 0; neighbour < graph[source].size(); neighbour++)
+    {
+        Edge new_edge = graph[source][neighbour];
+        if (visited[new_edge.neighbour] == false)
+        {
+            if (hasPath(graph, new_edge.neighbour, destination, visited) == true)
+            {
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 void allPaths(vector<vector<Edge>> &graph, int source, int destination, vector<bool> &visited, string answer_so_far)
