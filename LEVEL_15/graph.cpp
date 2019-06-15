@@ -103,4 +103,16 @@ int main(int argc, char **argv)
     addEdge(graph, 7, 0, 2);
     addEdge(graph, 7, 8, 2);
     addEdge(graph, 8, 0, 2);
+    
+    vector<bool> visited(graph.size(), 0); //*Required for all other functions
+    cout << "Has Path?" << endl;
+    cout << hasPath(graph, 0, 5, visited);
+    cout << "\nAll Paths" << endl;
+    string paths_so_far = " ";
+    allPaths(graph, 0, 6, visited, paths_so_far);
+    cout << endl;
+    cout << "Min Path\n";
+    min_Path(graph, 0, 6, visited, paths_so_far, 0);
+    cout << minpath;
+    cout << endl;
 }
