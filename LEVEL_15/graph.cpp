@@ -100,6 +100,17 @@ void max_Path(vector<vector<Edge>> &graph, int source, int destination, vector<b
         }
         return;
     }
+    visited[source] = true;
+    for (int neighbour = 0; neighbour < graph[source].size(); neighbour++)
+    {
+        Edge new_edge = graph[source][neighbour];
+        if (visited[new_edge.neighbour] == false)
+        {
+            sum += new_edge.weight;
+            max_Path(graph, new_edge.neighbour, destination, visited, answer_so_far + to_string(source) + " ", sum);
+        }
+    }
+    visited[source] = false;
 }
 
 int main(int argc, char **argv)
