@@ -115,7 +115,28 @@ void max_Path(vector<vector<Edge>> &graph, int source, int destination, vector<b
 
 void Ceil_Path(vector<vector<Edge>> &graph, int source, int destination, vector<bool> &visited, string answer_so_far, int sum, int data)
 {
-    
+    if (source == destination)
+    {
+        if (sum > data && Ceil > sum)
+        {
+            Ceil = sum;
+            ceilpath = answer_so_far + to_string(destination);
+        }
+        return;
+    }
+}
+
+void floor_Path(vector<vector<Edge>> &graph, int source, int destination, vector<bool> &visited, string answer_so_far, int sum, int data)
+{
+    if (source == destination)
+    {
+        if (sum < data && Floor < sum)
+        {
+            Floor = sum;
+            floorpath = answer_so_far + to_string(destination);
+        }
+        return;
+    }
 }
 
 int main(int argc, char **argv)
