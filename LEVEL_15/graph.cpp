@@ -89,6 +89,19 @@ void min_Path(vector<vector<Edge>> &graph, int source, int destination, vector<b
     visited[source] = false;
 }
 
+void max_Path(vector<vector<Edge>> &graph, int source, int destination, vector<bool> &visited, string answer_so_far, int sum)
+{
+    if (source == destination)
+    {
+        if (Max < sum)
+        {
+            Max = sum;
+            maxpath = answer_so_far + to_string(destination);
+        }
+        return;
+    }
+}
+
 int main(int argc, char **argv)
 {
     vector<vector<Edge>> graph(9);
