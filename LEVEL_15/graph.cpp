@@ -188,4 +188,16 @@ int main(int argc, char **argv)
     min_Path(graph, 0, 6, visited, paths_so_far, 0);
     cout << minpath;
     cout << endl;
+    cout << "Max Path\n";
+    max_Path(graph, 0, 6, visited, paths_so_far, 0);
+    cout << maxpath;
+    cout << endl;
+    
+    cout << "Ceil Path" << endl;
+    Ceil_Path(graph, 0, 6, visited, paths_so_far, 0, 30);
+    cout << ceilpath << endl;
+    cout << "Floor Path" << endl;
+    floor_Path(graph, 0, 6, visited, paths_so_far, 0, 60);
+    cout << floorpath << endl;
+    
 }
