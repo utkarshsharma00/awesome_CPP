@@ -246,4 +246,7 @@ int main(int argc, char **argv)
     floor_Path(graph, 0, 6, visited, paths_so_far, 0, 60);
     cout << floorpath << endl;
     
+    cout << "BFS TRAVERSAL" << endl;
+    cout << BFS(graph, 0, 6);
+    
 }
