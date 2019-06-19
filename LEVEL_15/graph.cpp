@@ -27,6 +27,21 @@ public:
     }
 };
 
+class Traversal_Helper
+{
+public:
+    int vertex;
+    string paths_so_far;
+    int distance_so_far;
+
+    Traversal_Helper(int vertex, string paths_so_far, int distance_so_far)
+    {
+        this->vertex = vertex;
+        this->paths_so_far = paths_so_far;
+        this->distance_so_far = distance_so_far;
+    }
+};
+
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 {
     graph[vertex1].push_back(Edge(vertex2, weight));
