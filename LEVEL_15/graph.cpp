@@ -5,6 +5,15 @@
 #include <climits>
 using namespace std;
 
+string minpath;
+string maxpath;
+string floorpath;
+string ceilpath;
+int Min = INT_MAX;
+int Max = INT_MIN;
+int Ceil = INT_MAX;
+int Floor = INT_MIN;
+
 class Edge
 {
 public:
