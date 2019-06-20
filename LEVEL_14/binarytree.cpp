@@ -254,6 +254,18 @@ int diameter(Node *root)
     {
         return 0;
     }
+    
+    int left_diameter = diameter(root->left);
+    int right_diameter = diameter(root->right);
+
+    int left_height = height(root->left);
+    int right_height = height(root->right);
+
+    int factor_1 = left_diameter;
+    int factor_2 = right_diameter;
+    int factor_3 = left_height + right_height + 1;
+
+    return max(factor_3, max(factor_1, factor_2));
 }
 
 void display(Node *root)
