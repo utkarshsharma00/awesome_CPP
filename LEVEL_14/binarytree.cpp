@@ -176,6 +176,10 @@ vector<int> *Node2RootPath(Node *root, int data)
 
 vector<Node *> *Node2RootPathForKfar(Node *root, int data)
 {
+    if (root == NULL)
+    {
+        return NULL;
+    }
     //yet to be written
 }
 
@@ -216,6 +220,14 @@ void kfar(Node *root, int data, int key)
     for (int i = 0; i <= key && i < Node2RootPath->size(); i++)
     {
         kdown2(Node2RootPath->at(i), i == 0 ? NULL : Node2RootPath->at(i - 1), key - i);
+    }
+}
+
+Node *removeLeavesTheBestWay(Node *root)
+{
+    if (root == NULL)
+    {
+        return NULL;
     }
 }
 
