@@ -188,6 +188,12 @@ vector<Node *> *Node2RootPathForKfar(Node *root, int data)
     {
         return NULL;
     }
+    if (root->data == data)
+    {
+        vector<Node *> *base_result = new vector<Node *>();
+        base_result->push_back(root);
+        return base_result;
+    }
     //yet to be written
 }
 
