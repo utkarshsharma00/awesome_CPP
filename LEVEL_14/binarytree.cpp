@@ -194,7 +194,22 @@ vector<Node *> *Node2RootPathForKfar(Node *root, int data)
         base_result->push_back(root);
         return base_result;
     }
-    //yet to be written
+    
+    vector<Node *> *node2leftpath = Node2RootPathForKfar(root->left, data);
+    if (node2leftpath != NULL)
+    {
+        node2leftpath->push_back(root);
+        return node2leftpath;
+    }
+    vector<Node *> *node2rightpath = Node2RootPathForKfar(root->right, data);
+    {
+        if (node2rightpath != NULL)
+        {
+            node2rightpath->push_back(root);
+            return node2rightpath;
+        }
+    }
+    return NULL;
 }
 
 void kdown(Node *root, int key)
