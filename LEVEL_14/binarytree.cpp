@@ -76,7 +76,11 @@ Node *constructgood1(vector<int> &preorder, vector<int> &inorder, int preoLow, i
             break;
         }
     }
-    //yet to be written
+    
+    int lhs = foundAt - inoLow; //* this gives the no. of nodes on the left sides
+    root->left = constructgood1(preorder, inorder, preoLow + 1, preoLow + lhs, inoLow, foundAt - 1);
+    root->right = constructgood1(preorder, inorder, preoLow + lhs + 1, preoHigh, foundAt + 1, inoHigh);
+    return root;
 }
 
 Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow, int postoHigh, int inoLow, int inoHigh)
@@ -96,7 +100,11 @@ Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow,
             break;
         }
     }
-    //yet to be written
+    
+    int rhs = inoHigh - (foundAt);
+    root->left = constructgood2(postorder, inorder, postoLow, postoHigh - rhs - 1, inoLow, foundAt - 1); //* use a little bit of brains for passing the params, they look difficult but are really easy
+    root->right = constructgood2(postorder, inorder, postoHigh - rhs, postoHigh - 1, foundAt + 1, inoHigh);
+    return root;
 }
 
 int maxintree(Node *root)
