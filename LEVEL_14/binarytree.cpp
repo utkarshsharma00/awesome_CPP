@@ -229,6 +229,14 @@ Node *removeLeavesTheBestWay(Node *root)
     {
         return NULL;
     }
+    if (root->left == NULL && root->right == NULL)
+    {
+        delete root;
+        return NULL;
+    }
+    root->left = removeLeavesTheBestWay(root->left);
+    root->right = removeLeavesTheBestWay(root->right);
+    return root;
 }
 
 display(Node *root)
