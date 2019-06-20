@@ -239,7 +239,24 @@ Node *removeLeavesTheBestWay(Node *root)
     return root;
 }
 
-display(Node *root)
+
+void RootToLeavePathInRange(Node *root, int low, int high, vector<int> &path, int sum)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+}
+
+int diameter(Node *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+}
+
+void display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
     {
