@@ -194,6 +194,17 @@ bool BFS(vector<vector<Edge>> &graph, int source, int destination)
     queue.push_back(Traversal_Helper(source, to_string(source), 0));
 }
 
+string getconnectedcomponents(vector<vector<Edge>> &graph, vector<bool> &visited, int source) //Slave function for the below get_connected_components
+{
+    string component;
+    list<int> queue;
+}
+
+vector<string> get_connected_components(vector<vector<Edge>> &graph) //Master function for the above getconnectedcomponents
+{
+    vector<string> components;
+}
+
 void display(vector<vector<Edge>> &graph)
 {
     for (int vertex = 0; vertex < graph.size(); vertex++)
