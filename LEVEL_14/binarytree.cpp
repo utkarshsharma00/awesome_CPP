@@ -415,4 +415,10 @@ int main(int argc, char **argv)
 
     vector<int> postorder{
         12, 40, 37, 25, 62, 87, 75, 50};
+    
+    cout << "Diameter with O(n^2) complexity is " << endl;
+    cout << diameter(root) << endl;
+    cout << "DiameterOptimized with O(n) complexity is " << endl;
+    cout << diameterOptimized(root)->diameter;
+    cout << endl;
 }
