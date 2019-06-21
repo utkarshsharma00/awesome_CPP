@@ -345,6 +345,24 @@ DiaPair *diameterOptimized(Node *root)
     return my_result;
 }
 
+class BalPair
+{
+public:
+    bool isBalanced;
+    int height;
+};
+
+BalPair *checkBalanced(Node *root)
+{
+    if (root == NULL)
+    {
+        BalPair *base_pair = new BalPair();
+        base_pair->height = 0;
+        base_pair->isBalanced = true;
+        return base_pair;
+    }
+}
+
 void display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
