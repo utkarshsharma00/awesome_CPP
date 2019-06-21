@@ -315,6 +315,24 @@ int diameter(Node *root)
     return max(factor_3, max(factor_1, factor_2));
 }
 
+class DiaPair
+{
+public:
+    int height = 0;
+    int diameter = 0;
+};
+
+DiaPair *diameterOptimized(Node *root)
+{
+    if (root == NULL)
+    {
+        DiaPair *base = new DiaPair();
+        base->height = 0;
+        base->diameter = 0;
+        return base;
+    }
+}
+
 void display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
