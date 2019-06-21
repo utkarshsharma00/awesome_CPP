@@ -268,13 +268,31 @@ Node *removeLeavesTheBestWay(Node *root)
     return root;
 }
 
-
 void RootToLeavePathInRange(Node *root, int low, int high, vector<int> &path, int sum)
 {
     if (root == NULL)
     {
         return;
     }
+    
+    if (root->left == NULL && root->right == NULL)
+    {
+        path.push_back(root->data);
+        sum = sum + root->data;
+        if (sum >= low && sum <= high)
+        {
+            for (int i = 0; i < path.size(); i++)
+            {
+                cout << path[i] << " " << endl;
+            }
+        }
+        return;
+    }
+
+    path.push_back(root->data);
+    RootToLeavePathInRange(root->left, low, high, path, sum + root->data);
+    RootToLeavePathInRange(root->right, low, high, path, sum + root->data);
+    path.pop_back();
 }
 
 int diameter(Node *root)
