@@ -331,6 +331,14 @@ DiaPair *diameterOptimized(Node *root)
         base->diameter = 0;
         return base;
     }
+    
+    DiaPair *left = diameterOptimized(root->left);
+    DiaPair *right = diameterOptimized(root->right);
+
+    DiaPair *my_result = new DiaPair();
+    my_result->height = max(left->height, right->height) + 1;
+    my_result->diameter = max(left->height + right->height + 1, max(left->diameter, right->diameter));
+
 }
 
 void display(Node *root)
