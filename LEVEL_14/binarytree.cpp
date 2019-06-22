@@ -374,6 +374,17 @@ BalPair *checkBalanced(Node *root)
     return my_pair;
 }
 
+class BSTPair
+{
+public:
+    bool isBST;
+    int min;
+    int max;
+
+    int largest_subtree_size; //* these 2 variables are needed for the LargestBST function apart from the variables defined above
+    int largest_subtree_root;
+};
+
 void display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
