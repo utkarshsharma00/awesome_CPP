@@ -385,6 +385,19 @@ public:
     int largest_subtree_root;
 };
 
+BSTPair *checkBST(Node *root)
+{
+    if (root == NULL)
+    {
+        BSTPair *base_pair = new BSTPair();
+        base_pair->isBST = true;
+        base_pair->max = INT_MIN;
+        base_pair->min = INT_MAX;
+
+        return base_pair;
+    }
+}
+
 void display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
