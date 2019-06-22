@@ -112,6 +112,11 @@ Node *constructOnly_From_Pre_and_Post(vector<int> &preorder, vector<int> &postor
     Node *root = new Node(preorder[preoLow]);
 }
 
+Node *constructFromData_and_Parent_Array(vector<int> &data_array, vector<int> &parrent_array)
+{
+    Node *root = NULL;
+}
+
 int maxintree(Node *root)
 {
     if (root == NULL)
