@@ -466,4 +466,15 @@ int main(int argc, char **argv)
     cout << "DiameterOptimized with O(n) complexity is " << endl;
     cout << diameterOptimized(root)->diameter;
     cout << endl;
+    
+    cout << "Construction of tree from Parent and Data Array" << endl;
+    vector<int> data_array{12, 25, 50, 75, 37, 87, 40, 80};
+    vector<int> parent_array{25, 50, -1, 50, 25, 75, 37, 87};
+    root = constructFromData_and_Parent_Array(data_array, parent_array);
+    display(root);
+
+    cout << "Construction of tree only from Post and Pre " << endl;
+    vector<int> preorder{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    vector<int> postorder{3, 4, 2, 6, 8, 9, 7, 5, 1};
+    root = constructOnly_From_Pre_and_Post(preorder, postorder, 0, preorder.size() - 1, 0, postorder.size() - 1);
 }
