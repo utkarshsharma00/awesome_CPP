@@ -361,6 +361,17 @@ BalPair *checkBalanced(Node *root)
         base_pair->isBalanced = true;
         return base_pair;
     }
+    
+    BalPair *left_pair = checkBalanced(root->left);
+    BalPair *right_pair = checkBalanced(root->right);
+
+    BalPair *my_pair = new BalPair();
+    int gap = left_pair->height - right_pair->height;
+
+    my_pair->height = max(left_pair->height, right_pair->height) + 1;
+    my_pair->isBalanced = left_pair->isBalanced && right_pair->isBalanced && gap >= -1 && gap <= 1;
+
+    return my_pair;
 }
 
 void display(Node *root)
