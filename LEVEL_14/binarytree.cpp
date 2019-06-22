@@ -107,6 +107,11 @@ Node *constructgood2(vector<int> &postorder, vector<int> &inorder, int postoLow,
     return root;
 }
 
+Node *constructOnly_From_Pre_and_Post(vector<int> &preorder, vector<int> &postorder, int preoLow, int preoHigh, int postoLow, int postoHigh)
+{
+    Node *root = new Node(preorder[preoLow]);
+}
+
 int maxintree(Node *root)
 {
     if (root == NULL)
