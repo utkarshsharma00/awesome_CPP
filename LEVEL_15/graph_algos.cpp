@@ -19,3 +19,11 @@ public:
         this->weight = weight;
     }
 };
+
+class Djikstra_Helper
+{
+    public:
+    int vertex;
+    string path_so_far;
+    int distance_so_far;
+};
