@@ -43,4 +43,9 @@ class Djikstra_Helper
     {
         return this->distance_so_far > other.distance_so_far;
     }
+    
+    void display()
+    {
+        cout << vertex << " " << path_so_far << " " << distance_so_far;
+    }
 };
