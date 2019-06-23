@@ -50,6 +50,12 @@ class Djikstra_Helper
     }
 };
 
+void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
+{
+    graph[vertex1].push_back(Edge(vertex2, weight));
+    graph[vertex2].push_back(Edge(vertex1, weight));
+}
+
 bool BFS(vector<vector<Edge>> &graph, int source)
 {
     priority_queue<Djikstra_Helper, vector<Djikstra_Helper>, greater<Djikstra_Helper>> queue;
