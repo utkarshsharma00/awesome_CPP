@@ -49,3 +49,9 @@ class Djikstra_Helper
         cout << vertex << " " << path_so_far << " " << distance_so_far;
     }
 };
+
+bool BFS(vector<vector<Edge>> &graph, int source)
+{
+    priority_queue<Djikstra_Helper, vector<Djikstra_Helper>, greater<Djikstra_Helper>> queue;
+    vector<bool> visited(graph.size(), false);
+}
