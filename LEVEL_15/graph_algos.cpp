@@ -56,6 +56,20 @@ void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
     graph[vertex2].push_back(Edge(vertex1, weight));
 }
 
+void display(vector<vector<Edge>> &graph)
+{
+    for (int vertex = 0; vertex < graph.size(); vertex++)
+    {
+        cout << vertex << "->";
+        for (int neighbour = 0; neighbour < graph[vertex].size(); neighbour++)
+        {
+            Edge new_edge = graph[vertex][neighbour];
+            cout << "[" << new_edge.neighbour << "@" << new_edge.weight << "]";
+        }
+        cout << endl;
+    }
+}
+
 bool BFS(vector<vector<Edge>> &graph, int source)
 {
     priority_queue<Djikstra_Helper, vector<Djikstra_Helper>, greater<Djikstra_Helper>> queue;
