@@ -26,4 +26,21 @@ class Djikstra_Helper
     int vertex;
     string path_so_far;
     int distance_so_far;
+    
+    Djikstra_Helper(int vertex, string path_so_far, int distance_so_far)
+    {
+        this->vertex = vertex;
+        this->path_so_far = path_so_far;
+        this->distance_so_far = distance_so_far;
+    }
+
+    bool operator<(const Djikstra_Helper &other) const
+    {
+        return this->distance_so_far < other.distance_so_far;
+    }
+
+    bool operator>(const Djikstra_Helper &other) const
+    {
+        return this->distance_so_far > other.distance_so_far;
+    }
 };
