@@ -90,6 +90,13 @@ class Prims_Helper
     int vertex;
     int acquiring_vertex;
     int cost_of_acquiring;
+    
+    Prims_Helper(int vertex, int acquiring_vertex, int cost_of_acquiring)
+    {
+        this->vertex = vertex;
+        this->acquiring_vertex = acquiring_vertex;
+        this->cost_of_acquiring = cost_of_acquiring;
+    }
 };
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
