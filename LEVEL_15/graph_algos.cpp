@@ -111,3 +111,21 @@ void display(vector<vector<Edge>> &graph)
         cout << endl;
     }
 }
+
+int main(int argc, char **argv)
+{
+    vector<vector<Edge>> graph(7);
+    addEdge(graph, 0, 1, 10);
+    addEdge(graph, 1, 2, 10);
+    addEdge(graph, 2, 3, 10);
+    addEdge(graph, 0, 3, 40);
+    addEdge(graph, 3, 4, 2);
+    addEdge(graph, 4, 5, 3);
+    addEdge(graph, 4, 6, 8);
+    addEdge(graph, 5, 6, 3);
+    display(graph);
+    cout << endl;
+    cout << endl;
+    cout << "--------------------Djikstra--------------------" << endl;
+    cout << BFS(graph, 0);
+}
