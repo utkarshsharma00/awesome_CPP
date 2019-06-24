@@ -99,6 +99,13 @@ class Prims_Helper
     }
 };
 
+vector<vector<Edge>> Prims(vector<vector<Edge>> &graph, int source)
+{
+    priority_queue<Prims_Helper, vector<Prims_Helper>, greater<Prims_Helper>> queue;
+    vector<bool> visited(graph.size(), false);
+    vector<vector<Edge>> subgraph(graph.size());
+}
+
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 {
     graph[vertex1].push_back(Edge(vertex2, weight));
