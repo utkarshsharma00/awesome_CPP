@@ -90,6 +90,16 @@ bool BFS(vector<vector<Edge>> &graph, int source)
         {
             visited[remove.vertex] = true;
         }
-    }    
+        cout << remove.vertex << " via " << remove.path_so_far << " @ " << remove.distance_so_far << endl;
 
+        for (int neighbour = 0; neighbour < graph[remove.vertex].size(); neighbour++) //add children
+        {
+            Edge new_edge = graph[remove.vertex][neighbour];
+            if (visited[new_edge.neighbour] == false)
+            {
+                Djikstra_Helper nbr = Djikstra_Helper(new_edge.neighbour, remove.path_so_far + to_string(new_edge.neighbour), remove.distance_so_far + new_edge.weight);
+                queue.push(nbr);
+            }
+        }
+     }    
 }
