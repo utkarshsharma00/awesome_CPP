@@ -158,6 +158,13 @@ class Kruskal_Helper
     }
 };
 
+vector<vector<Edge>> Kruskals(vector<vector<Edge>> &graph)
+{
+    vector<vector<Edge>> minimum_spanning_tree(graph.size());
+    vector<int> pointer_array(graph.size());
+    vector<int> rank_array(graph.size());
+}
+
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 {
     graph[vertex1].push_back(Edge(vertex2, weight));
