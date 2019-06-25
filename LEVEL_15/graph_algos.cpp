@@ -174,4 +174,7 @@ int main(int argc, char **argv)
     cout << endl;
     cout << "--------------------Djikstra--------------------" << endl;
     cout << BFS(graph, 0);
+    vector<vector<Edge>> subgraph = Prims(graph, 0);
+    cout << "\n\n---------------------Prims MST--------------------------" << endl;
+    display(subgraph);
 }
