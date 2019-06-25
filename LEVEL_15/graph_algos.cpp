@@ -151,6 +151,11 @@ class Kruskal_Helper
         this->vertex_2 = vertex_2;
         this->weight = weight;
     }
+    
+    bool operator>(const Kruskal_Helper &other) const
+    {
+        return this->weight > other.weight;
+    }
 };
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
