@@ -123,7 +123,19 @@ vector<vector<Edge>> Prims(vector<vector<Edge>> &graph, int source)
         {
             addEdge(subgraph, remove.vertex, remove.acquiring_vertex, remove.cost_of_acquiring);
         }
-    }    
+        
+        for (int neighbour = 0; neighbour < graph[remove.vertex].size(); neighbour++) //add children
+        {
+            Edge new_edge = graph[remove.vertex][neighbour]; //new_edge basically means neighbouring_edge
+            if (visited[new_edge.neighbour] == false)
+            {
+                Prims_Helper nbr = Prims_Helper(new_edge.neighbour, remove.vertex, new_edge.weight);
+                queue.push(nbr);
+            }
+        }
+    }
+    
+    return subgraph;   
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
