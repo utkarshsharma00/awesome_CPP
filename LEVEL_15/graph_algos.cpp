@@ -118,6 +118,11 @@ vector<vector<Edge>> Prims(vector<vector<Edge>> &graph, int source)
         {
             visited[remove.vertex] = true;
         }
+        
+        if (remove.acquiring_vertex != -1)
+        {
+            addEdge(subgraph, remove.vertex, remove.acquiring_vertex, remove.cost_of_acquiring);
+        }
     }    
 }
 
