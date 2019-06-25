@@ -138,6 +138,21 @@ vector<vector<Edge>> Prims(vector<vector<Edge>> &graph, int source)
     return subgraph;   
 }
 
+class Kruskal_Helper
+{
+    public:
+    int vertex_1;
+    int vertex_2;
+    int weight;
+    
+    Kruskal_Helper(int vertex_1, int vertex_2, int weight)
+    {
+        this->vertex_1 = vertex_1;
+        this->vertex_2 = vertex_2;
+        this->weight = weight;
+    }
+};
+
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 {
     graph[vertex1].push_back(Edge(vertex2, weight));
