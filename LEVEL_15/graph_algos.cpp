@@ -104,6 +104,21 @@ vector<vector<Edge>> Prims(vector<vector<Edge>> &graph, int source)
     priority_queue<Prims_Helper, vector<Prims_Helper>, greater<Prims_Helper>> queue;
     vector<bool> visited(graph.size(), false);
     vector<vector<Edge>> subgraph(graph.size());
+    
+    while (queue.size() > 0)
+    {
+        Prims_Helper remove = queue.top(); //get front
+        queue.pop();                       //remove front
+
+        if (visited[remove.vertex] == true)
+        {
+            continue;
+        }
+        else
+        {
+            visited[remove.vertex] = true;
+        }
+    }    
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
