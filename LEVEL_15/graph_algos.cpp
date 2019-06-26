@@ -177,6 +177,12 @@ int find(vector<int> &pointer_array, int vertex) //required for Kruskal's
     {
         return vertex;
     }
+    
+    else
+    {
+        int set_leader = find(pointer_array, pointer_array[vertex]);
+        return set_leader;
+    }
 }
 
 vector<vector<Edge>> Kruskals(vector<vector<Edge>> &graph)
