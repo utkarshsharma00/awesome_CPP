@@ -158,6 +158,14 @@ class Kruskal_Helper
     }
 };
 
+void Merge(vector<int> &pointer_array, vector<int> &rank_array, int vertex_1_set_leader, int vertex_2_set_leader) //required for Kruskal's
+{
+    if (rank_array[vertex_1_set_leader] < rank_array[vertex_2_set_leader])
+    {
+        pointer_array[vertex_1_set_leader] = vertex_2_set_leader;
+    }
+}
+
 vector<vector<Edge>> Kruskals(vector<vector<Edge>> &graph)
 {
     vector<vector<Edge>> minimum_spanning_tree(graph.size());
