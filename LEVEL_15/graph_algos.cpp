@@ -171,6 +171,14 @@ vector<vector<Edge>> Kruskals(vector<vector<Edge>> &graph)
     vector<vector<Edge>> minimum_spanning_tree(graph.size());
     vector<int> pointer_array(graph.size());
     vector<int> rank_array(graph.size());
+    
+    for (int i = 0; i < pointer_array.size(); i++)
+    {
+        pointer_array[i] = i;
+    }
+    
+    priority_queue<Kruskal_Helper, vector<Kruskal_Helper>, greater<Kruskal_Helper>> queue;
+
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
