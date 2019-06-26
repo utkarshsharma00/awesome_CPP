@@ -166,6 +166,14 @@ void Merge(vector<int> &pointer_array, vector<int> &rank_array, int vertex_1_set
     }
 }
 
+int find(vector<int> &pointer_array, int vertex) //required for Kruskal's
+{
+    if (pointer_array[vertex] == vertex)
+    {
+        return vertex;
+    }
+}
+
 vector<vector<Edge>> Kruskals(vector<vector<Edge>> &graph)
 {
     vector<vector<Edge>> minimum_spanning_tree(graph.size());
