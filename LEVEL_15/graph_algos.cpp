@@ -219,6 +219,22 @@ vector<vector<Edge>> Kruskals(vector<vector<Edge>> &graph)
 
 }
 
+class Bellman_Helper
+{
+    public:
+    int vertex_1;
+    int vertex_2;
+    int weight;
+
+    Bellman_Helper(int vertex_1, int vertex_2, int weight)
+    {
+        this->vertex_1 = vertex_1;
+        this->vertex_2 = vertex_2;
+        this->weight = weight;
+    }
+
+};
+
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 {
     graph[vertex1].push_back(Edge(vertex2, weight));
