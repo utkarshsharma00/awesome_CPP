@@ -203,6 +203,19 @@ vector<vector<Edge>> Kruskals(vector<vector<Edge>> &graph)
     }
     
     priority_queue<Kruskal_Helper, vector<Kruskal_Helper>, greater<Kruskal_Helper>> queue;
+    
+    for (int vertex = 0; vertex < graph.size(); vertex++)
+    {
+        for (int neighbour = 0; neighbour < graph[vertex].size(); neighbour++)
+        {
+            Edge new_edge = graph[vertex][neighbour];
+            if (vertex < new_edge.neighbour)
+            {
+                Kruskal_Helper KE(vertex, new_edge.neighbour, new_edge.weight);
+                queue.push(KE);
+            }
+        }
+    }
 
 }
 
