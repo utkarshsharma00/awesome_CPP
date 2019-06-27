@@ -235,6 +235,12 @@ class Bellman_Helper
 
 };
 
+void bellman(vector<vector<Edge>> &graph, int source)
+{
+    vector<int> result(graph.size(), INT_MAX);
+    vector<Bellman_Helper> all_edges;
+}
+
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 {
     graph[vertex1].push_back(Edge(vertex2, weight));
