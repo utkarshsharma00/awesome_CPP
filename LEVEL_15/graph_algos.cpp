@@ -169,6 +169,12 @@ void Merge(vector<int> &pointer_array, vector<int> &rank_array, int vertex_1_set
     {
         pointer_array[vertex_2_set_leader] = vertex_1_set_leader;
     }
+    
+    else
+    {
+        pointer_array[vertex_1_set_leader] = vertex_2_set_leader;
+        rank_array[vertex_2_set_leader]++;
+    }
 }
 
 int find(vector<int> &pointer_array, int vertex) //required for Kruskal's
