@@ -261,6 +261,18 @@ void bellman(vector<vector<Edge>> &graph, int source)
 {
     vector<int> result(graph.size(), INT_MAX);
     vector<Bellman_Helper> all_edges;
+    
+    result[source] = 0;
+
+    for (int vertex = 0; vertex < graph.size(); vertex++)
+    {
+        for (int neighbour = 0; neighbour < graph[vertex].size(); neighbour++)
+        {
+            Edge new_edge = graph[vertex][neighbour];
+            Bellman_Helper BE(vertex, new_edge.neighbour, new_edge.weight);
+            all_edges.push_back(BE);
+        }
+    }
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
