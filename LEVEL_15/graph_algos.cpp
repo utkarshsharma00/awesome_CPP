@@ -314,4 +314,9 @@ int main(int argc, char **argv)
     vector<vector<Edge>> subgraph = Prims(graph, 0);
     cout << "\n\n---------------------Prims MST--------------------------" << endl;
     display(subgraph);
+    
+    vector<vector<Edge>> subgraph_via_Kruskals = Kruskals(graph);
+    cout << "\n\n----------------Kruskal's MST-------------" << endl;
+    display(subgraph_via_Kruskals);
+    cout << endl;
 }
