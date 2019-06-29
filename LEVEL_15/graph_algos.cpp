@@ -232,7 +232,11 @@ class Bellman_Helper
         this->vertex_2 = vertex_2;
         this->weight = weight;
     }
-
+    
+    bool operator>(const Bellman_Helper &other) const
+    {
+        return this->weight > other.weight;
+    }
 };
 
 void bellman(vector<vector<Edge>> &graph, int source)
