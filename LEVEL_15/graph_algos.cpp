@@ -216,7 +216,25 @@ vector<vector<Edge>> Kruskals(vector<vector<Edge>> &graph)
             }
         }
     }
+    
+    int counter = 0;
+    while (queue.size() > 0 && counter < graph.size() - 1)
+    {
+        Kruskal_Helper KE = queue.top();
+        queue.pop();
 
+        int v1_set_leader = find(pointer_array, KE.vertex_1);
+        int v2_set_leader = find(pointer_array, KE.vertex_2);
+
+        if (v1_set_leader < v2_set_leader)
+        {
+            addEdge(minimum_spanning_tree, KE.vertex_1, KE.vertex_2, KE.weight);
+            Merge(pointer_array, rank_array, v1_set_leader, v2_set_leader);
+            counter++;
+        }
+    }
+
+    return minimum_spanning_tree;
 }
 
 class Bellman_Helper
