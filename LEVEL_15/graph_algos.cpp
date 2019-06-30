@@ -273,6 +273,21 @@ void bellman(vector<vector<Edge>> &graph, int source)
             all_edges.push_back(BE);
         }
     }
+    
+    for (int i = 0; i < graph.size() - 1; i++)
+    {
+        for (int j = 0; j < all_edges.size(); j++)
+        {
+            Bellman_Helper BE = all_edges[j];
+            if (result[BE.vertex_1] != INT_MAX)
+            {
+                if (result[BE.vertex_1] + BE.weight < result[BE.vertex_2])
+                {
+                    result[BE.vertex_2] = result[BE.vertex_1] + BE.weight;
+                }
+            }
+        }
+    }
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
