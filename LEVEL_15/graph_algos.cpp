@@ -288,6 +288,19 @@ void bellman(vector<vector<Edge>> &graph, int source)
             }
         }
     }
+    
+    for (int j = 0; j < all_edges.size(); j++)
+    {
+        Bellman_Helper BE = all_edges[j];
+        if (result[BE.vertex_1] != INT_MAX)
+        {
+            if (result[BE.vertex_1] + BE.weight < result[BE.vertex_2])
+            {
+                cout << "Negative Cycle\n";
+                return;
+            }
+        }
+    }
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
