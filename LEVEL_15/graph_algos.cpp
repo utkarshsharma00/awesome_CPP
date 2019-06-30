@@ -353,4 +353,8 @@ int main(int argc, char **argv)
     cout << "\n\n----------------Kruskal's MST-------------" << endl;
     display(subgraph_via_Kruskals);
     cout << endl;
+    
+    cout << endl;
+    cout << "Bellman Ford\n";
+    bellman(floyd_warshall_graph, 0);
 }
