@@ -358,7 +358,15 @@ int main(int argc, char **argv)
     cout << "\n\n----------------Kruskal's MST-------------" << endl;
     display(subgraph_via_Kruskals);
     cout << endl;
-    
+    cout << "\n\n----------------Floyd Warshall-------------" << endl;
+    vector<vector<Edge>> floyd_warshall_graph(4);
+    floyd_warshall_graph[0].push_back(Edge(1, 2));
+    floyd_warshall_graph[0].push_back(Edge(3, 8));
+    floyd_warshall_graph[0].push_back(Edge(2, 4));
+    floyd_warshall_graph[1].push_back(Edge(2, 1));
+    floyd_warshall_graph[1].push_back(Edge(3, 5));
+    floyd_warshall_graph[2].push_back(Edge(3, 1));
+    floyd_warshall(floyd_warshall_graph);
     cout << endl;
     cout << "Bellman Ford\n";
     bellman(floyd_warshall_graph, 0);
