@@ -301,6 +301,12 @@ void bellman(vector<vector<Edge>> &graph, int source)
             }
         }
     }
+    
+    for (int i = 0; i < result.size(); i++)
+    {
+        cout << result[i] << " ";
+    }
+    cout << endl;
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
