@@ -309,6 +309,11 @@ void bellman(vector<vector<Edge>> &graph, int source)
     cout << endl;
 }
 
+void floyd_warshall(vector<vector<Edge>> &graph) //TODO See comments in the notebook for this specific code
+{
+     vector<vector<int>> result = {graph.size(), vector<int>(graph.size(), INT_MAX)};
+}
+
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 {
     graph[vertex1].push_back(Edge(vertex2, weight));
