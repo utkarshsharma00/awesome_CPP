@@ -322,6 +322,16 @@ void floyd_warshall(vector<vector<Edge>> &graph) //TODO See comments in the note
             result[i][new_edge.neighbour] = new_edge.weight;
         }
     }
+    
+    for (int intermediate = 0; intermediate < graph.size(); intermediate++)
+    {
+        for (int source = 0; source < graph.size(); source++)
+        {
+            for (int destination = 0; destination < graph.size(); destination++)
+            {
+            }
+        }
+    }
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
