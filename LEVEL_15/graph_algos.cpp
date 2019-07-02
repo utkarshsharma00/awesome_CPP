@@ -311,7 +311,17 @@ void bellman(vector<vector<Edge>> &graph, int source)
 
 void floyd_warshall(vector<vector<Edge>> &graph) //TODO See comments in the notebook for this specific code
 {
-     vector<vector<int>> result = {graph.size(), vector<int>(graph.size(), INT_MAX)};
+    vector<vector<int>> result = {graph.size(), vector<int>(graph.size(), INT_MAX)};
+
+    for (int i = 0; i < graph.size(); i++)
+    {
+        result[i][i] = 0;
+        for (int neighbour = 0; neighbour < graph[i].size(); neighbour++)
+        {
+            Edge new_edge = graph[i][neighbour];
+            result[i][new_edge.neighbour] = new_edge.weight;
+        }
+    }
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
