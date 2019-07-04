@@ -4,6 +4,14 @@
 #include <climits>
 using namespace std;
 
+void lis_path_print(vector<int> &strg, vector<int> &arr, string psf, int index)
+{
+    if (strg[index] == 1)
+    {
+        cout << psf << endl;
+    }
+}
+
 void lis(vector<int> &arr)
 {
     vector<int> strg(arr.size(), 1);
