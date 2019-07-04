@@ -329,6 +329,21 @@ void floyd_warshall(vector<vector<Edge>> &graph) //TODO See comments in the note
         {
             for (int destination = 0; destination < graph.size(); destination++)
             {
+                if (intermediate == source || intermediate == destination || source == destination)
+                {
+                    continue;
+                }
+                else if (result[intermediate][destination] == INT_MAX || result[source][intermediate] == INT_MAX)
+                {
+                    continue;
+                }
+                else
+                {
+                    if (result[source][intermediate] + result[intermediate][destination] < result[source][destination])
+                    {
+                        result[source][destination] = result[source][intermediate] + result[intermediate][destination];
+                    }
+                }
             }
         }
     }
