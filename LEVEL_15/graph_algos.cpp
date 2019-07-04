@@ -347,6 +347,15 @@ void floyd_warshall(vector<vector<Edge>> &graph) //TODO See comments in the note
             }
         }
     }
+    
+    for (int source = 0; source < graph.size(); source++)
+    {
+        for (int destination = 0; destination < graph.size(); destination++)
+        {
+            cout << result[source][destination] << "\t\t";
+        }
+        cout << endl;
+    }
 }
 
 void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
