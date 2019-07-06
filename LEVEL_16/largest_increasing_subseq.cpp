@@ -10,6 +10,17 @@ void lis_path_print(vector<int> &strg, vector<int> &arr, string psf, int index)
     {
         cout << psf << endl;
     }
+
+    for (int i = index; i >= 0; i--)
+    {
+        if (strg[i] == strg[index] - 1)
+        {
+            if (arr[i] < arr[index])
+            {
+                lis_path_print(strg, arr, to_string(arr[i]) + " " + psf, i);
+            }
+        }
+    }
 }
 
 void lis(vector<int> &arr)
@@ -38,6 +49,8 @@ void lis(vector<int> &arr)
             index = i;
         }
     }
+    
+    lis_path_print(strg, arr, to_string(arr[index]), index);
 }
 
 int main(int argc, char** argv)
