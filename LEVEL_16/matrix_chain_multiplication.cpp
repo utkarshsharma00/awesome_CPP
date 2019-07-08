@@ -27,6 +27,22 @@ void matrix_chain_multiplication(vector<int> &matrix_arr)
                     storage[i][j] = matrix_arr[i] * matrix_arr[j] * matrix_arr[j + 1];
                 }
             }
+            else
+            {
+                int mymin = INT_MAX;
+                for (int k = 0; k < gap; k++)
+                {
+                    int lhs = storage[i][j - gap + k]; //this is basically the start point
+                    int rhs = storage[i + 1 + k][j];
+                    mymin = min(lhs + rhs + matrix_arr[j - gap] * matrix_arr[j - gap + k + 1] * matrix_arr[j + 1], mymin);
+                }
+
+                storage[i][j] = mymin;
+            }
+        }
+    }
+    
+    
 }
 
 int main(int argc, char **argv)
