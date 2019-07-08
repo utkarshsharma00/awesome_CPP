@@ -16,8 +16,17 @@ void matrix_chain_multiplication(vector<int> &matrix_arr)
             {
                 storage[i][j] = 0;
             }
-        }
-    }         
+            else if (gap == 1)
+            {
+                if (matrix_arr[i] == matrix_arr[j])
+                {
+                    storage[i][j] = 0;
+                }
+                else
+                {
+                    storage[i][j] = matrix_arr[i] * matrix_arr[j] * matrix_arr[j + 1];
+                }
+            }
 }
 
 int main(int argc, char **argv)
