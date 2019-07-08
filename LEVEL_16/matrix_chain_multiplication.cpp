@@ -42,7 +42,14 @@ void matrix_chain_multiplication(vector<int> &matrix_arr)
         }
     }
     
-    
+    for (int i = 0; i < storage.size(); i++)
+    {
+        for (int j = 0; j < storage[0].size(); j++)
+        {
+            cout << storage[i][j] << " ";
+        }
+        cout << endl;
+    } 
 }
 
 int main(int argc, char **argv)
