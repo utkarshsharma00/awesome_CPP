@@ -7,7 +7,17 @@ using namespace std;
 
 void matrix_chain_multiplication(vector<int> &matrix_arr)
 {
-    
+    vector<vector<int>> storage(matrix_arr.size(), vector<int>(matrix_arr.size() - 1));
+    for (int gap = 0; gap < matrix_arr.size(); gap++)
+    {
+        for (int i = 0, j = i + gap; j < storage.size(); i++, j++)
+        {
+            if (gap == 0)
+            {
+                storage[i][j] = 0;
+            }
+        }
+    }         
 }
 
 int main(int argc, char **argv)
