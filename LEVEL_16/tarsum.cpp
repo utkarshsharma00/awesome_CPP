@@ -4,6 +4,15 @@
 #include <climits>
 using namespace std;
 
+void paths_of_tarsum(vector<vector<bool>> &strg, int i, int j, vector<int> &arr, string psf)
+{
+    if (j == 0)
+    {
+        cout << psf << endl;
+        return;
+    }
+}
+
 void tarsum(vector<int> &arr, int target)
 {
     vector<vector<bool>> storage(arr.size() + 1, vector<bool>(target + 1, false));
