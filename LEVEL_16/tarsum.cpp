@@ -37,7 +37,17 @@ void tarsum(vector<int> &arr, int target)
         }
     }
     
-    
+    for (int i = 0; i < storage.size(); i++)
+    {
+        for (int j = 0; j < storage[0].size(); j++)
+        {
+            cout << storage[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+    paths_of_tarsum(storage, storage.size() - 1, storage[0].size() - 1, arr, "");
 }
 
 int main(int argc, char **argv)
