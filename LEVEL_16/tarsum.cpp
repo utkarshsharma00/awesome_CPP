@@ -19,6 +19,25 @@ void tarsum(vector<int> &arr, int target)
             {
                 storage[i][j] = false;
             }
+            else if (j == 0)
+            {
+                storage[i][j] = true;
+            }
+            else
+            {
+                if (storage[i - 1][j] == true) //if the previous team/elements were able to make some amount of the sum
+                {
+                    storage[i][j] = true;
+                }
+                if (j >= arr[i - 1] && storage[i - 1][j - arr[i - 1]] == true) //target -  what you can score
+                {
+                    storage[i][j] = true;
+                }
+            }
+        }
+    }
+    
+    
 }
 
 int main(int argc, char **argv)
