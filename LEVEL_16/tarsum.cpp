@@ -11,6 +11,20 @@ void paths_of_tarsum(vector<vector<bool>> &strg, int i, int j, vector<int> &arr,
         cout << psf << endl;
         return;
     }
+    {
+        return;
+    }
+    else
+    {
+        if (strg[i - 1][j] == true)
+        {
+            paths_of_tarsum(strg, i - 1, j, arr, psf);
+        }
+        if (j >= arr[i - 1] && strg[i - 1][j - arr[i - 1]] == true)
+        {
+            paths_of_tarsum(strg, i - 1, j - arr[i - 1], arr, psf + " " + to_string(arr[i - 1]));
+        }
+    }
 }
 
 void tarsum(vector<int> &arr, int target)
