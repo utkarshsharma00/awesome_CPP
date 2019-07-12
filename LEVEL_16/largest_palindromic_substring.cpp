@@ -17,6 +17,18 @@ void largest_palin_substring(string s)
             {
                 storage[i][j] = 1;
             }
+            else if (gap == 1)
+            {
+                if (s[i] == s[j])
+                {
+                    storage[i][j] = 1; //1 for true
+                }
+
+                else
+                {
+                    storage[i][j] = 0; //0 for false
+                }
+            }
 }
 
 int main()
