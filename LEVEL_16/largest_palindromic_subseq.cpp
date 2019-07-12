@@ -16,6 +16,18 @@ void LPS(string s1)
             {
                 storage[i][j] = 1;
             }
+            else if (gap == 1)
+            {
+                if (s1[i] == s1[j])
+                {
+                    storage[i][j] = 2;
+                }
+
+                else
+                {
+                    storage[i][j] = 1;
+                }
+            }
 }
 
 int main()
