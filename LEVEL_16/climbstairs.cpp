@@ -12,6 +12,14 @@ void printstairs(int no_of_stairs, string as_of_now)
         cout << counter;
         return;
     }
+    
+    for (int steps = 1; steps <= 3; steps++)
+    {
+        if (no_of_stairs - steps >= 0)
+        {
+            printstairs(no_of_stairs - steps, as_of_now + to_string(steps));
+        }
+    }
 }
 
 int main(int argc, char **argv)
