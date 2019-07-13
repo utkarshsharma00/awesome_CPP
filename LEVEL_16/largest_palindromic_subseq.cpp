@@ -28,6 +28,19 @@ void LPS(string s1)
                     storage[i][j] = 1;
                 }
             }
+            else
+            {
+                if (s1[i] == s1[j])
+                {
+                    storage[i][j] = 2 + storage[i + 1][j - 1];
+                }
+                else
+                {
+                    storage[i][j] = max(storage[i + 1][j], storage[i + 1][j - 1]);
+                }
+            }
+        }
+    }
 }
 
 int main()
