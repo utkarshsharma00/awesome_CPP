@@ -29,6 +29,22 @@ void largest_palin_substring(string s)
                     storage[i][j] = 0; //0 for false
                 }
             }
+            else
+            {
+                if (s[i] == s[j])
+                {
+                    storage[i][j] = storage[i + 1][j - 1];
+                    length = gap + 1;
+                }
+                else
+                {
+                    storage[i][j] = 0;
+                }
+            }
+        }
+    }
+    
+    cout << length;
 }
 
 int main()
