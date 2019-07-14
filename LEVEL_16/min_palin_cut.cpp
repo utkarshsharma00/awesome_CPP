@@ -49,6 +49,14 @@ void minimum_palin_cut(string s)
         }
     }   
     
+    for (int i = 0; i < storage.size(); i++)
+    {
+        for (int j = 0; j < storage[0].size(); j++)
+        {
+            cout << storage[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
 
 int main(int argc, char **argv)
