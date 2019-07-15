@@ -7,7 +7,19 @@ using namespace std;
 
 int min_square_cut(vector<vector<int>> &arr, int length, int breadth)
 {
+    if (length == 0 || breadth == 0)
+    {
+        return 0;
+    }
+    if (length == breadth)
+    {
+        return 1;
+    }
 
+    if (arr[length][breadth] != 0)
+    {
+        return arr[length][breadth];
+    }
 }
 
 int main(int argc, char **argv)
