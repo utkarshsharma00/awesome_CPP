@@ -7,6 +7,15 @@ using namespace std;
 int mincost(vector<vector<int>> &cost)
 {
     vector<vector<int>> strg(cost.size(), vector<int>(cost[0].size(), 0));
+    if (row == strg.size() - 1 && col == strg[0].size() - 1)
+    {
+        cout << path_so_far << endl;
+        return;
+    }
+    else if (row == strg.size() - 1)
+    {
+        mincostPath(strg, row, col + 1, path_so_far + "h");
+    }
 
 }
 
