@@ -23,7 +23,6 @@ int stepsknown(vector<int> &jumpSize) //new technique which is known as Tabulati
     }
 
     return strg[strg.size() - 1];
-
 }
 
 int main()
