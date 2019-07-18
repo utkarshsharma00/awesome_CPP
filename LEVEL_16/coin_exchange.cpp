@@ -8,8 +8,19 @@ void CoinChange_Perm(vector<int> &arr, int target) //target is the amount that h
 {
     vector<int> strg(target + 1, false);
     strg[0] = 1;
-    //yet to be written
-
+    for (int i = 0; i < strg.size(); i++)
+    {
+        for (int j = 0; j < arr.size(); j++)
+        {
+            int previous = i - arr[j];
+            int temp = 0;
+            if (previous >= 0)
+            {
+                temp = strg[previous];
+            }
+            strg[i] += temp;
+        }
+    }
 }
 
 void CoinChange_Comb(vector<int> &arr, int target)
