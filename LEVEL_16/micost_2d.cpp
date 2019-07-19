@@ -4,9 +4,8 @@
 #include <climits>
 using namespace std;
 
-int mincost(vector<vector<int>> &cost)
+void mincostPath(vector<vector<int>> &strg, int row, int col, string path_so_far)
 {
-    vector<vector<int>> strg(cost.size(), vector<int>(cost[0].size(), 0));
     if (row == strg.size() - 1 && col == strg[0].size() - 1)
     {
         cout << path_so_far << endl;
@@ -15,23 +14,6 @@ int mincost(vector<vector<int>> &cost)
     else if (row == strg.size() - 1)
     {
         mincostPath(strg, row, col + 1, path_so_far + "h");
-    }
-    else if (col == strg[0].size() - 1)
-    {
-        mincostPath(strg, row + 1, col, path_so_far + "v");
-    }
-    else
-    {
-        int mymin = min(strg[row][col + 1], strg[row + 1][col]);
-        if (strg[row + 1][col] == mymin)
-        {
-            mincostPath(strg, row + 1, col, path_so_far + "v");
-        }
-
-        if (strg[row][col + 1] == mymin)
-        {
-            mincostPath(strg, row, col + 1, path_so_far + "h");
-        }
     }
 }
 
