@@ -34,6 +34,11 @@ void mincostPath(vector<vector<int>> &strg, int row, int col, string path_so_far
     }
 }
 
+int mincost(vector<vector<int>> &cost)
+{
+    vector<vector<int>> strg(cost.size(), vector<int>(cost[0].size(), 0));  
+}
+
 int main(int argc, char **argv)
 {
     vector<vector<int>> cost{{2, 6, 5, 1, 3, 4},
