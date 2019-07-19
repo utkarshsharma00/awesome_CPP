@@ -20,7 +20,19 @@ int mincost(vector<vector<int>> &cost)
     {
         mincostPath(strg, row + 1, col, path_so_far + "v");
     }
+    else
+    {
+        int mymin = min(strg[row][col + 1], strg[row + 1][col]);
+        if (strg[row + 1][col] == mymin)
+        {
+            mincostPath(strg, row + 1, col, path_so_far + "v");
+        }
 
+        if (strg[row][col + 1] == mymin)
+        {
+            mincostPath(strg, row, col + 1, path_so_far + "h");
+        }
+    }
 }
 
 int main(int argc, char **argv)
