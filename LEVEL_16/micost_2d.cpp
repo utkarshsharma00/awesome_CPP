@@ -16,6 +16,10 @@ int mincost(vector<vector<int>> &cost)
     {
         mincostPath(strg, row, col + 1, path_so_far + "h");
     }
+    else if (col == strg[0].size() - 1)
+    {
+        mincostPath(strg, row + 1, col, path_so_far + "v");
+    }
 
 }
 
