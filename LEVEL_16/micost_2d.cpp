@@ -37,6 +37,19 @@ void mincostPath(vector<vector<int>> &strg, int row, int col, string path_so_far
 int mincost(vector<vector<int>> &cost)
 {
     vector<vector<int>> strg(cost.size(), vector<int>(cost[0].size(), 0));  
+    
+    for (int i = cost.size() - 1; i >= 0; i--)
+    {
+        for (int j = cost[0].size() - 1; j >= 0; j--)
+        {
+            if (i == cost.size() - 1 && j == cost[0].size() - 1)
+            {
+                strg[i][j] = cost[i][j];
+            }
+            else if (i == cost.size() - 1)
+            {
+                strg[i][j] = cost[i][j] + strg[i][j + 1];
+            }
 }
 
 int main(int argc, char **argv)
