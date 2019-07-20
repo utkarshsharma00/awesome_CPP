@@ -5,7 +5,13 @@
 using namespace std;
 
 int counter = 0;
+
 void count_palindromic_subseq(string s)
 {
     vector<vector<int>> storage(s.length(), vector<int>(s.length()));
+}
+
+int main(int argc, char **argv)
+{
+    count_palindromic_subseq("abgcckyb");
 }
