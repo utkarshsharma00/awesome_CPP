@@ -50,6 +50,19 @@ int mincost(vector<vector<int>> &cost)
             {
                 strg[i][j] = cost[i][j] + strg[i][j + 1];
             }
+            else if (j == cost.size() - 1)
+            {
+                strg[i][j] = cost[i][j] + strg[i + 1][j];
+            }
+            else
+            {
+                strg[i][j] = cost[i][j] + min(strg[i][j + 1], strg[i + 1][j]);
+            }
+        }
+    }
+    
+    mincostPath(strg, 0, 0, " ");
+    return strg[0][0];
 }
 
 int main(int argc, char **argv)
