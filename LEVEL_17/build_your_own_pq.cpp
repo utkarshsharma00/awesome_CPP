@@ -20,6 +20,14 @@ private:
             return list[i] > list[j]; //will create a MaxHeap
         }
     }
+    
+    void swap(int i, int j)
+    {
+        int ith = list[i];
+        int jth = list[j];
+        list[i] = jth;
+        list[j] = ith;
+    }
 };
 
 int main(int argc, char **argv)
