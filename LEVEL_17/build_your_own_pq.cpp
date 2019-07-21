@@ -35,4 +35,12 @@ int main(int argc, char **argv)
     pq.push(1);
     pq.push(5);
     pq.push(35);
+    
+    while (pq.size() > 0)
+    {
+        int val = pq.top();
+        pq.pop();
+        cout << val << " ";
+    }
+    cout << endl;
 }
