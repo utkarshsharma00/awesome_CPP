@@ -24,5 +24,15 @@ private:
 
 int main(int argc, char **argv)
 {
+    Priority_queue pq(false);
 
+    pq.push(10);
+    pq.push(2);
+    pq.push(20);
+    pq.push(7);
+    pq.push(60);
+    pq.push(100);
+    pq.push(1);
+    pq.push(5);
+    pq.push(35);
 }
