@@ -28,6 +28,18 @@ private:
         list[i] = jth;
         list[j] = ith;
     }
+    
+    void up_heapify(int index)
+    {
+        
+    }
+    
+    void down_heapify(int index)
+    {
+        
+    }
+
+
 };
 
 int main(int argc, char **argv)
