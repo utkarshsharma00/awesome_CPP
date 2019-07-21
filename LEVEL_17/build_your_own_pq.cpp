@@ -38,7 +38,18 @@ private:
     {
         
     }
+    
+public:
+    Priority_queue(bool type)
+    {
+        this->type = type;
+    }
 
+    void push(int val)
+    {
+        list.push_back(val);
+        up_heapify(list.size() - 1);
+    }
 
 };
 
