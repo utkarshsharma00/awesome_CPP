@@ -51,6 +51,21 @@ public:
         up_heapify(list.size() - 1);
     }
 
+    void pop()
+    {
+        
+    }
+    
+    int top()
+    {
+        
+    }
+    
+    int size()
+    {
+        
+    }
+
 };
 
 int main(int argc, char **argv)
