@@ -31,7 +31,12 @@ private:
     
     void up_heapify(int index)
     {
-        
+        int parent_index = (index - 1) / 2;
+        if (is_higher_priority(index, parent_index) == true)
+        {
+            swap(index, parent_index);
+            up_heapify(parent_index);
+        } 
     }
     
     void down_heapify(int index)
