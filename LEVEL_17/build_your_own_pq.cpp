@@ -58,17 +58,19 @@ public:
 
     void pop()
     {
-        
+        swap(0, list.size() - 1);
+        list.pop_back();
+        down_heapify(0); 
     }
     
     int top()
     {
-        
+        return list[0];        
     }
     
     int size()
     {
-        
+        return list.size();
     }
 
 };
