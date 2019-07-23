@@ -9,6 +9,14 @@ void ksorted(vector<int> &arr, int k)
     {
         pq.push(arr[i]);
     }
+    
+    for (int i = k + 1; i < arr.size(); i++)
+    {
+        int val = pq.top();
+        pq.pop();
+        pq.push(arr[i]);
+        cout << val << " ";
+    }
 }
 
 int main(int argc, char **argv)
