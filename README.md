@@ -16,6 +16,7 @@ LEVEL_14 : Insights of Trees.</br>
 LEVEL_15 : Insights of Graphs.</br>
 LEVEL_16 : Insights of Dynamic Programming.</br>
 LEVEL_17 : Insights of Priority Queue.</br>
+LEVEL_18 : Insights of Stack and Queue.</br>
 LEVEL_OOPS : Insights of OOPS.</br>
 
 
