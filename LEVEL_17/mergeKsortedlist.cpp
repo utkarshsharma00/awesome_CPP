@@ -2,6 +2,14 @@
 #include <iostream>
 using namespace std;
 
+class Helper
+{
+public:
+    int list_index;
+    int data_index;
+    int value;
+};
+
 int main(int argc, char **argv)
 {
     vector<vector<int>> lists{{2, 5, 9, 18, 20, 25},
