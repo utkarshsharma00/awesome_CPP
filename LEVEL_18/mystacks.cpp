@@ -1,5 +1,22 @@
 #include <iostream>
 
+class myStack
+{
+private:
+    int *data_arr = NULL;
+    int Capacity = 0;
+    int top_of_stack;
+    
+public:
+    myStack(int Capacity)
+    {
+        data_arr = new int[Capacity];
+        this->Capacity = Capacity;
+        this->top_of_stack = -1;
+    }
+
+};
+
 int main(int argc, char **argv)
 {
     myStack ms(5);
