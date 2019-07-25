@@ -14,6 +14,31 @@ public:
         this->Capacity = Capacity;
         this->top_of_stack = -1;
     }
+    
+    void push(int Value)
+    {
+        
+    }
+    
+    void pop()
+    {
+        
+    }
+    
+    int top()
+    {
+        
+    }
+    
+    int size()
+    {
+        
+    }
+    
+    bool isEmpty()
+    {
+        
+    }
 
 };
 
