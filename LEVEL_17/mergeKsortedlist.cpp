@@ -10,6 +10,11 @@ public:
     int value;
 };
 
+void mergeKsortedLists(vector<vector<int>> &lists)
+{
+    priority_queue<Helper> pq;
+}
+
 int main(int argc, char **argv)
 {
     vector<vector<int>> lists{{2, 5, 9, 18, 20, 25},
