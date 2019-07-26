@@ -22,17 +22,27 @@ public:
     
     void pop()
     {
-        
+        if (top_of_stack == -1)
+        {
+            cout << "Stack Underflow" << endl;
+        }
+        data_arr[top_of_stack] = 0;
+        top_of_stack--;
     }
     
     int top()
     {
+        if (top_of_stack == -1)
+        {
+            cout << "Stack Underflow" << endl;
+        }
         
+        return data_arr[top_of_stack]; 
     }
     
     int size()
     {
-        
+        return top_of_stack + 1;        
     }
     
     bool isEmpty()
