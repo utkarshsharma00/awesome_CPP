@@ -37,7 +37,14 @@ public:
     
     bool isEmpty()
     {
-        
+        if (top_of_stack == -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 };
