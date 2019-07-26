@@ -17,7 +17,13 @@ public:
     
     void push(int Value)
     {
-        
+       if (top_of_stack == Capacity - 1)
+        {
+            cout << "Stack Overflow" << endl;
+        }
+
+        top_of_stack++;
+        data_arr[top_of_stack] = Value; 
     }
     
     void pop()
