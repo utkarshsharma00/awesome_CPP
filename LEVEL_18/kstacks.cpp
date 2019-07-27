@@ -27,4 +27,16 @@ int main(int argc, char **argv)
     ks.push(90, 0);
     ks.push(100, 0);
     ks.push(110, 2);
+    
+    for (int i = 0; i <= 2; i++)
+    {
+        cout << i << ":";
+        while (ks.isEmpty(i) == false)
+        {
+            int val = ks.top(i);
+            ks.pop(i);
+            cout << val << " ";
+        }
+        cout << endl;
+    }
 }
