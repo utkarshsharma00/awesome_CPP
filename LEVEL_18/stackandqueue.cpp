@@ -27,3 +27,18 @@ public:
         return this->start < O.start;
     }
 };
+
+void stack_demo()
+{
+    stack<int> st;
+    st.push(10);
+    st.push(20);
+    st.push(30);
+    st.push(40);
+    while (st.size() > 0)
+    {
+        cout << st.top() << endl;
+        st.pop();
+    }
+    cout << endl;
+}
