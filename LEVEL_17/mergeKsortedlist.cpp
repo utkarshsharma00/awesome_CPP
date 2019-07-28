@@ -25,6 +25,10 @@ public:
 void mergeKsortedLists(vector<vector<int>> &lists)
 {
     priority_queue<Helper> pq;
+    for (int i = 0; i < lists.size(); i++)
+    {
+        pq.push(Helper(i, 0, lists[i][0]));
+    }
 }
 
 int main(int argc, char **argv)
