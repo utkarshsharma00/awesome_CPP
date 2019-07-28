@@ -21,6 +21,12 @@ void CoinChange_Perm(vector<int> &arr, int target) //target is the amount that h
             strg[i] += temp;
         }
     }
+    
+    for (int i = 0; i < strg.size(); i++)
+    {
+        cout << strg[i] << " ";
+    }
+    cout << endl;
 }
 
 void CoinChange_Comb(vector<int> &arr, int target)
