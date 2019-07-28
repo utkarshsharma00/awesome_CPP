@@ -8,6 +8,18 @@ public:
     int list_index;
     int data_index;
     int value;
+    
+    Helper(int list_index, int data_index, int value)
+    {
+        this->list_index = list_index;
+        this->data_index = data_index;
+        this->value = value;
+    }
+
+    bool operator<(const Helper &other) const
+    {
+        return this->value > other.value; //smartness here in comparisons
+    }
 };
 
 void mergeKsortedLists(vector<vector<int>> &lists)
