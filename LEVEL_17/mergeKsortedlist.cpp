@@ -29,6 +29,20 @@ void mergeKsortedLists(vector<vector<int>> &lists)
     {
         pq.push(Helper(i, 0, lists[i][0]));
     }
+    
+    while (pq.size() > 0)
+    {
+        Helper h = pq.top();
+        pq.pop();
+        cout << h.value << " ";
+        h.data_index++;
+
+        if (h.data_index < lists[h.list_index].size())
+        {
+            h.value = lists[h.list_index][h.data_index];
+            pq.push(h);
+        }
+    }
 }
 
 int main(int argc, char **argv)
