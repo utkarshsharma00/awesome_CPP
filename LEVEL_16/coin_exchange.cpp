@@ -33,7 +33,19 @@ void CoinChange_Comb(vector<int> &arr, int target)
 {
     vector<int> strg(target + 1, false);
     strg[0] = 1;
-    //yet to be written
+    for (int i = 0; i <= arr.size(); i++)
+    {
+        for (int j = 0; j <= strg.size(); j++)
+        {
+            int temp = 0;
+            int prev = j - arr[i];
+            if (prev >= 0)
+            {
+                temp = strg[prev];
+            }
+            strg[j] += temp;
+        }
+    }
 }
 
 int main(int argc, char **argv)
