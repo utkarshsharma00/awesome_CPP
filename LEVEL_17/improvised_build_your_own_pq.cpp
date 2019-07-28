@@ -4,6 +4,24 @@
 
 using namespace std;
 
+template <class T>
+    
+class pq
+{
+    private:
+    vector<T> list;
+};
+    
+    
+class Student
+{
+    public:
+    int marks;
+    int extra;
+    string name;
+    
+};
+
 int main(int argc, char **argv)
 {
     pq<Student> pq(StudentExtraMarksComparator);
