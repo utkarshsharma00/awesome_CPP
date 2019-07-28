@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char **argv)
+{
+    pq<Student> pq(StudentExtraMarksComparator);
+
+    pq.push(Student(8, 8, "D"));
+    pq.push(Student(5, 5, "E"));
+    pq.push(Student(10, 10, "A"));
+    pq.push(Student(6, 10, "B"));
+    pq.push(Student(10, 2, "C"));
+
+    while (pq.size() > 0)
+    {
+        Student s = pq.top();
+        pq.pop();
+        s.display();
+    }
+}
