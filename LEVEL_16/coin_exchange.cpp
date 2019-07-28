@@ -46,6 +46,12 @@ void CoinChange_Comb(vector<int> &arr, int target)
             strg[j] += temp;
         }
     }
+    
+    for (int i = 0; i < strg.size(); i++)
+    {
+        cout << strg[i] << " ";
+    }
+    cout << endl;
 }
 
 int main(int argc, char **argv)
