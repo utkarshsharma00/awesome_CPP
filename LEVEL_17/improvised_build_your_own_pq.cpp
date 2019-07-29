@@ -41,6 +41,11 @@ class Student
         this->name = name;
     }
     
+    void display()
+    {
+        cout << "[" << this->name << ":" << this->marks << ", "
+             << this->extra << "]" << endl;
+    }
 };
 
 int main(int argc, char **argv)
