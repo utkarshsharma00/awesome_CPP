@@ -17,6 +17,19 @@ void count_palindromic_subseq(string s)
             {
                 storage[i][j] = 1;
             }
+            
+            else if (gap == 1)
+            {
+                if (s[i] == s[j])
+                {
+                    storage[i][j] = 3;
+                }
+
+                else
+                {
+                    storage[i][j] = 2;
+                }
+            }
         }   
     }    
 }
