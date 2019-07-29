@@ -30,8 +30,20 @@ void count_palindromic_subseq(string s)
                     storage[i][j] = 2;
                 }
             }
-        }   
-    }    
+            
+            else
+            {
+                if (s[i] == s[j])
+                {
+                    storage[i][j] = storage[i][j - 1] + storage[i + 1][j] + 1;
+                }
+                else
+                {
+                    storage[i][j] = storage[i + 1][j] + storage[i][j - 1] - storage[i + 1][j - 1];
+                }
+            }
+        }
+    }   
 }
 
 int main(int argc, char **argv)
