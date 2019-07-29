@@ -20,6 +20,18 @@ class Student
     int extra;
     string name;
     
+    bool operator<(const Student &o) const
+    {
+        return this->name.compare(o.name) < 0;
+    }
+
+    Student(int marks, int extra, string name)
+    {
+        this->marks = marks;
+        this->extra = extra;
+        this->name = name;
+    }
+    
 };
 
 int main(int argc, char **argv)
