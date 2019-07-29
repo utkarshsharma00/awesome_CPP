@@ -10,6 +10,15 @@ class pq
 {
     private:
     vector<T> list;
+    bool (*comptor)(const T &o1, const T &o2) = NULL; //!this NULL has to be done only for the constructor created in line 82
+
+    void swap(int i, int j)
+    {
+        T ith = list[i];
+        T jth = list[j];
+        list[i] = jth;
+        list[j] = ith;
+    }
 };
     
     
