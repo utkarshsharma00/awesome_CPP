@@ -16,7 +16,6 @@ class Node
     }
 };
 
-
 class EulerHelper
 {
 public:
