@@ -463,8 +463,17 @@ void Euler(Node *root) //this uses EulerHelper Class
           }
           topHelper->state++;
       }
+      else if (topHelper->state == topHelper->root->children.size() + 1)
+      {
+          cout << topHelper->root->data << " Post" << endl;
+          topHelper->state++;
+      }
+      else if (topHelper->state == topHelper->root->children.size() + 2)
+      {
+          stack.pop_front();
+          delete topHelper;
+      }
    }
-  //yet to be written
 }
 
 void display(Node *root)
