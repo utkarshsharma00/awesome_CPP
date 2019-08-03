@@ -43,6 +43,26 @@ void stack_demo()
     cout << endl;
 }
 
+void decrease_increase_string(string Input)
+{
+    //yet to be written
+}
+
+void next_greater_element(vector<int> &v) //* Right To Left Thinking/Approach
+{
+    //yet to be written   
+}
+
+void next_greater_elementLtoR(vector<int> &v)
+{
+    //yet to be written   
+}
+
+int largest_area_histogram(vector<int> &v)
+{
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
     cout << "Stack Demo\n";
