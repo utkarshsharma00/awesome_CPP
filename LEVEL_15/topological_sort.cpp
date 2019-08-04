@@ -34,7 +34,8 @@ void slave_for_topological_sort(vector<vector<Edge>> &graph, int source, vector<
 
 void topological_sort(vector<vector<Edge>> &graph)
 {
-    
+    stack<int> stack;
+    vector<int> visited(graph.size(), 0);   
 }
 
 void display(vector<vector<Edge>> &graph)
