@@ -27,6 +27,21 @@ void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
     graph[vertex2].push_back(Edge(vertex1, weight));
 }
 
+void slave_for_topological_sort(vector<vector<Edge>> &graph, int source, vector<int> &visited, stack<int> &stack)
+{
+    
+}
+
+void topological_sort(vector<vector<Edge>> &graph)
+{
+    
+}
+
+void display(vector<vector<Edge>> &graph)
+{
+    
+}
+
 int main(int argc, char **argv)
 {
     vector<vector<Edge>> graph(7);
