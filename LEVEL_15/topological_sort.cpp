@@ -29,7 +29,7 @@ void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 
 void slave_for_topological_sort(vector<vector<Edge>> &graph, int source, vector<int> &visited, stack<int> &stack)
 {
-    
+    visited[source] = true;    
 }
 
 void topological_sort(vector<vector<Edge>> &graph)
