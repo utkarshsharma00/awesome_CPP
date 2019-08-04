@@ -17,6 +17,12 @@ public:
     }
 };
 
+void addEdge(vector<vector<Edge>> &graph, int v1, int v2, int weight)
+{
+    graph[v1].push_back(Edge(v2, weight));
+    graph[v2].push_back(Edge(v1, weight));
+}
+
 int main(int argc, char **argv)
 {
     vector<int> d1 = {1, 6, 8, 2, 9, 10, 0};
