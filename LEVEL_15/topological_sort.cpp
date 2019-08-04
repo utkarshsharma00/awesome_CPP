@@ -39,7 +39,16 @@ void topological_sort(vector<vector<Edge>> &graph)
 
 void display(vector<vector<Edge>> &graph)
 {
-    
+    for (int vertex = 0; vertex < graph.size(); vertex++)
+    {
+        cout << vertex << "->";
+        for (int neighbour = 0; neighbour < graph[vertex].size(); neighbour++)
+        {
+            Edge new_edge = graph[vertex][neighbour];
+            cout << "[" << new_edge.neighbour << "@" << new_edge.weight << "]";
+        }
+        cout << endl;
+    }    
 }
 
 int main(int argc, char **argv)
