@@ -25,12 +25,21 @@ void addEdge(vector<vector<Edge>> &graph, int v1, int v2, int weight)
 
 int getsize(vector<vector<Edge>> &graph, vector<bool> &visited, int src)
 {
-    
+    list<int> queue;
+    int count = 1;
+    int data = src;
+    queue.push_back(src);    
 }
 
 int astro(vector<int> &d1, vector<int> &d2, int vertices)
 {
-    
+    vector<vector<Edge>> graph(vertices);
+    vector<bool> visited(vertices, 0);
+
+    for (int i = 0; i < d1.size(); i++)
+    {
+        addEdge(graph, d1[i], d2[i], 10);
+    }    
 }
 
 void display(vector<vector<Edge>> &graph)
