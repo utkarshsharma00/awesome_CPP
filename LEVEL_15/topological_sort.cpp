@@ -29,7 +29,16 @@ void addEdge(vector<vector<Edge>> &graph, int vertex1, int vertex2, int weight)
 
 void slave_for_topological_sort(vector<vector<Edge>> &graph, int source, vector<int> &visited, stack<int> &stack)
 {
-    visited[source] = true;    
+    visited[source] = true;
+    for (int neighbour = 0; neighbour < graph[source].size(); neighbour++)
+    {
+        Edge new_edge = graph[source][neighbour];
+        if (visited[new_edge.neighbour] == false)
+        {
+            slave_for_topological_sort(graph, new_edge.neighbour, visited, stack);
+        }
+    }
+    stack.push(source);
 }
 
 void topological_sort(vector<vector<Edge>> &graph)
