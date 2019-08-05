@@ -35,7 +35,22 @@ void slave_for_topological_sort(vector<vector<Edge>> &graph, int source, vector<
 void topological_sort(vector<vector<Edge>> &graph)
 {
     stack<int> stack;
-    vector<int> visited(graph.size(), 0);   
+    vector<int> visited(graph.size(), 0);
+    for (int i = 0; i < graph.size(); i++) //i is vertex
+    {
+        if (visited[i] == 0)
+        {
+            slave_for_topological_sort(graph, i, visited, stack);
+        }
+    }
+
+    while ((stack.size() > 0))
+    {
+        int val = stack.top();
+        stack.pop();
+        cout << val << " ";
+    }
+    cout << endl;
 }
 
 void display(vector<vector<Edge>> &graph)
