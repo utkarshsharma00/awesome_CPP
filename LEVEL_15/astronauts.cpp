@@ -77,6 +77,17 @@ int astro(vector<int> &d1, vector<int> &d2, int vertices)
             people.push_back(temp);
         }
     }
+    
+    int total = 0;
+    for (int i = 0; i < count; i++)
+    {
+        // cout<<people[i]<<" ";
+        for (int j = 0; j < i; j++)
+        {
+            total += people[i] * people[j];
+        }
+    }
+    return total;
 }
 
 void display(vector<vector<Edge>> &graph)
