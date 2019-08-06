@@ -29,6 +29,31 @@ int getsize(vector<vector<Edge>> &graph, vector<bool> &visited, int src)
     int count = 1;
     int data = src;
     queue.push_back(src);    
+    
+    while (queue.size() > 0)
+    {
+        int rem = queue.front();
+        queue.pop_front();
+        if (visited[rem] == true)
+        {
+            continue;
+        }
+        else
+        {
+            visited[rem] = 1;
+        }
+
+        for (int i = 0; i < graph[rem].size(); i++)
+        {
+            Edge ne = graph[rem][i];
+            if (visited[ne.n] == 0)
+            {
+                queue.push_back(ne.n);
+                count++;
+            }
+        }
+    }
+    return count;
 }
 
 int astro(vector<int> &d1, vector<int> &d2, int vertices)
