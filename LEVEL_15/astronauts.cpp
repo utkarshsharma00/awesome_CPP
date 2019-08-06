@@ -39,7 +39,19 @@ int astro(vector<int> &d1, vector<int> &d2, int vertices)
     for (int i = 0; i < d1.size(); i++)
     {
         addEdge(graph, d1[i], d2[i], 10);
-    }    
+    }   
+    
+    vector<int> people;
+    int count = 0;
+    for (int i = 0; i < graph.size(); i++)
+    {
+        if (visited[i] == 0)
+        {
+            int temp = getsize(graph, visited, i);
+            count++;
+            people.push_back(temp);
+        }
+    }
 }
 
 void display(vector<vector<Edge>> &graph)
