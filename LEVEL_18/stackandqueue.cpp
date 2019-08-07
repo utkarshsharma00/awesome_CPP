@@ -78,7 +78,16 @@ void next_greater_element(vector<int> &v) //* Right To Left Thinking/Approach
     stack<int> st;
     st.push(v[v.size() - 1]);
     result[v.size() - 1] = -1;
-    //yet to be written   
+    for (int i = v.size() - 2; i >= 0; i--)
+    {
+        while (st.size() > 0 && v[i] > st.top())
+        {
+            st.pop();
+        }
+
+        result[i] = st.size() > 0 ? st.top() : -1;
+        st.push(v[i]);
+    }
 }
 
 void next_greater_elementLtoR(vector<int> &v)
@@ -90,6 +99,11 @@ void next_greater_elementLtoR(vector<int> &v)
 }
 
 int largest_area_histogram(vector<int> &v)
+{
+    //yet to be written
+}
+
+vector<int> *sliding_window_max(vector<int> &v, int window_size)
 {
     //yet to be written
 }
