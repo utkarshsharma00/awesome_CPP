@@ -45,6 +45,22 @@ void stack_demo()
 
 void decrease_increase_string(string Input)
 {
+    int val = 1;
+    stack<int> st;
+    for (int i = 0; i < Input.length(); i++)
+    {
+        char ch = Input[i];
+        st.push(val++);
+
+        if (ch == 'i')
+        {
+            while (st.size() > 0)
+            {
+                cout << st.top();
+                st.pop();
+            }
+        }
+    }
     //yet to be written
 }
 
