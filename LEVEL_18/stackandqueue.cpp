@@ -66,11 +66,18 @@ void decrease_increase_string(string Input)
 
 void next_greater_element(vector<int> &v) //* Right To Left Thinking/Approach
 {
+    vector<int> result(v.size(), 0);
+    stack<int> st;
+    st.push(v[v.size() - 1]);
+    result[v.size() - 1] = -1;
     //yet to be written   
 }
 
 void next_greater_elementLtoR(vector<int> &v)
 {
+    vector<int> result(v.size(), 0);
+    stack<int> st;
+
     //yet to be written   
 }
 
