@@ -108,6 +108,21 @@ vector<int> *sliding_window_max(vector<int> &v, int window_size)
     //yet to be written
 }
 
+bool duplicate_brackets(string Input)
+{
+    //yet to be written
+}
+
+void celebrity(vector<vector<bool>> &v)
+{
+    //yet to be written
+}
+
+void overlapping_intervals(vector<int> &starts, vector<int> &ends)
+{
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
     cout << "Stack Demo\n";
