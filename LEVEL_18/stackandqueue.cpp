@@ -61,7 +61,15 @@ void decrease_increase_string(string Input)
             }
         }
     }
-    //yet to be written
+    
+    st.push(val++);
+    while (st.size() > 0)
+    {
+        cout << st.top();
+        st.pop();
+    }
+
+    cout << endl;
 }
 
 void next_greater_element(vector<int> &v) //* Right To Left Thinking/Approach
