@@ -100,6 +100,16 @@ void next_greater_elementLtoR(vector<int> &v)
 {
     vector<int> result(v.size(), 0);
     stack<int> st;
+    
+    or (int i = 0; i < v.size(); i++)
+    {
+        while (st.size() > 0 && v[st.top()] < v[i])
+        {
+            result[st.top()] = v[i];
+            st.pop();
+        }
+        st.push(i);
+    }
 
     //yet to be written   
 }
