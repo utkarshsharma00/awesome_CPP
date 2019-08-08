@@ -48,6 +48,16 @@ class Student
     }
 };
 
+bool StudentMarksComparator(const Student &o1, const Student &o2)
+{
+    return o2.marks < o1.marks;
+}
+
+bool StudentExtraComparator(const Student &o1, const Student &o2)
+{
+    return o2.extra < o1.extra;
+}
+
 int main(int argc, char **argv)
 {
     pq<Student> pq(StudentExtraMarksComparator);
