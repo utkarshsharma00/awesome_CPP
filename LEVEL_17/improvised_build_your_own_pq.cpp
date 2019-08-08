@@ -19,8 +19,20 @@ class pq
         list[i] = jth;
         list[j] = ith;
     }
-};
     
+    // if i is higher priority return true, else return false
+    bool ishp(int i, int j)
+    {
+        if (this->comptor == NULL)
+        {
+            return list[j] < list[i];
+        }
+        else
+        {
+            return comptor(list[i], list[j]);
+        }
+    }
+};
     
 class Student
 {
