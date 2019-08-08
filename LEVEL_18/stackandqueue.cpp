@@ -88,6 +88,12 @@ void next_greater_element(vector<int> &v) //* Right To Left Thinking/Approach
         result[i] = st.size() > 0 ? st.top() : -1;
         st.push(v[i]);
     }
+    
+    for (int i = 0; i < result.size(); i++)
+    {
+        cout << result[i] << " ";
+    }
+    cout << endl;
 }
 
 void next_greater_elementLtoR(vector<int> &v)
