@@ -170,4 +170,7 @@ int main(int argc, char **argv)
     cout << "Histogram Largest Area\n";
     vector<int> v1 = {6, 2, 5, 4, 5, 1, 6};
     cout << largest_area_histogram(v1) << endl;
+    cout << "Sliding Window Max.\n";
+    vector<int> v2 = {2, 7, 3, 1, 6, 8, 4, 9, 5, 10};
+    vector<int> *arr = sliding_window_max(v2, 5);
 }
