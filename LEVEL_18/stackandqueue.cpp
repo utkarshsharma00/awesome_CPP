@@ -110,8 +110,12 @@ void next_greater_elementLtoR(vector<int> &v)
         }
         st.push(i);
     }
-
-    //yet to be written   
+    
+    for (int i = 0; i < result.size(); i++)
+    {
+        cout << result[i] << " ";
+    }
+    cout << endl;
 }
 
 int largest_area_histogram(vector<int> &v)
