@@ -111,6 +111,12 @@ void next_greater_elementLtoR(vector<int> &v)
         st.push(i);
     }
     
+    while (st.size() > 0)
+    {
+        result[st.top()] = -1;
+        st.pop();
+    }
+
     for (int i = 0; i < result.size(); i++)
     {
         cout << result[i] << " ";
