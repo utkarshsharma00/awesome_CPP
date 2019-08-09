@@ -143,4 +143,15 @@ int main(int argc, char **argv)
 {
     cout << "Stack Demo\n";
     stack_demo();
+    
+    cout << "Decrease Increase String" << endl;
+    decrease_increase_string("ddiddddd");
+    vector<int> v{1, 2, 7, 9, 6, 5, 3, 8};
+    cout << "Next Greater Element R to L approach\n";
+    next_greater_element(v);
+    cout << "Next Greater Element L to R approach\n";
+    next_greater_elementLtoR(v);
+    cout << "Histogram Largest Area\n";
+    vector<int> v1 = {6, 2, 5, 4, 5, 1, 6};
+    cout << largest_area_histogram(v1) << endl;
 }
