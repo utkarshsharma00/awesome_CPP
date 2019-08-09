@@ -173,4 +173,9 @@ int main(int argc, char **argv)
     cout << "Sliding Window Max.\n";
     vector<int> v2 = {2, 7, 3, 1, 6, 8, 4, 9, 5, 10};
     vector<int> *arr = sliding_window_max(v2, 5);
+    for (int i = 0; i < arr->size(); i++)
+    {
+        cout << (*arr)[i];
+    }
+    cout << "\n";
 }
