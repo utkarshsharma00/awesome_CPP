@@ -126,6 +126,12 @@ void next_greater_elementLtoR(vector<int> &v)
 
 int largest_area_histogram(vector<int> &v)
 {
+    int max_area = 0;
+
+    vector<int> left_bound(v.size(), 0);
+    stack<int> st1;
+    st1.push(0);
+    left_bound[0] = -1;
     //yet to be written
 }
 
