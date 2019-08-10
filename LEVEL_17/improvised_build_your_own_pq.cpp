@@ -8,7 +8,7 @@ template <class T>
     
 class pq
 {
-    private:
+  private:
     vector<T> list;
     bool (*comptor)(const T &o1, const T &o2) = NULL; //!this NULL has to be done only for the constructor created in line 82
 
@@ -45,11 +45,22 @@ class pq
             upheapify(pi);
         }
     }
+    
+  public:
+    pq()
+    {
+        this->comptor = NULL;
+    }
+
+    pq(bool (*comptor)(const T &o1, const T &o2))
+    {
+        this->comptor = comptor;
+    }
 };
     
 class Student
 {
-    public:
+  public:
     int marks;
     int extra;
     string name;
