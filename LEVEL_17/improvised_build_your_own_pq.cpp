@@ -32,6 +32,19 @@ class pq
             return comptor(list[i], list[j]);
         }
     }
+    
+    void upheapify(int i)
+    {
+        if (i == 0)
+            return;
+
+        int pi = (i - 1) / 2;
+        if (ishp(i, pi) == true)
+        {
+            swap(i, pi);
+            upheapify(pi);
+        }
+    }
 };
     
 class Student
