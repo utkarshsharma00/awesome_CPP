@@ -56,6 +56,16 @@ class pq
     {
         this->comptor = comptor;
     }
+    
+    T top()
+    {
+        return list[0];
+    }
+
+    int size()
+    {
+        return list.size();
+    }
 };
     
 class Student
@@ -92,6 +102,16 @@ bool StudentMarksComparator(const Student &o1, const Student &o2)
 bool StudentExtraComparator(const Student &o1, const Student &o2)
 {
     return o2.extra < o1.extra;
+}
+
+bool StudentMarksExtraComparator(const Student &o1, const Student &o2)
+{
+    
+}
+
+bool StudentExtraMarksComparator(const Student &o1, const Student &o2)
+{
+    
 }
 
 int main(int argc, char **argv)
