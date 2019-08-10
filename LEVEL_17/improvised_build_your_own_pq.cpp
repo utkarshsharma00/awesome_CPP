@@ -57,6 +57,12 @@ class pq
         this->comptor = comptor;
     }
     
+    void push(T val)
+    {
+        list.push_back(val);
+        upheapify(list.size() - 1);
+    }
+    
     T top()
     {
         return list[0];
