@@ -7,6 +7,21 @@ int petrolpump(vector<int> &oil, vector<int> &dist)
     int spare = 0;
     int start = 0;
     int end = 0;
+    
+    while (true)
+    {
+        if (spare + oil[end] >= dist[end])
+        {
+            spare = spare + oil[end] - dist[end];
+            end = (end + 1) % oil.size();
+
+            if (end == start)
+            {
+                cout << start << endl;
+                break;
+            }
+        }
+    }    
 }
 
 int main(int argc, char **argv)
