@@ -141,6 +141,17 @@ vector<int> *sliding_window_max(vector<int> &v, int window_size)
     stack<int> st;
     nge[v.size() - 1] = v.size();
     st.push(v.size() - 1);
+    
+    for (int i = v.size() - 2; i >= 0; i--)
+    {
+        while (st.size() > 0 && v[st.top()] < v[i])
+        {
+            st.pop();
+        }
+
+        nge[i] = st.size() == 0 ? v.size() : st.top();
+        st.push(i);
+    }
     //yet to be written
 }
 
