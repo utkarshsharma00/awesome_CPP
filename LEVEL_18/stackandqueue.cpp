@@ -137,6 +137,10 @@ int largest_area_histogram(vector<int> &v)
 
 vector<int> *sliding_window_max(vector<int> &v, int window_size)
 {
+    vector<int> nge(v.size(), 0); //* nge means next_greater_element
+    stack<int> st;
+    nge[v.size() - 1] = v.size();
+    st.push(v.size() - 1);
     //yet to be written
 }
 
