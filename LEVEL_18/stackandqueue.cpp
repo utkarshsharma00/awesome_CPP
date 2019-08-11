@@ -162,6 +162,21 @@ bool duplicate_brackets(string Input)
 
 void celebrity(vector<vector<bool>> &v)
 {
+    int n = v.size();
+    int left = 0;
+    int right = n - 1;
+
+    while (left != right)
+    {
+        if (v[left][right] == 1)
+        {
+            left++;
+        }
+        else
+        {
+            right--;
+        }
+    }
     //yet to be written
 }
 
