@@ -178,4 +178,14 @@ int main(int argc, char **argv)
         cout << (*arr)[i];
     }
     cout << "\n";
+    cout << "Duplicate Brackets Case when duplicate are present\n";
+    cout << duplicate_brackets("((a+b)+((c+d))") << endl;
+    cout << "Duplicate Brackets Case when duplicate are NOT present\n";
+    cout << duplicate_brackets("((a+b)+(c+d)") << endl;
+    vector<vector<bool>> v3 = {{0, 0, 1, 0, 1, 1},
+                               {1, 0, 1, 1, 1, 1},
+                               {1, 0, 0, 1, 1, 0},
+                               {0, 0, 0, 0, 1, 0},
+                               {0, 0, 0, 0, 0, 0},
+                               {1, 0, 1, 1, 1, 0}};
 }
