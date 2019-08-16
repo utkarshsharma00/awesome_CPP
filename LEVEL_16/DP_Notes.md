@@ -8,3 +8,5 @@ It is used when the solution can be recursively described in terms of solutions 
 Optimal substructure: optimal solution to problem consists of optimal solutions to subproblems.
 Overlapping subproblems: few subproblems in total, many recurring instances of each.
 Solve bottom-up, building a table of solved subproblems that are used to solve larger ones.
+
+### Formatting needs to be done. 
