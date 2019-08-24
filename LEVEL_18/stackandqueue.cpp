@@ -187,7 +187,13 @@ bool duplicate_brackets(string Input)
                 st.pop();
             }
         }
-    //yet to be written
+        else
+        {
+            st.push(ch);
+        }
+    }
+    
+    return false;
 }
 
 void celebrity(vector<vector<bool>> &v)
