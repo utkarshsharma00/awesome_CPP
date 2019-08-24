@@ -167,6 +167,26 @@ vector<int> *sliding_window_max(vector<int> &v, int window_size)
 
 bool duplicate_brackets(string Input)
 {
+    stack<char> st;
+
+    for (int i = 0; i < Input.size(); i++)
+    {
+        char ch = Input[i];
+        if (ch == ')')
+        {
+            if (st.top() == '(')
+            {
+                return true;
+            }
+            else
+            {
+                while (st.top() != '(')
+                {
+                    st.pop();
+                }
+                st.pop();
+            }
+        }
     //yet to be written
 }
 
