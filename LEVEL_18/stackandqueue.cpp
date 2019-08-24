@@ -157,7 +157,16 @@ int largest_area_histogram(vector<int> &v)
         right_bound[i] = st2.size() > 0 ? st2.top() : -1;
         st2.push(i);
     }
-    //yet to be written
+    
+    for (int i = 0; i < v.size(); i++)
+    {
+        int current_area = (right_bound[i] - left_bound[i] - 1) * v[i];
+        if (current_area > max_area)
+        {
+            max_area = current_area;
+        }
+    }
+    return max_area;
 }
 
 vector<int> *sliding_window_max(vector<int> &v, int window_size)
