@@ -142,6 +142,11 @@ int largest_area_histogram(vector<int> &v)
         left_bound[i] = st1.size() > 0 ? st1.top() : -1;
         st1.push(i);
     }
+    
+    vector<int> right_bound(v.size(), 0);
+    stack<int> st2;
+    st2.push(v.size() - 1);
+    right_bound[v.size() - 1] = v.size();
     //yet to be written
 }
 
