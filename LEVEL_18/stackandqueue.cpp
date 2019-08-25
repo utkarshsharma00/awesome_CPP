@@ -318,4 +318,15 @@ int main(int argc, char **argv)
     vector<int> v4 = {};
     cout << "Stock Span\n";
     stock_span(v4);
+    
+    cout << "Infix Eval\n";
+    string s1 = "8+2/3+2^1*(1+3)";
+    infix_evaluation(s1);
+    cout << endl;
+    cout << "\nInfix to Postfix\n";
+    cout << infix_to_postfix(s1);
+    cout << endl;
+    cout << "\nPost123\n";
+    post123("24/32^-");
+    cout << endl;
 }
