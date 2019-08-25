@@ -307,4 +307,15 @@ int main(int argc, char **argv)
                                {0, 0, 0, 0, 1, 0},
                                {0, 0, 0, 0, 0, 0},
                                {1, 0, 1, 1, 1, 0}};
+    
+    cout << "Celebrity" << endl;
+    celebrity(v3);
+    cout << "\nIntervals\n";
+    vector<int> starts = {22, 17, 19, 2, 6, 12, 3};
+    vector<int> ends = {26, 20, 23, 4, 9, 15, 7};
+    overlapping_intervals(starts, ends);
+    cout << endl;
+    vector<int> v4 = {};
+    cout << "Stock Span\n";
+    stock_span(v4);
 }
