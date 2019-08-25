@@ -186,7 +186,23 @@ vector<int> *sliding_window_max(vector<int> &v, int window_size)
         nge[i] = st.size() == 0 ? v.size() : st.top();
         st.push(i);
     }
-    //yet to be written
+    
+    vector<int> *result = new vector<int>(v.size() - window_size + 1);
+    int j = 0;
+    for (int i = 0; i < v.size() - window_size + 1; i++) //* i is traversing for windows that is first window start point, then second window start point and so on...
+    {
+        if (j < i)
+        {
+            j = i;
+        }
+
+        while (nge[j] < i + window_size)
+        {
+            j = nge[j];
+        }
+        (*result)[i] = j;
+    }
+    return result;
 }
 
 bool duplicate_brackets(string Input)
