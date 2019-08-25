@@ -253,7 +253,20 @@ void celebrity(vector<vector<bool>> &v)
             right--;
         }
     }
-    //yet to be written
+    
+    for (int i = 0; i < left; i++)
+    {
+        if (i != left)
+        {
+            if (v[i][left] == false || v[left][i] == true)
+            {
+                cout << -1 << endl;
+                return;
+            }
+        }
+    }
+
+    cout << left << endl;
 }
 
 void overlapping_intervals(vector<int> &starts, vector<int> &ends)
