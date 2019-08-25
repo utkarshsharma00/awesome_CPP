@@ -271,6 +271,18 @@ void celebrity(vector<vector<bool>> &v)
 
 void overlapping_intervals(vector<int> &starts, vector<int> &ends)
 {
+    vector<Interval> intervals;
+
+    for (int i = 0; i < starts.size(); i++)
+    {
+        Interval interval2(starts[i], ends[i]);
+        intervals.push_back(interval2);
+    }
+    //yet to be written
+}
+
+void stock_span(vector<int> &v)
+{
     //yet to be written
 }
 
