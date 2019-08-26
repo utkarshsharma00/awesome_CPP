@@ -306,7 +306,19 @@ void stock_span(vector<int> &v)
 {
     stack<int> st;
     st.push(0);
-    //yet to be written
+    
+    vector<int> result(v.size(), 0);
+    result[0] = 0;
+
+    for (int i = 0; i < v.size(); i++)
+    {
+        while (st.size() > 0 && v[st.top()] < v[i])
+        {
+            st.pop();
+        }
+
+        st.push(i);
+    }
 }
 
 int main(int argc, char **argv)
