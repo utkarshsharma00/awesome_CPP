@@ -323,7 +323,26 @@ void stock_span(vector<int> &v)
 
 int get_priority(char Operator)
 {
-    //yet to be written   
+    int return_value = -1;
+
+    switch (Operator)
+    {
+    case '^':
+        return_value = 3;
+        break;
+    case '*': //*combining of two cases
+    case '/':
+        return_value = 2;
+        break;
+    case '+':
+    case '-':
+        return_value = 1;
+        break;
+    default:
+        break;
+    }
+
+    return return_value;   
 }
 
 int get_value(char Operator, int num1, int num2)
