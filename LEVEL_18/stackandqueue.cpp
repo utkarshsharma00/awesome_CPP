@@ -321,6 +321,31 @@ void stock_span(vector<int> &v)
     }
 }
 
+int get_priority(char Operator)
+{
+    //yet to be written   
+}
+
+int get_value(char Operator, int num1, int num2)
+{
+    //yet to be written  
+}
+
+void infix_evaluation(string expression)
+{
+    //yet to be written
+}
+
+string infix_to_postfix(string expression)
+{
+    //yet to be written
+}
+
+void post123(string post_exp)
+{
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
     cout << "Stack Demo\n";
