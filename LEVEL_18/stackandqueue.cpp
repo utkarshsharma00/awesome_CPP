@@ -278,6 +278,22 @@ void overlapping_intervals(vector<int> &starts, vector<int> &ends)
         Interval interval2(starts[i], ends[i]);
         intervals.push_back(interval2);
     }
+    
+    sort(intervals.begin(), intervals.end());
+
+    stack<Interval> st;
+    st.push(intervals[0]);
+    for (int i = 0; i < intervals.size(); i++)
+    {
+        if (intervals[i].start <= st.top().end)
+        {
+            st.top().end = max(st.top().end, intervals[i].end);
+        }
+        else
+        {
+            st.push(intervals[i]);
+        }
+    }
     //yet to be written
 }
 
