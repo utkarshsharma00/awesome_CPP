@@ -294,11 +294,18 @@ void overlapping_intervals(vector<int> &starts, vector<int> &ends)
             st.push(intervals[i]);
         }
     }
-    //yet to be written
+    
+    while (st.size() > 0)
+    {
+        cout << st.top().start << "-" << st.top().end << endl;
+        st.pop();
+    }
 }
 
 void stock_span(vector<int> &v)
 {
+    stack<int> st;
+    st.push(0);
     //yet to be written
 }
 
