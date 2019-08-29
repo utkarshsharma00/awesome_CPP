@@ -385,6 +385,23 @@ string infix_to_postfix(string expression)
 {
     string postfix;
     stack<char> opening_stack;
+    
+    for (int i = 0; i < post_exp.length(); i++)
+    {
+        char ch = post_exp[i];
+        if (ch >= '0' && ch <= '9')
+        {
+            es.push(ch - '0');
+        }
+        else
+        {
+            int val2 = es.top();
+            es.pop();
+            int val1 = es.top();
+            es.pop();
+            es.push(get_value(ch, val1, val2));
+        }
+    }
     //yet to be written
 }
 
