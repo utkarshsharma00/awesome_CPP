@@ -376,16 +376,22 @@ int get_value(char Operator, int num1, int num2)
 
 void infix_evaluation(string expression)
 {
+    stack<char> opening_stack;
+    stack<int> value_stack;
     //yet to be written
 }
 
 string infix_to_postfix(string expression)
 {
+    string postfix;
+    stack<char> opening_stack;
     //yet to be written
 }
 
 void post123(string post_exp)
 {
+    //TODO Postfix Evaluation
+    stack<int> es; //evaluation_stack
     //yet to be written
 }
 
