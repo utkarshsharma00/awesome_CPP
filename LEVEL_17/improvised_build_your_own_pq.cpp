@@ -112,7 +112,14 @@ bool StudentExtraComparator(const Student &o1, const Student &o2)
 
 bool StudentMarksExtraComparator(const Student &o1, const Student &o2)
 {
-    
+    if (o1.marks != o2.marks)
+    {
+        return o2.marks < o1.marks;
+    }
+    else
+    {
+        return o2.extra < o1.extra;
+    }    
 }
 
 bool StudentExtraMarksComparator(const Student &o1, const Student &o2)
