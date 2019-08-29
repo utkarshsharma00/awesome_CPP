@@ -124,7 +124,14 @@ bool StudentMarksExtraComparator(const Student &o1, const Student &o2)
 
 bool StudentExtraMarksComparator(const Student &o1, const Student &o2)
 {
-    
+    if (o1.extra != o2.extra)
+    {
+        return o2.extra < o1.extra;
+    }
+    else
+    {
+        return o2.marks > o1.marks;
+    }    
 }
 
 int main(int argc, char **argv)
