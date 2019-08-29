@@ -347,7 +347,31 @@ int get_priority(char Operator)
 
 int get_value(char Operator, int num1, int num2)
 {
-    //yet to be written  
+    int return_value = -1;
+
+    switch (Operator)
+    {
+    case '^':
+        return_value = (int)pow(num1, num2);
+        break;
+    case '*':
+        return_value = num1 * num2;
+        break;
+    case '/':
+        return_value = num1 / num2;
+        break;
+    case '+':
+        return_value = num1 + num2;
+        break;
+    case '-':
+        return_value = num1 - num2;
+        break;
+
+    default:
+        break;
+    }
+
+    return return_value; 
 }
 
 void infix_evaluation(string expression)
