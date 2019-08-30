@@ -2,6 +2,21 @@
 #include <unordered_map>
 #include <vector>
 #include <bits/stdc++.h>
+using namespace std;
+
+void print_common_elements1(vector<int> &one, vector<int> &two)
+{
+    unordered_map<int, int> map;
+    
+    //yet to be written
+}
+
+void print_common_elements2(vector<int> &one, vector<int> &two)
+{
+    unordered_map<int, int> map;
+    
+    //yet to be written
+}
 
 int main(int argc, char **argv)
 {
