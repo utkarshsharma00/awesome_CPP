@@ -9,6 +9,22 @@ void longest_subseq_of_consecutive_elements(vector<int> &arr)
 {
     unordered_map<int, bool> map;
     
+    for (int i = 0; i < arr.size(); i++)
+    {
+        map[arr[i]]++;
+    }
+
+    for (int i = 0; i < arr.size(); i++)
+    {
+        if (map.find(arr[i] - 1) == map.end())
+        {
+            map[arr[i]] = true;
+        }
+        else
+        {
+            map[arr[i]] == false;
+        }
+    }
     //yet to be written
 }
 
