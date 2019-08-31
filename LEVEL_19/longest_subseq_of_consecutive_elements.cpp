@@ -36,9 +36,17 @@ void longest_subseq_of_consecutive_elements(vector<int> &arr)
             int total_start = arr[i];
             int total_len = 1;
             
-            //yet to be written
-        }    
+             while (map.count(total_start + total_len))
+            {
+                total_len++;
+            }
 
+            if (total_len > overall_len)
+            {
+                overall_len = total_len;
+                overall_start = total_start;
+            }
+        }    
     }
 
     cout << overall_start << "\t" << overall_len << endl;
