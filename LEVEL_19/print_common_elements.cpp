@@ -8,6 +8,20 @@ void print_common_elements1(vector<int> &one, vector<int> &two)
 {
     unordered_map<int, int> map;
     
+    for (int i = 0; i < one.size(); i++)
+    {
+        map[one[i]]++;
+    }
+
+    vector<int> pce1;
+    for (int i = 0; i < two.size(); i++)
+    {
+        if (map.find(two[i]) != map.end())
+        {
+            pce1.push_back(two[i]);
+            map.erase(two[i]);
+        }
+    }
     //yet to be written
 }
 
