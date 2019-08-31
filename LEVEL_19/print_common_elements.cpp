@@ -29,6 +29,19 @@ void print_common_elements2(vector<int> &one, vector<int> &two)
 {
     unordered_map<int, int> map;
     
+    for (int i = 0; i < one.size(); i++)
+    {
+        map[one[i]]++; 
+    }
+
+    for (int i = 0; i < two.size(); i++)
+    {
+        if (map.count(two[i]) == 1 && map[two[i]] > 0)
+        {
+            cout << two[i] << " ";
+            map[two[i]]--;
+        }
+    }
     //yet to be written
 }
 
