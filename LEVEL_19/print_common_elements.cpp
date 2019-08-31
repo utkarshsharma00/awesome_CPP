@@ -22,7 +22,13 @@ void print_common_elements1(vector<int> &one, vector<int> &two)
             map.erase(two[i]);
         }
     }
-    //yet to be written
+    
+    for (int i = 0; i < pce1.size(); i++)
+    {
+        cout << pce1[i] << " ";
+    }
+    
+    cout << endl;
 }
 
 void print_common_elements2(vector<int> &one, vector<int> &two)
@@ -42,7 +48,8 @@ void print_common_elements2(vector<int> &one, vector<int> &two)
             map[two[i]]--;
         }
     }
-    //yet to be written
+    
+    cout << endl;
 }
 
 int main(int argc, char **argv)
