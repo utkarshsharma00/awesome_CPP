@@ -38,4 +38,19 @@ class HashMap
 int main(int argc, char **argv)
 {
     HashMap<string, int> map;
+    
+    map["India"] = 10;
+    map["Pak"] = 8;
+    map["Sweden"] = 120;
+    map["canada"] = 8;
+    map["japan"] = 10;
+    map["Paukk"] = 8;
+    map["usa"] = 10;
+    map["hgjds"] = 8;
+    map["sfaf"] = 10;
+    map["fas"] = 8;
+    cout << map.count("India") << " " << map.count("Pak") << endl;
+
+    cout << map["India"] << endl;
+    map.display();
 }
