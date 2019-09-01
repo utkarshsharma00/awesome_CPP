@@ -8,7 +8,7 @@ template <class K, class V>
     
 class HashMap
 {
-    private:
+private:
     int no_of_elements;
     int no_of_buckets;
 
@@ -31,6 +31,14 @@ class HashMap
         int hash_code = hash<K>()(key);
         hash_code = abs(hash_code);
         return hash_code % no_of_buckets;
+    }
+    
+public:
+    HashMap()
+    {
+        no_of_buckets = 4;
+        no_of_elements = 0;
+        buckets = new list<HashMap_Node>[no_of_buckets];
     }
     //yet to be written
 };
