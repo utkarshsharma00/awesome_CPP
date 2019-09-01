@@ -40,6 +40,22 @@ public:
         no_of_elements = 0;
         buckets = new list<HashMap_Node>[no_of_buckets];
     }
+    
+    int size()
+    {
+        //yet to be written
+    }
+
+    void remove(K key)
+    {
+        //yet to be written
+    }
+
+    void display()
+    {
+        //yet to be written
+    }
+
     //yet to be written
 };
 
