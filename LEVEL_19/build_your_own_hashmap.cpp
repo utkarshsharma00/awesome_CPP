@@ -24,6 +24,14 @@ class HashMap
         }
     };
     
+    list<HashMap_Node> *buckets = NULL;
+
+    int get_bucket_index(K key)
+    {
+        int hash_code = hash<K>()(key);
+        hash_code = abs(hash_code);
+        return hash_code % no_of_buckets;
+    }
     //yet to be written
 };
 
