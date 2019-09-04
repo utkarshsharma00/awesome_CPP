@@ -50,7 +50,15 @@ public:
     {
         int bucket_index = get_bucket_index(key);
         auto data_index = get_data_index(bucket_index, key);
-        //yet to be written
+        
+        if (data_index == buckets[bucket_index].end())
+        {
+        }
+
+        else
+        {
+            buckets[bucket_index].erase(data_index);
+        }
     }
 
     void display()
@@ -69,8 +77,6 @@ public:
 
         cout << "-------------------------------" << endl;
     }
-
-    //yet to be written
 };
 
 int main(int argc, char **argv)
