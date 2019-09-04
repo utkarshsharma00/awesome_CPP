@@ -386,22 +386,25 @@ string infix_to_postfix(string expression)
     string postfix;
     stack<char> opening_stack;
     
-    for (int i = 0; i < post_exp.length(); i++)
+   for (int i = 0; i < expression.size(); i++)
     {
-        char ch = post_exp[i];
-        if (ch >= '0' && ch <= '9')
+        char ch = expression[i];
+
+        if (ch == '(')
         {
-            es.push(ch - '0');
+            opening_stack.push(ch);
         }
-        else
+        else if (ch == ')')
         {
-            int val2 = es.top();
-            es.pop();
-            int val1 = es.top();
-            es.pop();
-            es.push(get_value(ch, val1, val2));
+            while (opening_stack.top() != '(')
+            {
+                char Operator = opening_stack.top();
+                opening_stack.pop();
+                postfix += Operator;
+            }
+            opening_stack.pop();
         }
-    }
+   }   
     //yet to be written
 }
 
