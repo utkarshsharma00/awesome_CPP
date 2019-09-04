@@ -55,7 +55,19 @@ public:
 
     void display()
     {
-        //yet to be written
+        cout << "-------------------------------" << endl;
+
+        for (int bucket_index = 0; bucket_index < no_of_buckets; bucket_index++)
+        {
+            cout << bucket_index << ". ";
+            for (auto itr = buckets[bucket_index].begin(); itr != buckets[bucket_index].end(); itr++)
+            {
+                cout << "[" << itr->value << "@" << itr->key << "]";
+            }
+            cout << endl;
+        }
+
+        cout << "-------------------------------" << endl;
     }
 
     //yet to be written
