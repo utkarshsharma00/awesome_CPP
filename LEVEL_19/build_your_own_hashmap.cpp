@@ -43,11 +43,13 @@ public:
     
     int size()
     {
-        //yet to be written
+        return no_of_elements;
     }
 
     void remove(K key)
     {
+        int bucket_index = get_bucket_index(key);
+        auto data_index = get_data_index(bucket_index, key);
         //yet to be written
     }
 
