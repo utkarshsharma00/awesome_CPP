@@ -41,6 +41,22 @@ public:
         buckets = new list<HashMap_Node>[no_of_buckets];
     }
     
+    int count(K key)
+    {
+        int bucket_index = get_bucket_index(key);
+        auto data_index = get_data_index(bucket_index, key);
+        
+        //yet to be written
+    }
+    
+    V &operator[](const K &key)
+    {
+        int bucket_index = get_bucket_index(key);
+        auto data_index = get_data_index(bucket_index, key);
+        
+        //yet to be written
+    }
+    
     int size()
     {
         return no_of_elements;
