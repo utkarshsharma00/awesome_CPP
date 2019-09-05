@@ -419,7 +419,14 @@ string infix_to_postfix(string expression)
             opening_stack.push(ch);
         }
    }   
-    //yet to be written
+   
+   while (opening_stack.size() > 0)
+    {
+        char Operator = opening_stack.top();
+        opening_stack.pop();
+        postfix += Operator;
+    }
+    return postfix;
 }
 
 void post123(string post_exp)
