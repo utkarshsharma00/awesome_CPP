@@ -433,6 +433,16 @@ void post123(string post_exp)
 {
     //TODO Postfix Evaluation
     stack<int> es; //evaluation_stack
+    
+    for (int i = 0; i < post_exp.length(); i++)
+    {
+        char ch = post_exp[i];
+        if (ch >= '0' && ch <= '9')
+        {
+            es.push(ch - '0');
+        }
+        
+    }
     //yet to be written
 }
 
