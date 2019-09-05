@@ -404,6 +404,10 @@ string infix_to_postfix(string expression)
             }
             opening_stack.pop();
         }
+        else if (ch >= '0' && ch <= '9')
+        {
+            postfix += ch;
+        }
    }   
     //yet to be written
 }
