@@ -408,6 +408,16 @@ string infix_to_postfix(string expression)
         {
             postfix += ch;
         }
+        else
+        {
+            while (opening_stack.size() > 0 && opening_stack.top() != '(' && get_priority(opening_stack.top() >= get_priority(ch)))
+            {
+                char Operator = opening_stack.top();
+                opening_stack.pop();
+                postfix += Operator;
+            }
+            opening_stack.push(ch);
+        }
    }   
     //yet to be written
 }
