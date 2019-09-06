@@ -449,6 +449,20 @@ void post123(string post_exp)
             es.pop();
             es.push(get_value(ch, val1, val2));
         }
+    }
+    
+    cout << es.top() << endl;
+
+    //TODO Post to Infix
+    stack<string> is;
+    for (int i = 0; i < post_exp.length(); i++)
+    {
+        char ch = post_exp[i];
+        if (ch >= '0' && ch <= '9')
+        {
+            string s = string() + ch;
+            is.push(s);
+        }
         
     }
     //yet to be written
