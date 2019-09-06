@@ -441,6 +441,14 @@ void post123(string post_exp)
         {
             es.push(ch - '0');
         }
+        else
+        {
+            int val2 = es.top();
+            es.pop();
+            int val1 = es.top();
+            es.pop();
+            es.push(get_value(ch, val1, val2));
+        }
         
     }
     //yet to be written
