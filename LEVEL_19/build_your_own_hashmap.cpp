@@ -70,7 +70,17 @@ public:
 
             return buckets[bucket_index].back().value;
         }
-        //yet to be written
+        
+        else
+        {
+            return data_index->value;
+        }
+
+        // double lambda = no_of_elements * 1.0 / no_of_buckets;
+        // if (lambda > 2.0)
+        // {
+        //     rehash();
+        // }
     }
     
     int size()
