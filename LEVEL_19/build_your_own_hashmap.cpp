@@ -55,7 +55,6 @@ public:
         {
             return 1;
         }
-        //yet to be written
     }
     
     V &operator[](const K &key)
@@ -63,6 +62,14 @@ public:
         int bucket_index = get_bucket_index(key);
         auto data_index = get_data_index(bucket_index, key);
         
+        if (data_index == buckets[bucket_index].end())
+        {
+            HashMap_Node node(key, V());
+            buckets[bucket_index].push_back(node);
+            no_of_elements++;
+
+            return buckets[bucket_index].back().value;
+        }
         //yet to be written
     }
     
