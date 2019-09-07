@@ -33,6 +33,11 @@ private:
         return hash_code % no_of_buckets;
     }
     
+    auto get_data_index(int bucket_index, K key)
+    {
+        //yet to be written
+    }
+    
 public:
     HashMap()
     {
