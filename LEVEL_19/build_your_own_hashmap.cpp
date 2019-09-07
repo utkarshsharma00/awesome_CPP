@@ -46,6 +46,15 @@ public:
         int bucket_index = get_bucket_index(key);
         auto data_index = get_data_index(bucket_index, key);
         
+        if (data_index == buckets[bucket_index].end())
+        {
+            return 0;
+        }
+
+        else
+        {
+            return 1;
+        }
         //yet to be written
     }
     
