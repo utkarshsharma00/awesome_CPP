@@ -472,8 +472,12 @@ void post123(string post_exp)
             is.pop();
             is.push("(" + s1 + ch + s2 + ")");
         }
- 
     }
+    
+    cout << is.top() << endl;
+    
+    //TODO Post to Pre
+    stack<string> pres;
     //yet to be written
 }
 
