@@ -463,7 +463,16 @@ void post123(string post_exp)
             string s = string() + ch;
             is.push(s);
         }
-        
+        else
+        {
+            // string s = string() + ch;
+            string s2 = is.top();
+            is.pop();
+            string s1 = is.top();
+            is.pop();
+            is.push("(" + s1 + ch + s2 + ")");
+        }
+ 
     }
     //yet to be written
 }
