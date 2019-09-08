@@ -35,7 +35,15 @@ private:
     
     auto get_data_index(int bucket_index, K key)
     {
-        //yet to be written
+        for (auto itr = buckets[bucket_index].begin(); itr != buckets[bucket_index].end(); itr++)
+        {
+            if (itr->key == key)
+            {
+                return itr;
+            }
+        }
+
+        return buckets[bucket_index].end();
     }
     
 public:
