@@ -486,8 +486,18 @@ void post123(string post_exp)
             string s = string() + ch;
             pres.push(s);
         }
+        else
+        {
+            string pval2 = pres.top();
+            pres.pop();
+            string pval1 = pres.top();
+            pres.pop();
+            string pval = ch + pval1 + pval2;
+            pres.push(pval);
+        }
     }    
-    //yet to be written
+    
+    cout << pres.top();
 }
 
 int main(int argc, char **argv)
