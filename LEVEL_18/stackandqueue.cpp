@@ -478,6 +478,15 @@ void post123(string post_exp)
     
     //TODO Post to Pre
     stack<string> pres;
+    for (int i = 0; i < post_exp.length(); i++)
+    {
+        char ch = post_exp[i];
+        if (ch >= '0' && ch <= '9')
+        {
+            string s = string() + ch;
+            pres.push(s);
+        }
+    }    
     //yet to be written
 }
 
