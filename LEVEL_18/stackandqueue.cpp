@@ -378,6 +378,17 @@ void infix_evaluation(string expression)
 {
     stack<char> opening_stack;
     stack<int> value_stack;
+    
+    for (int i = 0; i < expression.size(); i++)
+    {
+        char ch = expression[i];
+
+        if (ch == '(')
+        {
+            opening_stack.push(ch);
+        }
+        //yet to be written
+    }   
     //yet to be written
 }
 
