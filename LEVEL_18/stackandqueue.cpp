@@ -391,7 +391,21 @@ void infix_evaluation(string expression)
         {
             value_stack.push(ch - '0');
         }
-        //yet to be written
+        else
+        {
+            while (!(opening_stack.size() == 0 || opening_stack.top() == '(' || get_priority(opening_stack.top()) < get_priority(ch)))
+            {
+                char Operator = opening_stack.top();
+                opening_stack.pop();
+                int num2 = value_stack.top();
+                value_stack.pop();
+                int num1 = value_stack.top();
+                value_stack.pop();
+
+                value_stack.push(get_value(Operator, num1, num2));
+            }
+            opening_stack.push(ch);
+        }
     }   
     
     cout << value_stack.top();
