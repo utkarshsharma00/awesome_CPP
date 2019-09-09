@@ -387,9 +387,14 @@ void infix_evaluation(string expression)
         {
             opening_stack.push(ch);
         }
+        else if (ch >= '0' && ch <= '9')
+        {
+            value_stack.push(ch - '0');
+        }
         //yet to be written
     }   
-    //yet to be written
+    
+    cout << value_stack.top();
 }
 
 string infix_to_postfix(string expression)
