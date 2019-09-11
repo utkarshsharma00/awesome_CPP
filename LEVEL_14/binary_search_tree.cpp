@@ -25,6 +25,16 @@ Node *construct(vector<int> &datalist, int start, int end)
     //yet to be written
 }
 
+int Min(Node *root)
+{
+    //yet to be written
+}
+
+int Max(Node *root)
+{
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
     //yet to be written
