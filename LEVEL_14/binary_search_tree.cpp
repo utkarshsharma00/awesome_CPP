@@ -20,7 +20,12 @@ class Node
     }
 };
 
+Node *construct(vector<int> &datalist, int start, int end)
+{
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
-  //yet to be written
+    //yet to be written
 }
