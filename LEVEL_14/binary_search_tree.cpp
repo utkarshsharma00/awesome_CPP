@@ -22,6 +22,10 @@ class Node
 
 Node *construct(vector<int> &datalist, int start, int end)
 {
+    if (start > end)
+    {
+        return NULL;
+    }
     //yet to be written
 }
 
@@ -31,6 +35,11 @@ int Min(Node *root)
 }
 
 int Max(Node *root)
+{
+    //yet to be written
+}
+
+void display(Node *root)
 {
     //yet to be written
 }
