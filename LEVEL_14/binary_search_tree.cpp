@@ -37,7 +37,14 @@ Node *construct(vector<int> &datalist, int start, int end)
 
 int Min(Node *root)
 {
-    //yet to be written
+    if (root->left != NULL)
+    {
+        return Min(root->left);
+    }
+    else
+    {
+        return root->data;
+    }
 }
 
 int Max(Node *root)
