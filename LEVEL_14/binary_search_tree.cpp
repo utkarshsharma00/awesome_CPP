@@ -26,7 +26,13 @@ Node *construct(vector<int> &datalist, int start, int end)
     {
         return NULL;
     }
-    //yet to be written
+  
+    int mid = (start + end) / 2;
+    Node *root = new Node(datalist[mid]);
+    root->left = construct(datalist, start, mid - 1);
+    root->right = construct(datalist, mid + 1, end);
+
+    return root;
 }
 
 int Min(Node *root)
