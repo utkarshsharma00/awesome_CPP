@@ -78,5 +78,7 @@ void display(Node *root)
 
 int main(int argc, char **argv)
 {
+    vector<int> datalist{12, 25, 37, 50, 62, 75, 87};
+    Node *root = construct(datalist, 0, datalist.size() - 1);
     //yet to be written
 }
