@@ -49,7 +49,11 @@ int Min(Node *root)
 
 int Max(Node *root)
 {
-    //yet to be written
+    while (root->right != NULL)
+    {
+        root = root->right;
+    }
+    return root->data;
 }
 
 void display(Node *root)
