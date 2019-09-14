@@ -56,9 +56,24 @@ int Max(Node *root)
     return root->data;
 }
 
+bool find(Node *root, int data)
+{
+    if (root == NULL)
+    {
+        return false;
+    }
+    //yet to be written
+}
+
 void display(Node *root)
 {
-    //yet to be written
+    if (root->left != NULL && root->right != NULL)
+    {
+        cout << root->left->data << "<-" << root->data << "->" << root->right->data << endl;
+        display(root->left);
+        display(root->right);
+    }
+  //yet to be written
 }
 
 int main(int argc, char **argv)
