@@ -76,6 +76,21 @@ bool find(Node *root, int data)
     }
 }
 
+void Print_In_Range(Node *root, int low, int high)
+{
+    //yet to be written
+}
+
+void Replace_with_Sum_of_Larger_nodes(Node *root, int &sum)
+{
+    //yet to be written
+}
+
+void Pair_Sum_Target(Node *root, int target, Node *original_root) //* O(nlogn)
+{
+    //yet to be written
+}
+
 void display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
