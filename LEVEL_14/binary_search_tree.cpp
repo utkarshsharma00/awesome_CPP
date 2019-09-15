@@ -96,5 +96,12 @@ int main(int argc, char **argv)
 {
     vector<int> datalist{12, 25, 37, 50, 62, 75, 87};
     Node *root = construct(datalist, 0, datalist.size() - 1);
+    display(root);
+    cout << "Min is " << endl;
+    cout << Min(root) << endl;
+    cout << "Max is " << endl;
+    cout << Max(root) << endl;
+    cout << "Find in tree " << endl;
+    cout << find(root, 87) << endl;
     //yet to be written
 }
