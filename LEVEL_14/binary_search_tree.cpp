@@ -62,7 +62,18 @@ bool find(Node *root, int data)
     {
         return false;
     }
-    //yet to be written
+    else if (data > root->data)
+    {
+        return find(root->right, data);
+    }
+    else if (data < root->data)
+    {
+        return find(root->left, data);
+    }
+    else
+    {
+        return true;
+    }
 }
 
 void display(Node *root)
@@ -73,19 +84,16 @@ void display(Node *root)
         display(root->left);
         display(root->right);
     }
-  
     else if (root->left != NULL)
     {
         cout << root->left->data << "<-" << root->data << "." << endl;
         display(root->left);
     }
-  
     else if (root->right != NULL)
     {
         cout << "." << root->data << "->" << root->right->data << endl;
         display(root->right);
     }
-  
     else
     {
         cout << "." << root->data << "." << endl;
