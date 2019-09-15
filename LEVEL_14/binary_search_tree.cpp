@@ -78,6 +78,15 @@ bool find(Node *root, int data)
 
 void Print_In_Range(Node *root, int low, int high)
 {
+    if (root == NULL)
+    {
+        return;
+    }
+
+    if (root->data < low)
+    {
+        Print_In_Range(root->right, low, high);
+    }
     //yet to be written
 }
 
