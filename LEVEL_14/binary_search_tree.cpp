@@ -153,5 +153,11 @@ int main(int argc, char **argv)
     cout << Max(root) << endl;
     cout << "Find in tree " << endl;
     cout << find(root, 87) << endl;
+    cout << "Path in Range " << endl;
+    Print_In_Range(root, 12, 72);
+    cout << endl;
+
+    vector<int> datalist1{10, 20, 30, 50, 60, 70, 80};
+    Node *root1 = construct(datalist, 0, datalist.size() - 1)
     //yet to be written
 }
