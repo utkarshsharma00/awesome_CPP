@@ -87,7 +87,16 @@ void Print_In_Range(Node *root, int low, int high)
     {
         Print_In_Range(root->right, low, high);
     }
-    //yet to be written
+    else if (root->data > high)
+    {
+        Print_In_Range(root->left, low, high);
+    }
+    else
+    {
+        Print_In_Range(root->left, low, high);
+        cout << root->data << endl;
+        Print_In_Range(root->right, low, high);
+    }
 }
 
 void Replace_with_Sum_of_Larger_nodes(Node *root, int &sum)
