@@ -101,7 +101,16 @@ void Print_In_Range(Node *root, int low, int high)
 
 void Replace_with_Sum_of_Larger_nodes(Node *root, int &sum)
 {
-    //yet to be written
+    if (root == NULL)
+        return;
+
+    Replace_with_Sum_of_Larger_nodes(root->right, sum);
+
+    int orignal_data = root->data;
+    root->data = sum;
+    sum += orignal_data;
+
+    Replace_with_Sum_of_Larger_nodes(root->left, sum);
 }
 
 void Pair_Sum_Target(Node *root, int target, Node *original_root) //* O(nlogn)
