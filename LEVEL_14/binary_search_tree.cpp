@@ -121,7 +121,16 @@ void Pair_Sum_Target(Node *root, int target, Node *original_root) //* O(nlogn)
     }
 
     int Complement = target - root->data;
-    //yet to be written
+    if (root->data < Complement)
+    {
+        if (find(original_root, Complement) == true) //* find() function has O(logn) complexity for BST
+        {
+            cout << root->data << " " << Complement << endl;
+        }
+    }
+
+    Pair_Sum_Target(root->left, target, original_root); //* These 2 statements contribute to O(n)
+    Pair_Sum_Target(root->right, target, original_root);
 }
 
 Node *Add_node_in_the_tree(Node *root, int data)
