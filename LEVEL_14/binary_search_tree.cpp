@@ -115,6 +115,17 @@ void Replace_with_Sum_of_Larger_nodes(Node *root, int &sum)
 
 void Pair_Sum_Target(Node *root, int target, Node *original_root) //* O(nlogn)
 {
+    if (root == NULL)
+    {
+        return;
+    }
+
+    int Complement = target - root->data;
+    //yet to be written
+}
+
+Node *Add_node_in_the_tree(Node *root, int data)
+{
     //yet to be written
 }
 
