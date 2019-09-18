@@ -176,6 +176,11 @@ void display(Node *root)
     }
 }
 
+int CountBST(int num)
+{
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
     vector<int> datalist{12, 25, 37, 50, 62, 75, 87};
@@ -192,6 +197,14 @@ int main(int argc, char **argv)
     cout << endl;
 
     vector<int> datalist1{10, 20, 30, 50, 60, 70, 80};
-    Node *root1 = construct(datalist, 0, datalist.size() - 1)
+    Node *root1 = construct(datalist, 0, datalist.size() - 1);
+  
+    cout << "Replace with sum of Larger Nodes " << endl;
+    int sum = 0;
+    Replace_with_Sum_of_Larger_nodes(root1, sum);
+    display(root1);
+
+    cout << "Pair Sum Target " << endl;
+    Pair_Sum_Target(root, 100, root);
     //yet to be written
 }
