@@ -135,9 +135,23 @@ void Pair_Sum_Target(Node *root, int target, Node *original_root) //* O(nlogn)
 
 Node *Add_node_in_the_tree(Node *root, int data)
 {
+    if (root == NULL)
+    {
+        Node *newnode = new Node(data);
+        return newnode;
+    }
     //yet to be written
 }
 
+Node *Remove_node_from_tree(Node *root, int data)
+{
+    if (root == NULL)
+    {
+        return NULL;
+    }
+    //yet to be written
+}
+  
 void display(Node *root)
 {
     if (root->left != NULL && root->right != NULL)
