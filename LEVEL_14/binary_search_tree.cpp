@@ -178,7 +178,18 @@ void display(Node *root)
 
 int CountBST(int num)
 {
-    //yet to be written
+    if (num == 0 || num == 1)
+    {
+        return 1;
+    }
+
+    int count = 0;
+    for (int i = 0; i < num; i++)
+    {
+        count += CountBST(i) * CountBST(num - i - 1);
+    }
+
+    return count;
 }
 
 int main(int argc, char **argv)
@@ -206,5 +217,9 @@ int main(int argc, char **argv)
 
     cout << "Pair Sum Target " << endl;
     Pair_Sum_Target(root, 100, root);
+  
+    cout << endl;
+    cout << "Number of distinct BST if we have distinct elements in the array (bonus question)" << endl;
+    cout << CountBST(5);
     //yet to be written
 }
