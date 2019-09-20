@@ -140,7 +140,17 @@ Node *Add_node_in_the_tree(Node *root, int data)
         Node *newnode = new Node(data);
         return newnode;
     }
-    //yet to be written
+  
+    if (data > root->data)
+    {
+        root->right = Add_node_in_the_tree(root->right, data);
+    }
+    else if (data < root->data)
+    {
+        root->left = Add_node_in_the_tree(root->left, data);
+    }
+
+    return root;
 }
 
 Node *Remove_node_from_tree(Node *root, int data)
