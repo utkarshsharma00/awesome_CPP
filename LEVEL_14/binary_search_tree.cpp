@@ -231,5 +231,11 @@ int main(int argc, char **argv)
     cout << endl;
     cout << "Number of distinct BST if we have distinct elements in the array (bonus question)" << endl;
     cout << CountBST(5);
+  
+    cout << endl;
+    cout << "Add a node in the tree " << endl;
+    Add_node_in_the_tree(root, 68);
+    display(root);
+    cout << endl;
     //yet to be written
 }
