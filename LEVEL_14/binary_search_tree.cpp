@@ -159,6 +159,15 @@ Node *Remove_node_from_tree(Node *root, int data)
     {
         return NULL;
     }
+  
+    if (data < root->data)
+    {
+        root->left = Remove_node_from_tree(root->left, data);
+    }
+    else if (data > root->data)
+    {
+        root->right = Remove_node_from_tree(root->right, data);
+    }
     //yet to be written
 }
   
