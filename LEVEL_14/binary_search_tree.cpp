@@ -149,7 +149,7 @@ Node *Add_node_in_the_tree(Node *root, int data)
     {
         root->left = Add_node_in_the_tree(root->left, data);
     }
-
+  
     return root;
 }
 
@@ -168,7 +168,23 @@ Node *Remove_node_from_tree(Node *root, int data)
     {
         root->right = Remove_node_from_tree(root->right, data);
     }
-    //yet to be written
+    else
+    {
+        if (root->left != NULL && root->right != NULL)
+        {
+            int left_max = Max(root->left); //* we basically think that we find the Max of left and then replace the node with left_max and then we delete/remove left_max
+            root->data = left_max;
+            root->left = Remove_node_from_tree(root->left, data);
+        }
+        else
+        {
+            Node *temp = root;
+            root = root->left != NULL ? root->left : root->right;
+            delete temp;
+        }
+    }
+  
+    return root;
 }
   
 void display(Node *root)
@@ -207,7 +223,7 @@ int CountBST(int num)
     {
         count += CountBST(i) * CountBST(num - i - 1);
     }
-
+  
     return count;
 }
 
