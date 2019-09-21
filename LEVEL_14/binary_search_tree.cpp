@@ -261,6 +261,10 @@ int main(int argc, char **argv)
     cout << "Add a node in the tree " << endl;
     Add_node_in_the_tree(root, 68);
     display(root);
+  
     cout << endl;
-    //yet to be written
+    cout << "Remove the node from the tree " << endl;
+    Remove_node_from_tree(root, 75);
+    display(root);
+    cout << endl;
 }
