@@ -6,6 +6,15 @@
 
 using namespace std;
 
+int train(vector<int> &arrival, vector<int> &departure)
+{
+    sort(arrival.begin(), arrival.end());
+    sort(departure.begin(), departure.end());
+
+    int i = 0; //for traversing arrival vector
+    int j = 0; //for traversing departure vector
+}
+
 int main(int argc, char **argv)
 {
     vector<int> arrival{900, 940, 950, 1100, 1500, 1800};
