@@ -6,6 +6,21 @@
 
 using namespace std;
 
+class Activity
+{
+public:
+    int start_time;
+    int end_time;
+
+    Activity(int start_time, int end_time)
+    {
+        this->start_time = start_time;
+        this->end_time = end_time;
+    }
+    
+    //yet to be written
+};
+
 int main(int argc, char **argv)
 {
     priority_queue<Activity, vector<Activity>, greater<Activity>> pq;
