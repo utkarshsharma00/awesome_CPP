@@ -21,6 +21,15 @@ public:
     //yet to be written
 };
 
+void activity_selection(priority_queue<Activity, vector<Activity>, greater<Activity>> &pq)
+{
+    int counter = 1;
+    Activity base = pq.top();
+    pq.pop();
+    
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
     priority_queue<Activity, vector<Activity>, greater<Activity>> pq;
