@@ -13,6 +13,29 @@ int train(vector<int> &arrival, vector<int> &departure)
 
     int i = 0; //for traversing arrival vector
     int j = 0; //for traversing departure vector
+    
+    while (i < arrival.size() && j < departure.size())
+    {
+        if (arrival[i] < departure[j])
+        {
+            i++;
+            count++;
+        }
+        else
+        {
+            j++;
+            count--;
+        }
+
+        if (count > max_train_standing)
+        {
+            max_train_standing = count;
+        }
+    }
+
+    int min_platform_required = max_train_standing;
+
+    return min_platform_required;
 }
 
 int main(int argc, char **argv)
