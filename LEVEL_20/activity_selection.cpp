@@ -12,4 +12,11 @@ int main(int argc, char **argv)
 
     vector<int> start{3, 0, 1, 8, 5, 5};
     vector<int> end{4, 6, 2, 9, 9, 7};
+    
+    for (int i = 0; i < start.size(); i++)
+    {
+        pq.push(Activity(start[i], end[i]));
+    }
+
+    activity_selection(pq);
 }
