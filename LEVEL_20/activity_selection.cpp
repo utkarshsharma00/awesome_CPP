@@ -30,7 +30,20 @@ void activity_selection(priority_queue<Activity, vector<Activity>, greater<Activ
     Activity base = pq.top();
     pq.pop();
     
-    //yet to be written
+    while (pq.size() > 0)
+    {
+        Activity helper = pq.top();
+        pq.pop();
+
+        if (helper.start_time >= base.end_time)
+        {
+            counter++;
+            base.start_time = helper.start_time;
+            base.end_time = helper.end_time;
+        }
+    }
+
+    cout << counter << endl;
 }
 
 int main(int argc, char **argv)
