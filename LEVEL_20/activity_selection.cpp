@@ -18,7 +18,10 @@ public:
         this->end_time = end_time;
     }
     
-    //yet to be written
+    bool operator>(const Activity &other) const
+    {
+        return this->end_time > other.end_time;
+    }
 };
 
 void activity_selection(priority_queue<Activity, vector<Activity>, greater<Activity>> &pq)
