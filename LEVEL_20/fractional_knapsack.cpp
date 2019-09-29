@@ -6,6 +6,26 @@
 
 using namespace std;
 
+class Items
+{
+public:
+    int weight;
+    int value;
+    double ratio;
+
+    Items(int weight, int value)
+    {
+        this->weight = weight;
+        this->value = value;
+        this->ratio = value * 1.0 / weight;
+    }
+
+    bool operator<(const Items &other) const
+    {
+        return this->ratio < other.ratio;
+    }
+};
+
 int main(int argc, char **argv)
 {
     vector<int> value{60, 40, 100, 120};
