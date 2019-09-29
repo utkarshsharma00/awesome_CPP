@@ -26,6 +26,11 @@ public:
     }
 };
 
+int fractional_knapsack(vector<int> &value, vector<int> &weight, int capacity)
+{
+    //yet to be written
+}
+
 int main(int argc, char **argv)
 {
     vector<int> value{60, 40, 100, 120};
