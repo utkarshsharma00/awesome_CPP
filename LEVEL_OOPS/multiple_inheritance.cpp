@@ -28,3 +28,9 @@ public:
     cout << "C's constructor called" << endl; 
   }
 };
+
+int main(int argc,char** argv)
+{
+  C c;
+  return 0;
+}
