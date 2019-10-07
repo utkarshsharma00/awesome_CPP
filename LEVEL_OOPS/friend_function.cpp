@@ -12,13 +12,20 @@ public:
   void setWidth(double wid);
 };
 
+void Box::setWidth(double wid)
+{
+  width = wid;
+}
+
+void printWidth(Box box)
+{
+  cout << "Width of box : " << box.width << endl;
+}
+
 int main(int argc, char**argv)
 {
   Box box;
-
   box.setWidth(10.0);
-
   printWidth(box);
-
   return 0;
 }
