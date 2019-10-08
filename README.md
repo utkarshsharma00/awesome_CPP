@@ -1,3 +1,5 @@
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+
 # AwesomeCPP
 A spectacular way to learn the insights of C++ and Competitive Programming.<br/>
 
